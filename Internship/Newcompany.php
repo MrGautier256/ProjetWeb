@@ -29,15 +29,15 @@
 
                              <div class="Student-box">
                                  <li> Company Name : </li>
-                                 <input id="newCompanyName" name="newCompanyName" type="text" placeholder="Company name" required="required">
+                                 <input class="formulaireInput" id="newCompanyName" name="newCompanyName" type="text" placeholder="Company name" required="required">
                              </div>
                              <div class="Student-box">
                                  <li> line of business : </li>
-                                 <input id="newCompanyBusiness" name="newCompanyBusiness" type="text" placeholder="Company line of business" required="required">
+                                 <input class="formulaireInput" id="newCompanyBusiness" name="newCompanyBusiness" type="text" placeholder="Company line of business" required="required">
                              </div>
                              <div class="Student-box">
                                  <li> City : </li>
-                                 <input id="newCompanyCity" name="newCompanyCity" type="text" placeholder="Company City" required="required">
+                                 <input class="formulaireInput" id="newCompanyCity" name="newCompanyCity" type="text" placeholder="Company City" required="required">
                              </div>
                              <div class="Student-box">
                                  <li> Pilot confidence : </li>
@@ -53,23 +53,23 @@
                              <h2 style="color: white; margin-bottom:20px;">Internship Informations </h2>
                              <div class="Student-box">
                                  <li> Internship Name : </li>
-                                 <input id="internshipName" name="internshipName" type="text" placeholder="Internship Name" required="required">
+                                 <input class="formulaireInput" id="internshipName" name="internshipName" type="text" placeholder="Internship Name" required="required">
                              </div>
                              <div class="Student-box">
                                  <li> Skills : </li>
-                                 <input id="internshipSkills" name="internshipSkills" type="text" placeholder="Student Skills" required="required">
+                                 <input class="formulaireInput" id="internshipSkills" name="internshipSkills" type="text" placeholder="Student Skills" required="required">
                              </div>
                              <div class="Student-box">
                                  <li> Compensation : </li>
-                                 <input id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
+                                 <input class="formulaireInput" id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
                              </div>
                              <div class="Student-box">
                                  <li> Duration : </li>
-                                 <input id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
+                                 <input class="formulaireInput" id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
                              </div>
                              <div class="Student-box">
                                  <li> Date : </li>
-                                 <input id="intershipDate" name="internshipDate" type="date" placeholder="InternShip Duration" required="required">
+                                 <input class="formulaireInput" id="intershipDate" name="internshipDate" type="date" placeholder="InternShip Duration" required="required">
                              </div>
                              <div class="Student-box">
                                  <li></li>
