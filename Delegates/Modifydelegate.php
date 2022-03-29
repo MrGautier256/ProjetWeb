@@ -25,18 +25,18 @@
             <form method="post" action="">
                 <div class="search-box1">
                     <img src="../images/search.png">
-                    <input id="myInput" name="pseudoDelegateLogin" type="text" placeholder="Delegate Login" required="required">
+                    <input class="formulaireInput" id="myInput" name="pseudoDelegateLogin" type="text" placeholder="Delegate Login" required="required">
                 </div>
                 <div class="write-post-container1">
                     <div class="student-account">
                         <ul>
                             <div class="Student-box">
                                 <li> First Name : </li>
-                                <input id="myInput" name="pseudoDelegateFistName" type="text" placeholder="Delegate FirstName" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoDelegateFistName" type="text" placeholder="Delegate FirstName" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Name : </li>
-                                <input id="myInput" name="pseudoDelegateName" type="text" placeholder="Delegate Name" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoDelegateName" type="text" placeholder="Delegate Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Center : </li>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="Student-box">
                                 <li> Email : </li>
-                                <input id="myInput" name="pseudoDelegateEmail" type="text" placeholder="Delegate Email" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoDelegateEmail" type="text" placeholder="Delegate Email" required="required">
                             </div>
                             <div class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">

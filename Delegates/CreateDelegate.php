@@ -28,15 +28,15 @@
                         <ul>
                             <div class="Student-box">
                                 <li> Login : </li>
-                                <input id="delegateLogin" name="delegateLogin" type="text" placeholder="Delegate Login" required="required">
+                                <input class="formulaireInput" id="delegateLogin" name="delegateLogin" type="text" placeholder="Delegate Login" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> First Name : </li>
-                                <input id="delegateFirstName" name="delegateFirstName" type="text" placeholder="Delegate FirstName" required="required">
+                                <input class="formulaireInput" id="delegateFirstName" name="delegateFirstName" type="text" placeholder="Delegate FirstName" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Name : </li>
-                                <input id="delegateName" name="delegateLastName" type="text" placeholder="Delegate Name" required="required">
+                                <input class="formulaireInput" id="delegateName" name="delegateLastName" type="text" placeholder="Delegate Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Center : </li>
@@ -70,19 +70,19 @@
                             </div>
                             <div class="Student-box">
                                 <li> Email : </li>
-                                <input id="delegateEmail" name="delegateEmail" type="text" placeholder="Delegate Email" required="required">
+                                <input class="formulaireInput" id="delegateEmail" name="delegateEmail" type="text" placeholder="Delegate Email" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Password : </li>
-                                <input id="delegatePassword" name="delegatePassword" type="password" placeholder="Delegate Password" required="required">
+                                <input class="formulaireInput" id="delegatePassword" name="delegatePassword" type="password" placeholder="Delegate Password" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Confirm Password : </li>
-                                <input id="delegateConfirmPassword" name="delegateConfirmPassword" type="password" placeholder="Confirm Password" required="required">
+                                <input class="formulaireInput" id="delegateConfirmPassword" name="delegateConfirmPassword" type="password" placeholder="Confirm Password" required="required">
                             </div>
                             <div class="Student-box">
                                 <li></li>
-                                <input id="delegateCreate" name="delegateCreate" type="radio" value="1" style="visibility: hidden" checked>
+                                <input class="formulaireInput" id="delegateCreate" name="delegateCreate" type="radio" value="1" style="visibility: hidden" checked>
                             </div>
                             <div class="button-box">
                                 <input class="favorite-styled" type="submit" value="Create">

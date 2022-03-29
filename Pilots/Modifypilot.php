@@ -25,18 +25,18 @@
             <form method="post" action="">
                 <div class="search-box1">
                     <img src="../images/search.png">
-                    <input id="myInput" name="pseudoPilotLogin" type="text" placeholder="Pilot Login" required="required">
+                    <input class="formulaireInput" id="myInput" name="pseudoPilotLogin" type="text" placeholder="Pilot Login" required="required">
                 </div>
                 <div class="write-post-container1">
                     <div class="student-account">
                         <ul>
                             <div class="Student-box">
                                 <li> First Name : </li>
-                                <input id="myInput" name="pseudoPilotFirstName" type="text" placeholder="Pilot FirstName" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoPilotFirstName" type="text" placeholder="Pilot FirstName" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Name : </li>
-                                <input id="myInput" name="pseudoPilotName" type="text" placeholder="Pilot Name" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoPilotName" type="text" placeholder="Pilot Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Promotion : </li>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="Student-box">
                                 <li> Email : </li>
-                                <input id="myInput" name="pseudoPilotEmail" type="text" placeholder="Pilot Email" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoPilotEmail" type="text" placeholder="Pilot Email" required="required">
                             </div>
                             <div class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">

@@ -35,19 +35,19 @@ $Entreprises = new DisplayEntreprise();
                         <form method="post" action="">
                             <div class="Student-box">
                                 <li> Internship Name : </li>
-                                <input id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
+                                <input class="formulaireInput" id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Skills : </li>
-                                <input id="myInput" name="oldInternshipSkills" type="text" placeholder="Internship skills" required="required">
+                                <input class="formulaireInput" id="myInput" name="oldInternshipSkills" type="text" placeholder="Internship skills" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Compensation : </li>
-                                <input id="myInput" name="oldInternshipCompensation" type="text" placeholder="Company Compensation" required="required">
+                                <input class="formulaireInput" id="myInput" name="oldInternshipCompensation" type="text" placeholder="Company Compensation" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Duration : </li>
-                                <input id="myInput" name="oldInternshipDuration" type="text" placeholder="InternShip Duration" required="required">
+                                <input class="formulaireInput" id="myInput" name="oldInternshipDuration" type="text" placeholder="InternShip Duration" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Company : </li>

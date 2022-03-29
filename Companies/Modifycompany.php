@@ -25,26 +25,26 @@
             <form method="post" action="">
                 <div class="search-box1">
                     <img src="../images/search.png">
-                    <input id="myInput" name="pseudoCompanyLogin" type="text" placeholder="Company Login" required="required">
+                    <input class="formulaireInput" id="myInput" name="pseudoCompanyLogin" type="text" placeholder="Company Login" required="required">
                 </div>
                 <div class="write-post-container1">
                     <div class="student-account">
                         <ul>
                             <div class="Student-box">
                                 <li> Company Name : </li>
-                                <input id="myInput" name="pseudoCompany" type="text" placeholder="Company Name" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoCompany" type="text" placeholder="Company Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> line of business : </li>
-                                <input id="myInput" name="pseudoCompanyBusiness" type="text" placeholder="Company Line of business" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoCompanyBusiness" type="text" placeholder="Company Line of business" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> City : </li>
-                                <input id="myInput" name="pseudoCompanyCity" type="text" placeholder="Company city" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoCompanyCity" type="text" placeholder="Company city" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Pilot confidence : </li>
-                                <input id="myInput" name="pseudoCompanyConfidence" type="text" placeholder="Company Pilot Confidence" required="required">
+                                <input class="formulaireInput" id="myInput" name="pseudoCompanyConfidence" type="text" placeholder="Company Pilot Confidence" required="required">
                             </div>
                             <div class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">

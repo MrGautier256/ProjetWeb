@@ -545,8 +545,6 @@ nav {
   display: none;
 }
 
-/* ---------------Media query for home page --------------- */
-
 /* ---------------Entreprises --------------- */
 
 .search-box1 {
@@ -565,18 +563,6 @@ nav {
   padding: 10px;
   outline: none;
   border: 0;
-}
-
-input[type="text"] {
-  width: 30%;
-  -webkit-transition: width 0.15s ease-in-out;
-  transition: width 0.15s ease-in-out;
-}
-
-/* When the input field gets focus,
-        change its width to 100% */
-input[type="text"]:focus {
-  width: 70%;
 }
 
 .entreprises-logo {
@@ -934,4 +920,9 @@ input[type="text"]:focus {
 .button-box {
   display: flex;
   justify-content: space-between;
+}
+
+.formulaireInput {
+  width: 100%;
+  font-size: 16px;
 }

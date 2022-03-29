@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
-    <title>Document</title>
+    <title>Search Student</title>
 </head>
 
 <body>
@@ -21,26 +21,18 @@
 
         <div class="add-content">
 
-            <h2 class="title-main-content">Create New Student Account</h2>
+            <h2 class="title-main-content">Search Pilot</h2>
+            <form method="post" action="../FunctionPHP/import.php">
 
-            <div class="write-post-container1">
                 <div class="student-account">
                     <ul>
                         <div class="Student-box">
-                            <li> Login : </li>
-                            <input class="formulaireInput" id="myInput" name="pseudoStudentLogin" type="text" placeholder="Student FirstName" required="required">
-                        </div>
-                        <div class="Student-box">
-                            <li> First Name : </li>
-                            <input class="formulaireInput" id="myInput" name="pseudoStudentFisrtName" type="text" placeholder="Student FirstName" required="required">
-                        </div>
-                        <div class="Student-box">
-                            <li> Name : </li>
-                            <input class="formulaireInput" id="myInput" name="pseudoStudentName" type="text" placeholder="Student Name" required="required">
+                            <li> Search by Login : </li>
+                            <input class="formulaireInput" id="delegateLogin" name="delegateLogin" type="text" placeholder="Pilot Login">
                         </div>
                         <div class="Student-box">
                             <li> Promotion : </li>
-                            <select name="pseudoPilotPromotion" required="required">
+                            <select name="pseudoPilotPromotion">
                                 <option value="">Choose the Promotion</option>
                                 <option value="">CPI A1</option>
                                 <option value="">CPI A2-INFORMATIQUE</option>
@@ -63,7 +55,7 @@
                         </div>
                         <div class="Student-box">
                             <li> Center : </li>
-                            <select name="pseudoPilotCenter" required="required">
+                            <select name="pseudoPilotCenter">
                                 <option value="">Choose the Center</option>
                                 <option value="">Aix-en-Provence</option>
                                 <option value="">Angoulême</option>
@@ -91,27 +83,16 @@
                                 <option value="">Toulouse</option>
                             </select>
                         </div>
-                        <div class="Student-box">
-                            <li> Email : </li>
-                            <input class="formulaireInput" id="myInput" name="pseudoStudentEmail" type="text" placeholder="Student Email" required="required">
-                        </div>
-                        <div class="Student-box">
-                            <li> PassWord : </li>
-                            <input class="formulaireInput" id="myInput" name="pseudoStudentPassword" type="text" placeholder="Student Password" required="required">
-                        </div>
-                        <div class="Student-box">
-                            <li> Confirm Password : </li>
-                            <input class="formulaireInput" id="myInput" name="pseudoStudentConfirmPassword" type="text" placeholder="Confirm Password" required="required">
-                        </div>
                         <div class="button-box">
-                            <input class="favorite-styled" type="submit" value="Validate">
+                            <input class="favorite-styled" type="submit" value="Create">
                             <input class="favorite-styled" type="reset" value="Reset">
                         </div>
                     </ul>
                 </div>
 
-            </div>
+            </form>
         </div>
+
     </div>
     <style>
         .Student-box select {
@@ -122,6 +103,7 @@
             padding: 10px;
         }
     </style>
+
     <script src="../Javascriptindex.js"></script>
 
 

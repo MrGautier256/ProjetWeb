@@ -35,15 +35,15 @@
                         <ul>
                             <div class="Student-box">
                                 <li> Login : </li>
-                                <input id="pilotLogin" name="pilotLogin" type="text" placeholder="Pilot Login" required="required">
+                                <input class="formulaireInput" id="pilotLogin" name="pilotLogin" type="text" placeholder="Pilot Login" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> First Name : </li>
-                                <input id="pilotFirstName" name="pilotFirstName" type="text" placeholder="Pilot FirstName" required="required">
+                                <input class="formulaireInput" id="pilotFirstName" name="pilotFirstName" type="text" placeholder="Pilot FirstName" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Name : </li>
-                                <input id="pilotLastName" name="pilotLastName" type="text" placeholder="Pilot Name" required="required">
+                                <input class="formulaireInput" id="pilotLastName" name="pilotLastName" type="text" placeholder="Pilot Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Promotion : </li>
@@ -100,19 +100,19 @@
                             </div>
                             <div class="Student-box">
                                 <li> Email : </li>
-                                <input id="pilotEmail" name="pilotEmail" type="email" placeholder="Pilot Email" required="required">
+                                <input class="formulaireInput" id="pilotEmail" name="pilotEmail" type="email" placeholder="Pilot Email" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Password : </li>
-                                <input id="pilotPassword" name="pilotPassword" type="password" placeholder="Pilot Password" required="required">
+                                <input class="formulaireInput" id="pilotPassword" name="pilotPassword" type="password" placeholder="Pilot Password" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Confirm Password : </li>
-                                <input id="pilotConfirmPassword" name="pilotConfirmPassword" type="password" placeholder="Confirm Password" required="required">
+                                <input class="formulaireInput" id="pilotConfirmPassword" name="pilotConfirmPassword" type="password" placeholder="Confirm Password" required="required">
                             </div>
                             <div class="Student-box">
                                 <li></li>
-                                <input id="pilotCreate" name="pilotCreate" type="radio" value="1" style="visibility: hidden" checked>
+                                <input class="formulaireInput" id="pilotCreate" name="pilotCreate" type="radio" value="1" style="visibility: hidden" checked>
                             </div>
                             <div class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">
