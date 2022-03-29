@@ -1,5 +1,4 @@
 <?php
-
 require('../FunctionPHP/DisplayClass.php');
 $Entreprises = new DisplayEntreprise();
 
@@ -32,23 +31,7 @@ $Entreprises = new DisplayEntreprise();
                 <div class="student-account">
                     <ul>
                         <h2 style="color: white; margin-bottom:20px;">Internship Informations </h2>
-                        <form method="post" action="">
-                            <div class="Student-box">
-                                <li> Internship Name : </li>
-                                <input class="formulaireInput" id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Skills : </li>
-                                <input class="formulaireInput" id="myInput" name="oldInternshipSkills" type="text" placeholder="Internship skills" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Compensation : </li>
-                                <input class="formulaireInput" id="myInput" name="oldInternshipCompensation" type="text" placeholder="Company Compensation" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Duration : </li>
-                                <input class="formulaireInput" id="myInput" name="oldInternshipDuration" type="text" placeholder="InternShip Duration" required="required">
-                            </div>
+                        <form method="post" action="../FunctionPHP/import.php">
                             <div class="Student-box">
                                 <li> Company : </li>
                                 <select name="oldCompanyName" required="required">
@@ -61,6 +44,27 @@ $Entreprises = new DisplayEntreprise();
                                     }
                                     ?>
                                 </select>
+                            </div>
+                            <div class="Student-box">
+                                <li> Internship Name : </li>
+                                <input class="formulaireInput" id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
+                                <input id="internshipName" name="internshipName" type="text" placeholder="Internship Name" required="required">
+                            </div>
+                            <div class="Student-box">
+                                <li> Skills : </li>
+                                <input id="internshipSkills" name="internshipSkills" type="text" placeholder="Internship skills" required="required">
+                            </div>
+                            <div class="Student-box">
+                                <li> Compensation : </li>
+                                <input id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
+                            </div>
+                            <div class="Student-box">
+                                <li> Duration : </li>
+                                <input id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
+                            </div>
+                            <div class="Student-box">
+                                <li> Date : </li>
+                                <input id="internshipDate" name="internshipDate" type="date" placeholder="InternShip Date" required="required">
                             </div>
                             <div class="Student-box">
                                 <li></li>

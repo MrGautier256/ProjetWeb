@@ -22,11 +22,15 @@
         <div class="add-content">
 
             <h2 class="title-main-content">Delete Delegate Account</h2>
-            <form method="post" action="">
+            <form method="post" action="../FunctionPHP/delete.php">
 
                 <div class="search-box1">
                     <img src="../images/search.png">
-                    <input id="myInput" name="pseudoDelegateLogin" type="text" placeholder="Delegate Login" required="required">
+                    <input id="delegateLogin" name="delegateLogin" type="text" placeholder="Delegate Login" required="required">
+                </div>
+                <div class="Student-box">
+                    <li></li>
+                    <input id="delegateDelete" name="delegateDelete" type="radio" value="1" style="visibility: hidden" checked>
                 </div>
                 <div class="write-post-container1">
                     <input class="favorite-styled-menu" type="submit" value="Delete">
