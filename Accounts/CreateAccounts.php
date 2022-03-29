@@ -45,9 +45,9 @@
                         </form>
                     </div>
                     <div class="button-box-menu">
-                        <form action="../Pilots/CreatePilot.php">
+                        <form action="../Internship/CreateOffer.php">
                             <button class="favorite-styled-menu" type="submit">
-                                Create Company
+                                Create InternShip Offer
                             </button>
                         </form>
                     </div>

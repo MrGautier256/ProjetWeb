@@ -1,3 +1,10 @@
+<?php
+
+require('../FunctionPHP/DisplayClass.php');
+$Entreprises = new DisplayEntreprise();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,31 +35,36 @@
                         <form method="post" action="">
                             <div class="Student-box">
                                 <li> Internship Name : </li>
-                                <input id="myInput" name="pseudoInternshipName" type="text" placeholder="Internship Name" required="required">
+                                <input id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Skills : </li>
-                                <input id="myInput" name="pseudoInternshipSkills" type="text" placeholder="Internship skills" required="required">
+                                <input id="myInput" name="oldInternshipSkills" type="text" placeholder="Internship skills" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Compensation : </li>
-                                <input id="myInput" name="pseudoInternshipCompensation" type="text" placeholder="Company Compensation" required="required">
+                                <input id="myInput" name="oldInternshipCompensation" type="text" placeholder="Company Compensation" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Duration : </li>
-                                <input id="myInput" name="pseudoInternshipDuration" type="text" placeholder="InternShip Duration" required="required">
+                                <input id="myInput" name="oldInternshipDuration" type="text" placeholder="InternShip Duration" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Company : </li>
-                                <select name="pseudoCompanyName" required="required">
+                                <select name="oldCompanyName" required="required">
                                     <option value="">Choose the Company</option>
-                                    <option value="PC SOFT">PC SOFT</option>
-                                    <option value="UBISOFT">UBISOFT</option>
-                                    <option value="INETUM">INETUM</option>
-                                    <option value="DELL">DELL</option>
-                                    <option value="HP">HP</option>
-                                    <option value="HUAWEI">HUAWEI</option>
+                                    <?php
+                                    foreach ($Entreprises->getCompanies() as $Entreprise) {
+                                    ?>
+                                        <option value="<?= $Entreprise['En_Nom'] ?>"><?= $Entreprise['En_Nom'] ?></option>
+                                    <?php
+                                    }
+                                    ?>
                                 </select>
+                            </div>
+                            <div class="Student-box">
+                                <li></li>
+                                <input id="createInternshipOldCompany" name="createInternshipOldCompany" type="radio" value="1" style="visibility: hidden" checked>
                             </div>
                             <div class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">
@@ -77,8 +89,5 @@
     </style>
 
     <script src="../Javascriptindex.js"></script>
-
-
-
 
 </body>

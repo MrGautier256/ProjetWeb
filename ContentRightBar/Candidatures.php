@@ -35,6 +35,7 @@
 
             .Offer-container .left-event {
                 background: white;
+                width: 29%;
                 align-items: center;
             }
 
