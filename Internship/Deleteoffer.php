@@ -1,3 +1,8 @@
+<?php
+require('../FunctionPHP/DisplayClass.php');
+$Entreprises = new DisplayEntreprise();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +30,20 @@
             <form method="post" action="">
                 <div class="search-box1">
                     <img src="../images/search.png">
-                    <input id="myInput" name="pseudoOfferLogin" type="text" placeholder="Offer Login" required="required">
+                    <input id="myInput" name="pseudoOfferLogin" type="text" placeholder="Offer Name" required="required">
+                </div>
+                <div class="Student-box">
+                    <li style="color: black"> Company : </li>
+                    <select name="CompanyName" required="required">
+                        <option value="">Choose the Company</option>
+                        <?php
+                        foreach ($Entreprises->getCompanies() as $Entreprise) {
+                        ?>
+                            <option value="<?= $Entreprise['En_Nom'] ?>"><?= $Entreprise['En_Nom'] ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="write-post-container1">
                     <input class="favorite-styled-menu" type="submit" value="Delete">
@@ -34,10 +52,14 @@
         </div>
 
     </div>
-
+    <style>
+        .Student-box select {
+            font-size: 0.9rem;
+            padding: 2px 5px;
+            border-radius: 20px;
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
     <script src="../Javascriptindex.js"></script>
-
-
-
-
 </body>

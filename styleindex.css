@@ -568,15 +568,23 @@ nav {
 }
 
 input[type="text"] {
-  width: 30%;
-  -webkit-transition: width 0.15s ease-in-out;
-  transition: width 0.15s ease-in-out;
+  width: 100%;
 }
 
-/* When the input field gets focus,
-        change its width to 100% */
-input[type="text"]:focus {
-  width: 70%;
+input[type="password"] {
+  width: 100%;
+}
+
+input[type="date"] {
+  width: 100%;
+}
+
+input[type="number"] {
+  width: 100%;
+}
+
+input[type="email"] {
+  width: 100%;
 }
 
 .entreprises-logo {

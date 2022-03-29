@@ -22,20 +22,21 @@
         <div class="add-content">
 
             <h2 class="title-main-content">Delete Student Account</h2>
-            <form method="post" action="">
+            <form method="post" action="../FunctionPHP/delete.php">
                 <div class="search-box1">
                     <img src="../images/search.png">
-                    <input id="myInput" name="pseudoStudentLogin" type="text" placeholder="Student Login" required="required">
+                    <input id="studentLogin" name="studentLogin" type="text" placeholder="Student Login" required="required">
+                </div>
+                <div class="Student-box">
+                    <li></li>
+                    <input id="studentDelete" name="studentDelete" type="radio" value="1" style="visibility: hidden" checked>
                 </div>
                 <div class="write-post-container1">
                     <input class="favorite-styled-menu" type="submit" value="Delete">
                 </div>
             </form>
         </div>
-
     </div>
-
-
     <script src="../Javascriptindex.js"></script>
 
 

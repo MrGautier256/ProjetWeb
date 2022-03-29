@@ -1,13 +1,15 @@
 <?php
-session_start();
+require_once("../Const.php");
 
 $studentCreate = @$_POST['studentCreate'];
 $pilotCreate = @$_POST['pilotCreate'];
 $delegateCreate = @$_POST['delegateCreate'];
 $companyCreate = @$_POST['companyCreate'];
 $offerCreate = @$_POST['offerCreate'];
+$createInternshipNewCompany = @$_POST['createInternshipNewCompany'];
+$createInternshipOldCompany = @$_POST['createInternshipOldCompany'];
 
-echo "delegateCreate = " . $delegateCreate;
+
 
 try {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_mieux;charset=utf8', 'root', '');
@@ -60,12 +62,12 @@ if ($studentCreate == 1) {
 
         $Studentresults = $bdd->query($Studentreq_str);
         $bdd = null;
-        //header('Location: ../Student/Createstudent.php');
-        //exit();
+        header('Location: ../Student/Createstudent.php');
+        exit();
     } else {
-        // $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
-        // header('Location: ../Student/Createstudent.php');
-        // exit();
+        $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
+        header('Location: ../Student/Createstudent.php');
+        exit();
     }
 }
 
@@ -112,20 +114,18 @@ if ($pilotCreate == 1) {
 
         $Pilotresults = $bdd->query($Pilotreq_str);
         $bdd = null;
-        // header('Location: ../Pilots/CreatePilot.php');
-        // exit();
+        header('Location: ../Pilots/CreatePilot.php');
+        exit();
     } else {
-        // $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
-        // header('Location: ../Student/CreatePilot.php');
-        // exit();
+        $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
+        header('Location: ../Student/CreatePilot.php');
+        exit();
     }
 }
 
-echo "avant if";
 
 if ($delegateCreate == 1) {
 
-    echo "apres if</br>";
     $delegateEmail = $_POST['delegateEmail'];
     $delegateLogin = $_POST['delegateLogin'];
     echo $delegateEmail . "</br>";
@@ -163,11 +163,102 @@ if ($delegateCreate == 1) {
 
         $Delegateresults = $bdd->query($Delegatereq_str);
         $bdd = null;
-        //header('Location: ../Delegates/CreateDelegate.php');
-        //exit();
+        header('Location: ../Delegates/CreateDelegate.php');
+        exit();
     } else {
-        // $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
-        // header('Location: ../Student/CreatePilot.php');
-        // exit();
+        $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
+        header('Location: ../Student/CreateDelegate.php');
+        exit();
+    }
+}
+
+
+
+if ($createInternshipNewCompany == 1) {
+
+    $newCompanyName = $_POST['newCompanyName'];
+
+    $VerifCompanyName = "SELECT En_Nom FROM `entreprise` WHERE En_Nom = " . $bdd->quote($newCompanyName) . "OR En_Nom = LOWER(" . $bdd->quote($newCompanyName) . ")";
+    $VerifCompanyNameResultFetch = $bdd->query($VerifDelegateLogin)->fetch(PDO::FETCH_ASSOC);
+    if ($VerifCompanyNameResultFetch == false) {
+
+        $newCompanyBusiness = $_POST['newCompanyBusiness'];
+        $newCompanyCity = $_POST['newCompanyCity'];
+        $newCompanyConfidence = $_POST['newCompanyConfidence'];
+        $internshipName = $_POST['internshipName'];
+        $internshipSkills = $_POST['internshipSkills'];
+        $internshipCompensation = $_POST['internshipCompensation'];
+        $internshipDuration = $_POST['internshipDuration'];
+        $internshipDate = $_POST['internshipDate'];
+
+        $InternshipNewCompanyreq_str =
+            "INSERT INTO `entreprise` (`En_Nom`, `En_Secteur_Activite`, `En_Localite`, `En_Nb_Stagiaire_Cesi`, `En_Evaluation_Stagiaire`, `En_Confiance_Pilote`) 
+    VALUES (
+    " . $bdd->quote($newCompanyName) . ", 
+    " . $bdd->quote($newCompanyBusiness) . ",
+    " . $bdd->quote($newCompanyCity) . " 
+    , 0, 'Aucune', 'confiant');
+
+    INSERT INTO `offre_de_stage` (`OS_Nom`,`OS_Competences`, `OS_Localites`, `OS_Remuneration`, `OS_Duree`, `OS_Date_Offre`, `ID_Entreprise`) 
+    VALUES (
+        " . $bdd->quote($internshipName) . ", 
+        " . $bdd->quote($internshipSkills) . ", 
+        (SELECT En_Localite FROM entreprise WHERE En_Nom = " . $bdd->quote($newCompanyName) . "), 
+        " . $bdd->quote($internshipCompensation) . ",
+        " . $bdd->quote($internshipDuration) . ",
+        " . $bdd->quote($internshipDate) . ", 
+        (SELECT ID_Entreprise FROM entreprise WHERE En_Nom = " . $bdd->quote($newCompanyName) . "));";
+
+
+        var_dump($InternshipNewCompanyreq_str);
+
+
+        $InternshipNewCompanyresults = $bdd->query($InternshipNewCompanyreq_str);
+        $bdd = null;
+        header('Location: ../Internship/Newcompany.php');
+        exit();
+    } else {
+        $_SESSION['Error_creation'] = "entreprise deja existante";
+        header('Location: ../Internship/Newcompany.php');
+        exit();
+    }
+}
+
+if ($createInternshipOldCompany == 1) {
+
+    $internshipName = $_POST['internshipName'];
+
+    $VerifinternshipName = "SELECT OS_Nom FROM `offre_de_stage` WHERE OS_Nom = " . $bdd->quote($internshipName) . "OR OS_Nom = LOWER(" . $bdd->quote($internshipName) . ")";
+    $VerifinternshipNameResultFetch = $bdd->query($VerifinternshipName)->fetch(PDO::FETCH_ASSOC);
+
+    if ($VerifinternshipNameResultFetch == false) {
+
+
+        $companyName = $_POST['oldCompanyName'];
+        $internshipSkills = $_POST['internshipSkills'];
+        $internshipCompensation = $_POST['internshipCompensation'];
+        $internshipDuration = $_POST['internshipDuration'];
+        $internshipDate = $_POST['internshipDate'];
+
+        $InternshipOldCompanyreq_str = "INSERT INTO `offre_de_stage` (`OS_Nom`,`OS_Competences`, `OS_Localites`, `OS_Remuneration`, `OS_Duree`, `OS_Date_Offre`, `ID_Entreprise`) 
+    VALUES (
+        " . $bdd->quote($internshipName) . ", 
+        " . $bdd->quote($internshipSkills) . ", 
+        (SELECT En_Localite FROM entreprise WHERE En_Nom = " . $bdd->quote($companyName) . "), 
+        " . $bdd->quote($internshipCompensation) . ",
+        " . $bdd->quote($internshipDuration) . ",
+        " . $bdd->quote($internshipDate) . ", 
+        (SELECT ID_Entreprise FROM entreprise WHERE En_Nom = " . $bdd->quote($companyName) . "));";
+
+        var_dump($InternshipOldCompanyresults);
+        $InternshipOldCompanyresults = $bdd->query($InternshipOldCompanyreq_str);
+        $bdd = null;
+        header('Location: ../Internship/Existingcompany.php');
+        exit();
+    } else {
+        echo "prout";
+        $_SESSION['Error_creation'] = "Nom d'offre deja existant";
+        header('Location: ../Internship/Existingcompany.php');
+        exit();
     }
 }

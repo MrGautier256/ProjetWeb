@@ -1,5 +1,5 @@
 <?php
-
+echo "coucou";
 class DisplayEntreprise
 {
     private $_connexion;
