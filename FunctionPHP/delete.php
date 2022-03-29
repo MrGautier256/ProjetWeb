@@ -38,14 +38,14 @@ if ($studentDelete == 1) {
         DELETE FROM utilisateur WHERE `ID_UTILISATEUR` = @IdUti; 
         DELETE FROM authentification WHERE `ID_Authentification` = @IdAuth;";
 
-        var_dump($StudentDeleteRqt);
+
         $Studentresults = $bdd->query($StudentDeleteRqt);
         $bdd = null;
-        //header('Location: ../Student/Deletestudent.php');
+        header('Location: ../Student/Deletestudent.php');
         exit();
     } else {
         $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
-        //header('Location: ../Student/Deletestudent.php');
+        header('Location: ../Student/Deletestudent.php');
         exit();
     }
 }
