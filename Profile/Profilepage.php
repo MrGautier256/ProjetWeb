@@ -118,7 +118,19 @@ include_once("../Bar/Leftbar.html");
 <div class="footer">
     <p>Copyright 2022 - Virtual InternShips</p>
 </div>
+<style>
+    @media (min-width: 901px) {
+        .left-sidebar {
+            display: none;
+        }
+    }
 
+    @media (max-width: 900px) {
+        .cover-img {
+            margin: 64px 0 14px 0;
+        }
+    }
+</style>
 <script src="../Javascriptindex.js"></script>
 </body>
 

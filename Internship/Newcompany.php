@@ -29,41 +29,37 @@
 
                             <div class="Student-box">
                                 <li> Company Name : </li>
-                                <input id="newCompanyName" name="companyName" type="text" placeholder="CompanyName" required="required">
+                                <input id="myInput" name="pseudoCompany" type="text" placeholder="CompanyName" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> line of business : </li>
-                                <input id="companyBusiness" name="companyBusiness" type="text" placeholder="Company line of business" required="required">
+                                <input id="myInput" name="pseudoCompanyBusiness" type="text" placeholder="Company line of business" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> City : </li>
-                                <input id="companyCity" name="companyCity" type="text" placeholder="Company City" required="required">
+                                <input id="myInput" name="pseudoCompanyCity" type="text" placeholder="Company City" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Pilot confidence : </li>
-                                <input id="companyConfidence" name="companyConfidence" type="text" placeholder="Pilot Confidence" required="required">
+                                <input id="myInput" name="pseudoCompanyConfidence" type="text" placeholder="Pilot Confidence" required="required">
                             </div>
                             <hr style="margin: 30px 20px;">
                             <h2 style="color: white; margin-bottom:20px;">Internship Informations </h2>
                             <div class="Student-box">
                                 <li> Internship Name : </li>
-                                <input id="internshipName" name="internshipName" type="text" placeholder="Internship Name" required="required">
+                                <input id="myInput" name="pseudoInternshipName" type="text" placeholder="Internship Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Skills : </li>
-                                <input id="internshipPassword" name="internshipPassword" type="text" placeholder="Student Skills" required="required">
+                                <input id="myInput" name="pseudoInternshipPassword" type="text" placeholder="Student Password" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Compensation : </li>
-                                <input id="internshipCompensation" name="internshipCompensation" type="text" placeholder="Company Compensation" required="required">
+                                <input id="myInput" name="pseudoInternshipCompensation" type="text" placeholder="Company Compensation" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Duration : </li>
-                                <input id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li></li>
-                                <input id="createInternshipNewCompany" name="createInternshipNewCompany" type="radio" value="1" style="visibility: hidden" checked>
+                                <input id="myInput" name="pseudoInternshipDuration" type="text" placeholder="InternShip Duration" required="required">
                             </div>
                             <div class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">

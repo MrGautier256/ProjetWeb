@@ -51,9 +51,12 @@
                 </ul>
             </div>
         </div>
+
     </div>
+
     <style>
         @media (max-width: 900px) {
+
             .Delegate-content {
                 width: 70%;
             }
@@ -68,5 +71,8 @@
         }
     </style>
     <script src="../Javascriptindex.js"></script>
+
+
+
 
 </body>

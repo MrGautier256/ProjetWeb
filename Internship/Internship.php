@@ -18,6 +18,7 @@
         @media (max-width: 900px) {
             .Internship-content {
                 margin-left: 0;
+                width: 100%;
             }
         }
     </style>

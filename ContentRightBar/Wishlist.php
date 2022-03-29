@@ -40,6 +40,19 @@
             .Internship-content {
                 margin-left: 0;
             }
+
+        }
+
+        .right-wishlist {
+            border-radius: 10px;
+            height: 65px;
+            width: 65px;
+            padding-top: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+            background-color: var(--bg-color);
         }
     </style>
     <?php include_once("../Bar/NavBar.html") ?>
@@ -65,7 +78,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="left-event1">
+                            <div class="right-wishlist">
                                 <h3>1</h3>
                             </div>
                         </div>
@@ -83,13 +96,13 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="left-event1">
+                            <div class="right-wishlist">
                                 <h3>2</h3>
                             </div>
                         </div>
 
                     </li>
-                    <li>
+                    <!-- <li>
                         <div class="Offer-container">
                             <div class="Offer-Title">
                                 <div contenteditable="true">
@@ -101,12 +114,12 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="left-event1">
+                            <div class="right-wishlist">
                                 <h3>3</h3>
                             </div>
                         </div>
 
-                    </li>
+                    </li> -->
                     <li>
                         <div class="Offer-container">
                             <div class="Offer-Title">
@@ -119,8 +132,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="left-event1">
-                                <h3>4</h3>
+                            <div class="right-wishlist">
+                                <h3>3</h3>
                             </div>
                         </div>
                     </li>
@@ -136,8 +149,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="left-event1">
-                                <h3>5</h3>
+                            <div class="right-wishlist">
+                                <h3>4</h3>
                             </div>
                         </div>
 

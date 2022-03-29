@@ -402,7 +402,7 @@ nav {
 .cover-img {
   width: 100%;
   border-radius: 6px;
-  margin-bottom: 14px;
+  margin: 64px 0 14px 0;
 }
 
 .profile-details {
@@ -568,20 +568,25 @@ nav {
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 30%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
 }
 
-input[type="password"] {
-  width: 100%;
-}
-
-input[type="email"] {
-  width: 100%;
+/* When the input field gets focus,
+        change its width to 100% */
+input[type="text"]:focus {
+  width: 70%;
 }
 
 .entreprises-logo {
   width: 70px;
   border-radius: 4px;
+}
+
+#myInput {
+  width: 100%;
+  font-size: 16px;
 }
 
 #Entreprises-list {
@@ -858,6 +863,7 @@ input[type="email"] {
   }
   .internship-content {
     margin-left: 0;
+    width: 100%;
   }
 }
 

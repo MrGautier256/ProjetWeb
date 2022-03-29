@@ -48,7 +48,7 @@ function myFunction() {
 
 var getSidebar = document.getElementById('left-sidebar');
 var getToggle = document.getElementById('toggle');
-getToggle.addEventListener('click', function () {
-    // console.warn("hello world");
-    getSidebar.classList.toggle('left-sidebar');
-});
+    getToggle.addEventListener('click', function () {
+        // console.warn("hello world");
+        getSidebar.classList.toggle('left-sidebar');
+    });
