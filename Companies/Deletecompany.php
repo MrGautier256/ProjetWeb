@@ -27,7 +27,7 @@ $Entreprises = new DisplayEntreprise();
         <div class="add-content">
 
             <h2 class="title-main-content">Delete Company</h2>
-            <form method="post" action="">
+            <form method="post" action="../FunctionPHP/delete.php">
                 <div class="Student-box">
                     <select name="CompanyName" required="required">
                         <option value="">Choose the Company</option>

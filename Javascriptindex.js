@@ -48,7 +48,51 @@ function myFunction() {
 
 var getSidebar = document.getElementById('left-sidebar');
 var getToggle = document.getElementById('toggle');
-    getToggle.addEventListener('click', function () {
-        // console.warn("hello world");
-        getSidebar.classList.toggle('left-sidebar');
-    });
+getToggle.addEventListener('click', function () {
+    // console.warn("hello world");
+    getSidebar.classList.toggle('left-sidebar');
+});
+
+/*
+document.getElementById('CreateStudent').addEventListener("submit", function (e) {
+    e.preventDefault();
+    var Password1 = document.getElementById("studentPassword").value;
+    var Password2 = document.getElementById("studentConfirmPassword").value;
+
+    var confirmpassword = ConfirmPassword(Password1, Password2)
+
+    var Login = document.getElementById("studentLogin").value;
+    var Prenom = getElementById("studentFirstName").value;
+    var Nom = getElementById("studentLastName").value;
+
+    var chainescorrecte = verifchaine(Login, Prenom, Nom)
+    console.log("Toutvabien")
+
+    if (confirmpassword == true && chainescorrecte == true) {
+        document.getElementById('CreateStudent').submit()
+    }
+})
+
+function ConfirmPassword(Pass1, Pass2) {
+
+    if (Pass1 == Pass2) {
+        return true;
+    }
+    else {
+        console.log("Les mots de passe de correspondent pas")
+        return false;
+    }
+}
+
+function verifchaine(Login, Prenom, Nom) {
+
+    if (Login.match(/^([0-9a-zA-Z]){6,17}$/) && Prenom.match(/^([0-9a-zA-Z]){6,17}$/) && Nom.match(/^([0-9a-zA-Z]){6,17}$/)) {
+        return true;
+    }
+    else {
+        console.log("Veuillez utilisez des caractères classiques");
+        return false;
+    }
+
+}
+*/

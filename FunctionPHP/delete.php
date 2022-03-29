@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $studentDelete = @$_POST['studentDelete'];
 $pilotDelete = @$_POST['pilotDelete'];
 $delegateDelete = @$_POST['delegateDelete'];
@@ -121,30 +120,59 @@ if ($delegateDelete == 1) {
 if ($companyDelete == 1) {
 
     $CompanyName = $_POST['CompanyName'];
-    " . $bdd->quote($CompanyName);";
 
-    $VerifCompanyName = "SELECT A_Login FROM `authentification` WHERE A_Login = " . $bdd->quote($CompanyName);
+    $VerifCompanyName = "SELECT En_Nom FROM `entreprise` WHERE En_Nom = " . $bdd->quote($CompanyName);
     $VerifCompanyNameResult = $bdd->query($VerifCompanyName);
     $VerifCompanyNameResultFetch  = $VerifCompanyNameResult->fetch(PDO::FETCH_ASSOC);
     var_dump($VerifCompanyNameResultFetch);
 
     if ($VerifCompanyNameResultFetch  != false) {
 
-        $DelegateDeleteRqt = "SET @IdAuth = (SELECT ID_Authentification FROM authentification 
-        WHERE A_Login = " . $bdd->quote($delegateLogin) . ");
-        SET @IdUti = (SELECT ID_UTILISATEUR FROM utilisateur WHERE ID_Authentification = @IdAuth);
-        
-        DELETE FROM utilisateur WHERE `ID_UTILISATEUR` = @IdUti; 
-        DELETE FROM authentification WHERE `ID_Authentification` = @IdAuth;";
+        $CompanyDeleteRqt = "SET @idEntreprise = (SELECT ID_Entreprise FROM entreprise WHERE En_Nom = " . $bdd->quote($CompanyName) . ");
+        DELETE FROM ajoute WHERE ID_Offre_de_Stage IN (SELECT ID_Offre_de_Stage FROM offre_de_stage WHERE ID_Entreprise = @idEntreprise);
+        DELETE FROM offre_de_stage WHERE ID_Entreprise = @idEntreprise;
+        DELETE FROM entreprise WHERE ID_Entreprise = @idEntreprise";
 
-
-        $Delegateresults = $bdd->query($DelegateDeleteRqt);
+        var_dump($CompanyDeleteRqt);
+        $Companyresults = $bdd->query($CompanyDeleteRqt);
         $bdd = null;
-        header('Location: ../Student/Deletedelegate.php');
+        header('Location: ../companies/Deletecompany.php');
         exit();
     } else {
         $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
-        header('Location: ../Student/Deletedelegate.php');
+        header('Location: ../companies/Deletecompany.php');
+        exit();
+    }
+}
+
+if ($offerDelete == 1) {
+
+    $CompanyName = $_POST['CompanyName'];
+    $OfferName = $_POST['OfferName'];
+
+    $VerifOfferName = "SELECT OS_Nom FROM `offre_de_stage` WHERE OS_Nom = " . $bdd->quote($OfferName);
+    $VerifOfferNameResult = $bdd->query($VerifOfferName);
+    $VerifOfferNameResultFetch  = $VerifOfferNameResult->fetch(PDO::FETCH_ASSOC);
+    var_dump($VerifOfferNameResultFetch);
+
+    if ($VerifOfferNameResultFetch  != false) {
+
+        $OfferDeleteRqt = "SET @idEntreprise = (SELECT ID_Entreprise FROM entreprise WHERE En_Nom = 
+        " . $bdd->quote($CompanyName) . ");
+        SET @idOffre = (SELECT ID_Offre_de_Stage FROM offre_de_stage 
+        WHERE OS_Nom = " . $bdd->quote($OfferName) . " AND ID_Entreprise = @idEntreprise);
+        
+        DELETE FROM ajoute WHERE ID_Offre_de_Stage = @idOffre;
+        DELETE FROM offre_de_stage WHERE ID_Offre_de_Stage = @idOffre;";
+
+        var_dump($OfferDeleteRqt);
+        $Companyresults = $bdd->query($OfferDeleteRqt);
+        $bdd = null;
+        header('Location: ../Internship/Deleteoffer.php');
+        exit();
+    } else {
+        $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
+        header('Location: ../Internship/Deleteoffer.php');
         exit();
     }
 }

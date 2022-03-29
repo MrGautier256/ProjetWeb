@@ -39,7 +39,7 @@ if ($studentCreate == 1) {
         $studentLastName = $_POST['studentLastName'];
         $studentPromo = $_POST['studentPromotion'];
         $studentCenter = $_POST['studentCenter'];
-        $studentPassword = $_POST['studentPassword'];
+        $studentPassword = hash('md5', $_POST['studentPassword']);
         $studentConfirmPassword = $_POST['studentConfirmPassword'];
 
         $Studentreq_str = "INSERT INTO `authentification` (`A_Login`, `A_mdp`) VALUES
@@ -90,7 +90,7 @@ if ($pilotCreate == 1) {
         $pilotLastName = $_POST['pilotLastName'];
         $pilotPromoTab = $_POST['pilotPromotion'];
         $pilotCenter = $_POST['pilotCenter'];
-        $pilotPassword = $_POST['pilotPassword'];
+        $pilotPassword = hash('md5', $_POST['pilotPassword']);
         $pilotConfirmPassword = $_POST['pilotConfirmPassword'];
 
         $pilotPromo = implode(", ", $pilotPromoTab);
@@ -144,7 +144,7 @@ if ($delegateCreate == 1) {
         $delegateFirstName = $_POST['delegateFirstName'];
         $delegateLastName = $_POST['delegateLastName'];
         $delegateCenter = $_POST['delegateCenter'];
-        $delegatePassword = $_POST['delegatePassword'];
+        $delegatePassword = hash('md5', $_POST['delegatePassword']);
         $delegateConfirmPassword = $_POST['delegateConfirmPassword'];
 
         $Delegatereq_str = "INSERT INTO `authentification` (`A_Login`, `A_mdp`) VALUES
@@ -179,7 +179,7 @@ if ($createInternshipNewCompany == 1) {
     $newCompanyName = $_POST['newCompanyName'];
 
     $VerifCompanyName = "SELECT En_Nom FROM `entreprise` WHERE En_Nom = " . $bdd->quote($newCompanyName) . "OR En_Nom = LOWER(" . $bdd->quote($newCompanyName) . ")";
-    $VerifCompanyNameResultFetch = $bdd->query($VerifDelegateLogin)->fetch(PDO::FETCH_ASSOC);
+    $VerifCompanyNameResultFetch = $bdd->query($VerifCompanyName)->fetch(PDO::FETCH_ASSOC);
     if ($VerifCompanyNameResultFetch == false) {
 
         $newCompanyBusiness = $_POST['newCompanyBusiness'];
