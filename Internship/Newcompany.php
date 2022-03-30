@@ -25,7 +25,7 @@
                  <div class="student-account">
                      <ul>
                          <h2 style="color: white; margin-bottom:20px;">Company Informations </h2>
-                         <form method="post" action="../FunctionPHP/import.php">
+                         <form id="CreateNewCompany" method="post" action="../FunctionPHP/import.php">
 
                              <div class="Student-box">
                                  <li> Company Name : </li>

@@ -22,7 +22,7 @@
         <div class="add-content">
 
             <h2 class="title-main-content">Create New Delegate Account</h2>
-            <form method="post" action="../FunctionPHP/import.php">
+            <form method="post" id="CreateDelegate" action="../FunctionPHP/import.php">
                 <div class="write-post-container1">
                     <div class="student-account">
                         <ul>

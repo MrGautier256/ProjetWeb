@@ -53,25 +53,64 @@ getToggle.addEventListener('click', function () {
     getSidebar.classList.toggle('left-sidebar');
 });
 
-/*
-document.getElementById('CreateStudent').addEventListener("submit", function (e) {
-    e.preventDefault();
-    var Password1 = document.getElementById("studentPassword").value;
-    var Password2 = document.getElementById("studentConfirmPassword").value;
+if (document.getElementById('CreateStudent')) {
+    document.getElementById('CreateStudent').addEventListener("submit", function (e) {
+        e.preventDefault();
+        var Password1 = document.getElementById("studentPassword").value;
+        var Password2 = document.getElementById("studentConfirmPassword").value;
 
-    var confirmpassword = ConfirmPassword(Password1, Password2)
+        var confirmpassword = ConfirmPassword(Password1, Password2)
 
-    var Login = document.getElementById("studentLogin").value;
-    var Prenom = getElementById("studentFirstName").value;
-    var Nom = getElementById("studentLastName").value;
+        var Login = document.getElementById("studentLogin").value;
+        var Prenom = document.getElementById("studentFirstName").value;
+        var Nom = document.getElementById("studentLastName").value;
 
-    var chainescorrecte = verifchaine(Login, Prenom, Nom)
-    console.log("Toutvabien")
+        var chainescorrecte = verifchaine(Login, Prenom, Nom)
 
-    if (confirmpassword == true && chainescorrecte == true) {
-        document.getElementById('CreateStudent').submit()
-    }
-})
+        if (confirmpassword == true && chainescorrecte == true) {
+            document.getElementById('CreateStudent').submit()
+        }
+    })
+}
+
+if (document.getElementById('CreatePilot')) {
+    document.getElementById('CreatePilot').addEventListener("submit", function (e) {
+        e.preventDefault();
+        var Password1 = document.getElementById("pilotPassword").value;
+        var Password2 = document.getElementById("pilotConfirmPassword").value;
+
+        var confirmpassword = ConfirmPassword(Password1, Password2)
+
+        var Login = document.getElementById("pilotLogin").value;
+        var Prenom = document.getElementById("pilotFirstName").value;
+        var Nom = document.getElementById("pilotLastName").value;
+
+        var chainescorrecte = verifchaine(Login, Prenom, Nom)
+
+        if (confirmpassword == true && chainescorrecte == true) {
+            document.getElementById('CreatePilot').submit()
+        }
+    })
+}
+
+if (document.getElementById('CreateNewCompany')) {
+    document.getElementById('CreateNewCompany').addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var Name = document.getElementById("newCompanyName").value;
+        var Business = document.getElementById("newCompanyBusiness").value;
+        var City = document.getElementById("newCompanyCity").value;
+
+        var chainescorrecte = verifchaine(Name, Business, City)
+
+        if (chainescorrecte == true) {
+            document.getElementById('CreateNewCompany').submit()
+        }
+    })
+}
+
+
+
 
 function ConfirmPassword(Pass1, Pass2) {
 
@@ -79,7 +118,7 @@ function ConfirmPassword(Pass1, Pass2) {
         return true;
     }
     else {
-        console.log("Les mots de passe de correspondent pas")
+        alert("Les mots de passe de correspondent pas")
         return false;
     }
 }
@@ -90,9 +129,8 @@ function verifchaine(Login, Prenom, Nom) {
         return true;
     }
     else {
-        console.log("Veuillez utilisez des caractères classiques");
+        alert("Veuillez utilisez des caractères classiques");
         return false;
     }
 
 }
-*/

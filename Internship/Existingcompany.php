@@ -31,7 +31,7 @@ $Entreprises = new DisplayEntreprise();
                 <div class="student-account">
                     <ul>
                         <h2 style="color: white; margin-bottom:20px;">Internship Informations </h2>
-                        <form method="post" action="../FunctionPHP/import.php">
+                        <form method="post" id="CreateOfferOldCompany" action="../FunctionPHP/import.php">
                             <div class="Student-box">
                                 <li> Company : </li>
                                 <select name="oldCompanyName" required="required">

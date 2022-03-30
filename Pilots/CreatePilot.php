@@ -29,7 +29,7 @@
                 $_SESSION['Error_creation'] = '';
             }
             ?>
-            <form method="post" action="../FunctionPHP/import.php">
+            <form method="post" id="CreatePilot" action="../FunctionPHP/import.php">
                 <div class="write-post-container1">
                     <div class="student-account">
                         <ul>
@@ -136,8 +136,5 @@
     </style>
 
     <script src="../Javascriptindex.js"></script>
-
-
-
 
 </body>

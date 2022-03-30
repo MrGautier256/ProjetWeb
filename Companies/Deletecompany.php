@@ -1,8 +1,9 @@
 <?php
 require('../FunctionPHP/DisplayClass.php');
 $Entreprises = new DisplayEntreprise();
-
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
