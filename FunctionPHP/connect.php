@@ -31,7 +31,7 @@ class LoginRepository
 }
 
 $co = new LoginRepository();
-$verif = $co->login($_POST['userLogin'], $_POST['userPassword']);
+$verif = $co->login($_POST['userLogin'], hash('md5', ($_POST['userPassword'])));
 
 if (count($verif) > 0) {
 

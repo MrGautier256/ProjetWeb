@@ -140,7 +140,6 @@ if ($delegateCreate == 1) {
 
 
     if ($VerifDelegateLoginResultFetch == false && $VerifDelegateMailResultFetch == false) {
-        echo "apres deuxieme if</br>";
         $delegateFirstName = $_POST['delegateFirstName'];
         $delegateLastName = $_POST['delegateLastName'];
         $delegateCenter = $_POST['delegateCenter'];
@@ -209,9 +208,7 @@ if ($createInternshipNewCompany == 1) {
         " . $bdd->quote($internshipDate) . ", 
         (SELECT ID_Entreprise FROM entreprise WHERE En_Nom = " . $bdd->quote($newCompanyName) . "));";
 
-
         var_dump($InternshipNewCompanyreq_str);
-
 
         $InternshipNewCompanyresults = $bdd->query($InternshipNewCompanyreq_str);
         $bdd = null;
@@ -226,15 +223,18 @@ if ($createInternshipNewCompany == 1) {
 
 if ($createInternshipOldCompany == 1) {
 
-    $internshipName = $_POST['internshipName'];
+    $internshipName = $_POST['oldInternshipName'];
+    $companyName = $_POST['oldCompanyName'];
 
-    $VerifinternshipName = "SELECT OS_Nom FROM `offre_de_stage` WHERE OS_Nom = " . $bdd->quote($internshipName) . "OR OS_Nom = LOWER(" . $bdd->quote($internshipName) . ")";
+    $VerifinternshipName = "SELECT OS_Nom FROM `offre_de_stage` WHERE OS_Nom =" . $bdd->quote($internshipName) . " 
+    AND ID_Entreprise = (select ID_Entreprise from entreprise where En_Nom = " . $bdd->quote($companyName) . ")";
+
     $VerifinternshipNameResultFetch = $bdd->query($VerifinternshipName)->fetch(PDO::FETCH_ASSOC);
 
-    if ($VerifinternshipNameResultFetch == false) {
+    if ($VerifinternshipNameResultFetch == false && isset($internshipName) && isset($companyName)) {
+        var_dump($VerifinternshipNameResultFetch);
 
 
-        $companyName = $_POST['oldCompanyName'];
         $internshipSkills = $_POST['internshipSkills'];
         $internshipCompensation = $_POST['internshipCompensation'];
         $internshipDuration = $_POST['internshipDuration'];

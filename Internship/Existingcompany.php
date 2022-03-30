@@ -45,7 +45,7 @@ $Entreprises = new DisplayEntreprise();
                             </select>
                             <div class="Student-box">
                                 <li> Internship Name : </li>
-                                <input class="formulaireInput" id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
+                                <input class="formulaireInput" id="oldInternshipName" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Skills : </li>
