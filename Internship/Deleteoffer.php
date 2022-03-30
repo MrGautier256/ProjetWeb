@@ -27,10 +27,10 @@ $Entreprises = new DisplayEntreprise();
         <div class="add-content">
 
             <h2 class="title-main-content">Delete Offer</h2>
-            <form method="post" action="">
+            <form method="post" action="../FunctionPHP/delete.php">
                 <div class="search-box1">
                     <img src="../images/search.png">
-                    <input id="myInput" name="pseudoOfferLogin" type="text" placeholder="Offer Name" required="required">
+                    <input id="OfferName" name="OfferName" type="text" placeholder="Offer Name" required="required">
                 </div>
                 <div class="Student-box">
                     <li style="color: black"> Company : </li>
@@ -44,6 +44,10 @@ $Entreprises = new DisplayEntreprise();
                         }
                         ?>
                     </select>
+                    <div class="Student-box">
+                        <li></li>
+                        <input id="offerDelete" name="offerDelete" type="radio" value="1" style="visibility: hidden" checked>
+                    </div>
                 </div>
                 <div class="write-post-container1">
                     <input class="favorite-styled-menu" type="submit" value="Delete">
