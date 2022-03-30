@@ -1,5 +1,5 @@
 <?php
-include_once("../Bar/Leftbar.html");
+include_once("../Bar/Leftbar.php");
 ?>
 <div class="profile-container">
     <img src="../images/cover.png" class="cover-img">

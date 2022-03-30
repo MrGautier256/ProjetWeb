@@ -12,7 +12,7 @@
 <body>
     <?php include_once("../bar/Navbar.html"); ?>
     <div class="container">
-        <?php include_once("../bar/Leftbar.html"); ?>
+        <?php include_once("../bar/Leftbar.php"); ?>
         <div class="main-content">
 
             <h2 class="title-main-content">Companies</h2>

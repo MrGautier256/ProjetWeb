@@ -23,9 +23,11 @@
             <a href="../Student/Searchstudent.php"><img src="../images/Student.png"></i>Student</a>
             <a href="../Delegates/Searchdelegate.php"><img src="../images/watch.png"> Delegates</a>
             <a href="../Pilots/Searchpilot.php"><img src="../images/marketplace.png"> Pilots</a>
+            <div class="Crud-student">
             <a href="../Accounts/CreateAccounts.php"><img src="../images/add.png"> Create</a>
             <a href="../Accounts/ModifyAccounts.php"><img src="../images/edit.png"> Modify</a>
             <a href="../Accounts/DeleteAccounts.php"><img src="../images/delete.png"> Delete</a>
+            </div>
             <div class="Mobile-content">
             <a href="../ContentRightBar/Wishlist.php"><img src="../images/wish.png"> My Wish List</a>
             <a href="../ContentRightBar/Candidatures.php"><img src="../images/candidature.png"> My Candidatures</a></div>

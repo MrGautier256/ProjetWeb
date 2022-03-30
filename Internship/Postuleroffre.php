@@ -19,7 +19,7 @@
 
 <body>
     <?php include_once('../Bar/Navbar.html') ?>
-    <?php include_once('../Bar/Leftbar.html') ?>
+    <?php include_once('../Bar/Leftbar.php') ?>
 
     <div class="containeroffre">
         <div class="formulaire-wrapper">

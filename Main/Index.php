@@ -13,7 +13,7 @@
     <?php include_once("../Bar/NavBar.html"); ?>
 
     <div class="container">
-        <?php include_once("../Bar/Leftbar.html"); ?>
+        <?php include_once("../Bar/Leftbar.php"); ?>
         <div class="main-content">
             <h2 class="title-main-content">Latest News</h2>
             <div class="write-post-container">

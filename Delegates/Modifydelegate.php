@@ -16,7 +16,7 @@
 
     <div class="container">
         <?php
-        include_once("../Bar/Leftbar.html");
+        include_once("../Bar/Leftbar.php");
         ?>
 
         <div class="add-content">
