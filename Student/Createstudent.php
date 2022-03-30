@@ -17,7 +17,6 @@
         }
     </style>
     <?php
-    session_start();
     include_once("../Bar/Navbar.html");
     ?>
 

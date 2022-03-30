@@ -125,11 +125,13 @@ function ConfirmPassword(Pass1, Pass2) {
 
 function verifchaine(Login, Prenom, Nom) {
 
-    if (Login.match(/^([0-9a-zA-Z]){6,17}$/) && Prenom.match(/^([0-9a-zA-Z]){6,17}$/) && Nom.match(/^([0-9a-zA-Z]){6,17}$/)) {
+    if (Login.match(/^([0-9a-zA-Z]){2,17}$/) && Prenom.match(/^([0-9a-zA-Z]){2,17}$/) && Nom.match(/^([0-9a-zA-Z]){2,17}$/)) {
         return true;
     }
     else {
-        alert("Veuillez utilisez des caractères classiques");
+        alert(Login);
+        alert(Prenom);
+        alert(Nom);
         return false;
     }
 
