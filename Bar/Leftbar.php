@@ -27,12 +27,13 @@
            </div>
            <?php
             // 1 = Student 2 = pilot 3 = Admin 4 = Delegate
-            if ($_SESSION['user']['ID_Role'] != 1) {
-                echo '
+            // if ($_SESSION['user']['ID_Role'] != 1) {
+            echo '
                <a href="../Accounts/CreateAccounts.php"><img src="../images/add.png"> Create</a>
                <a href="../Accounts/ModifyAccounts.php"><img src="../images/edit.png"> Modify</a>
                <a href="../Accounts/DeleteAccounts.php"><img src="../images/delete.png"> Delete</a>';
-            } ?>
+            // } 
+            ?>
 
            <div class="Mobile-content">
                <a href="../ContentRightBar/Wishlist.php"><img src="../images/wish.png"> My Wish List</a>
