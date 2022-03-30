@@ -55,6 +55,7 @@ if (isset($studentLogin) && $studentCenter === "" && $studentPromotion === "") {
     $solo = false;
 }
 
+
 ?>
 
 <!DOCTYPE html>
