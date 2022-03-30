@@ -19,26 +19,29 @@
     include_once("../Bar/Navbar.html");
     ?>
     <div class="container">
-        <?php
-        include_once("../Bar/Leftbar.php");
-        ?>
 
-        <div id="Crud-student">
+        <?php
+        switch ($_SESSION['user']['ID_Role']) {
+            case '1':
+                header('Location: ../Main/Index.php');
+                break;
+
+            case '4':
+                include_once("../Bar/Leftbar.php");
+                echo '   <div id="Crud-student">
+            <div class="add-content">
+                <div class="write-create-container">
+                    <div class="student-account">
+                        <H2 style="color: #fff;">Create Account</H2>';
+                break;
+            default:
+                include_once("../Bar/Leftbar.php");
+                echo '
+                   <div id="Crud-student">
             <div class="add-content">
                 <div class="write-create-container">
                     <div class="student-account">
                         <H2 style="color: #fff;">Create Account</H2>
-                        <?php
-                        switch ($_SESSION['user']['ID_Role']) {
-                            case '1':
-                                echo "
-        <h1 style ='color: #fff'>Vous n'avez pas les droits</h1>";
-                                break;
-
-                            case '4':
-                                break;
-                            default:
-                                echo '
                         <div class="button-box-menu">
                             <form action="../Student/Createstudent.php">
                                 <button class="favorite-styled-menu" type="submit">
@@ -53,18 +56,21 @@
                                 </button>
                             </form>
                         </div>';
-                        }
-                        if ($_SESSION['user']['ID_Role'] != 2 && $_SESSION['user']['ID_Role'] != 1 && $_SESSION['user']['ID_Role'] != 4) {
-                            echo '<div class="button-box-menu">
+        } ?>
+
+
+
+        <?php if ($_SESSION['user']['ID_Role'] == 3) {
+            echo '<div class="button-box-menu">
                             <form action="../Pilots/CreatePilot.php">
                                 <button class="favorite-styled-menu" type="submit">
                                     Create Pilot
                                 </button>
                             </form>';
-                        }
-                        // $GLOBALS["session"]
-                        if ($_SESSION['user']['ID_Role'] != 1) {
-                            echo '
+        }
+        // $GLOBALS["session"]
+        if ($_SESSION['user']['ID_Role'] != 1) {
+            echo '
                             <div class="button-box-menu">
                                 <form action="../Internship/CreateOffer.php">
                                     <button class="favorite-styled-menu" type="submit">
@@ -80,25 +86,25 @@
             </div>
             <script src="../Javascriptindex.js"></script>
         </div>';
-                        }
-                        ?>
-                        <style>
-                            #Crud-student {
-                                width: 100%;
-                            }
+        }
+        ?>
+        <style>
+            #Crud-student {
+                width: 100%;
+            }
 
-                            .add-content {
-                                width: 100%;
-                            }
+            .add-content {
+                width: 100%;
+            }
 
-                            .container h1 {
-                                width: 100%;
-                                text-align: center;
-                                margin-top: 20px;
-                            }
+            .container h1 {
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
 
-                            .button-box-menu {
-                                width: 100%;
-                            }
-                        </style>
+            .button-box-menu {
+                width: 100%;
+            }
+        </style>
 </body>
