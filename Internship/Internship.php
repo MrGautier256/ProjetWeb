@@ -30,10 +30,6 @@
         <div class="Internship-content">
 
             <h2 class="title-main-content">InternShip Offers</h2>
-            <div class="search-box1">
-                <img src="../images/search.png">
-                <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search Offers">
-            </div>
             <div class="write-post-container">
                 <ul class="Offers-list">
                     <li>

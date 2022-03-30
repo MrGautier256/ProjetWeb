@@ -22,10 +22,6 @@
         <div class="Delegate-content">
 
             <h2 class="title-main-content">Delegates</h2>
-            <div class="search-box1">
-                <img src="../images/search.png">
-                <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search Delegates">
-            </div>
 
             <div class="write-post-container">
                 <ul class="Delegate-list">

@@ -16,10 +16,6 @@
         <div class="main-content">
 
             <h2 class="title-main-content">Companies</h2>
-            <div class="search-box1">
-                <img src="../images/search.png">
-                <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search Companies">
-            </div>
             <div class="write-post-container">
                 <ul id="Entreprises-list">
                     <li><a href="">PC soft <img src="../images/pc-soft.png" class="entreprises-logo"></a></li>

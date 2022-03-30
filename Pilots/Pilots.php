@@ -17,10 +17,6 @@
             <div class="main-content">
 
                 <h2 class="title-main-content">Pilots</h2>
-                <div class="search-box1">
-                    <img src="../images/search.png">
-                    <input id="myInput" type="text" onkeyup="myFunction()" placeholder="Search Pilots   ">
-                </div>
 
                 <div class="write-post-container">
                     <ul id="Pilot-list">
