@@ -1,9 +1,3 @@
-<?php
-require('../FunctionPHP/DisplayClass.php');
-$Entreprises = new DisplayEntreprise();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,56 +21,40 @@ $Entreprises = new DisplayEntreprise();
 
         <div class="add-content">
 
-            <div class="write-post-container1">
-                <div class="student-account">
-                    <ul>
-                        <h2 style="color: white; margin-bottom:20px;">Internship Informations </h2>
-                        <form method="post" id="CreateOfferOldCompany" action="../FunctionPHP/import.php">
-                            <div class="Student-box">
-                                <li> Company : </li>
-                                <select name="oldCompanyName" required="required">
-                                    <option value="">Choose the Company</option>
-                                    <?php
-                                    foreach ($Entreprises->getCompanies() as $Entreprise) {
-                                    ?>
-                                        <option value="<?= $Entreprise['En_Nom'] ?>"><?= $Entreprise['En_Nom'] ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="Student-box">
-                                <li> Internship Name : </li>
-                                <input class="formulaireInput" id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Skills : </li>
-                                <input class="formulaireInput" id="internshipSkills" name="internshipSkills" type="text" placeholder="Internship skills" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Compensation : </li>
-                                <input class="formulaireInput" id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Duration : </li>
-                                <input class="formulaireInput" id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Date : </li>
-                                <input class="formulaireInput" id="internshipDate" name="internshipDate" type="date" placeholder="InternShip Date" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li></li>
-                                <input class="formulaireInput" id="createInternshipOldCompany" name="createInternshipOldCompany" type="radio" value="1" style="visibility: hidden" checked>
-                            </div>
-                            <div class="button-box">
-                                <input class="favorite-styled" type="submit" value="Validate">
-                                <input class="favorite-styled" type="reset" value="Reset">
-                            </div>
-                        </form>
-                    </ul>
-                </div>
-
+            <div class="student-account">
+                <ul>
+                    <h2 style="color: white; margin-bottom:20px;">Internship Informations </h2>
+                    <form method="post" id="CreateOfferOldCompany" action="../FunctionPHP/import.php">
+                        <div class="Student-box">
+                            <li> Internship Name : </li>
+                            <input class="formulaireInput" id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
+                        </div>
+                        <div class="Student-box">
+                            <li> Skills : </li>
+                            <input class="formulaireInput" id="internshipSkills" name="internshipSkills" type="text" placeholder="Internship skills" required="required">
+                        </div>
+                        <div class="Student-box">
+                            <li> Compensation : </li>
+                            <input class="formulaireInput" id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
+                        </div>
+                        <div class="Student-box">
+                            <li> Duration : </li>
+                            <input class="formulaireInput" id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
+                        </div>
+                        <div class="Student-box">
+                            <li> Date : </li>
+                            <input class="formulaireInput" id="internshipDate" name="internshipDate" type="date" placeholder="InternShip Date" required="required">
+                        </div>
+                        <div class="Student-box">
+                            <li></li>
+                            <input class="formulaireInput" id="createInternshipOldCompany" name="createInternshipOldCompany" type="radio" value="1" style="visibility: hidden" checked>
+                        </div>
+                        <div class="button-box">
+                            <input class="favorite-styled" type="submit" value="Validate">
+                            <input class="favorite-styled" type="reset" value="Reset">
+                        </div>
+                    </form>
+                </ul>
             </div>
         </div>
 

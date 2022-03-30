@@ -10,58 +10,58 @@
 </head>
 
 <body>
-    <?php
-    include_once("../Bar/Navbar.html");
-    ?>
-
-    <div class="container">
+    <div id="Crud-student">
         <?php
-        include_once("../Bar/Leftbar.php");
+        include_once("../Bar/Navbar.html");
         ?>
 
-        <div class="add-content">
-            <div class="write-create-container">
-                <div class="student-account">
-                    <H2 style="color: #fff;">Create Account</H2>
-                    <div class="button-box-menu">
-                        <form action="../Student/Createstudent.php">
-                            <button class="favorite-styled-menu" type="submit">
-                                Create Student
-                            </button>
-                        </form>
-                    </div>
-                    <div class="button-box-menu">
-                        <form action="../Delegates/CreateDelegate.php">
-                            <button class="favorite-styled-menu" type="submit">
-                                Create Delegate
-                            </button>
-                        </form>
-                    </div>
-                    <div class="button-box-menu">
-                        <form action="../Pilots/CreatePilot.php">
-                            <button class="favorite-styled-menu" type="submit">
-                                Create Pilot
-                            </button>
-                        </form>
-                    </div>
-                    <div class="button-box-menu">
-                        <form action="../Internship/CreateOffer.php">
-                            <button class="favorite-styled-menu" type="submit">
-                                Create InternShip Offer
-                            </button>
-                        </form>
-                    </div>
-                </div>
+        <div class="container">
+            <?php
+            include_once("../Bar/Leftbar.php");
+            ?>
 
+            <div class="add-content">
+                <div class="write-create-container">
+                    <div class="student-account">
+                        <H2 style="color: #fff;">Create Account</H2>
+                        <div class="button-box-menu">
+                            <form action="../Student/Createstudent.php">
+                                <button class="favorite-styled-menu" type="submit">
+                                    Create Student
+                                </button>
+                            </form>
+                        </div>
+                        <div class="button-box-menu">
+                            <form action="../Delegates/CreateDelegate.php">
+                                <button class="favorite-styled-menu" type="submit">
+                                    Create Delegate
+                                </button>
+                            </form>
+                        </div>
+                        <div id="Crud-pilot">
+                            <div class="button-box-menu">
+                                <form action="../Pilots/CreatePilot.php">
+                                    <button class="favorite-styled-menu" type="submit">
+                                        Create Pilot
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="button-box-menu">
+                            <form action="../Internship/CreateOffer.php">
+                                <button class="favorite-styled-menu" type="submit">
+                                    Create InternShip Offer
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
         </div>
 
+
+        <script src="../Javascriptindex.js"></script>
     </div>
-
-
-    <script src="../Javascriptindex.js"></script>
-
-
-
-
 </body>
