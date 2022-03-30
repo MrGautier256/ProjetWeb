@@ -10,38 +10,38 @@
 </head>
 
 <body>
-    <div id="Crud-pilot">
+    <section id="Crud-pilot">
         <?php
         include_once("../Bar/Navbar.html");
         include_once("../Const.php");
         ?>
 
-        <div class="container">
+        <section class="container">
             <?php
             include_once("../Bar/Leftbar.php");
             ?>
 
-            <div class="add-content">
+            <article class="add-content">
 
                 <h2 class="title-main-content">Delete Pilot Account</h2>
                 <form method="post" action="../FunctionPHP/delete.php">
 
-                    <div class="search-box1">
+                    <article class="search-box1">
                         <img src="../images/search.png">
                         <input id="pilotLogin" name="pilotLogin" type="text" placeholder="Pilot Login" required="required">
-                    </div>
-                    <div class="Student-box">
+                    </article>
+                    <article class="Student-box">
                         <li></li>
                         <input id="pilotDelete" name="pilotDelete" type="radio" value="1" style="visibility: hidden" checked>
-                    </div>
-                    <div class="write-post-container1">
+                    </article>
+                    <article class="write-post-container1">
                         <input class="favorite-styled-menu" type="submit" value="Delete">
-                    </div>
+                    </article>
                 </form>
-            </div>
+            </article>
 
-        </div>
-    </div>
+        </section>
+    </section>
 
 
     <script src="../Javascriptindex.js"></script>

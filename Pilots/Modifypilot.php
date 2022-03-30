@@ -10,104 +10,106 @@
 </head>
 
 <body>
-    <?php
-    include_once("../Bar/Navbar.html");
-    include_once("../Const.php");
-    ?>
-
-    <div class="container">
+    <main>
         <?php
-        include_once("../Bar/Leftbar.php");
+        include_once("../Bar/Navbar.html");
+        include_once("../Const.php");
         ?>
 
-        <div class="add-content">
+        <section class="container">
+            <?php
+            include_once("../Bar/Leftbar.php");
+            ?>
 
-            <h2 class="title-main-content">Modify Pilot Account</h2>
-            <form method="post" action="">
-                <div class="search-box1">
-                    <img src="../images/search.png">
-                    <input class="formulaireInput" id="myInput" name="pseudoPilotLogin" type="text" placeholder="Pilot Login" required="required">
-                </div>
-                <div class="write-post-container1">
-                    <div class="student-account">
-                        <ul>
-                            <div class="Student-box">
-                                <li> First Name : </li>
-                                <input class="formulaireInput" id="myInput" name="pseudoPilotFirstName" type="text" placeholder="Pilot FirstName" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Name : </li>
-                                <input class="formulaireInput" id="myInput" name="pseudoPilotName" type="text" placeholder="Pilot Name" required="required">
-                            </div>
-                            <div class="Student-box">
-                                <li> Promotion : </li>
-                                <select name="pseudoPilotPromotion" required="required">
-                                    <option value="">Choose the Promotion</option>
-                                    <option value="">CPI A1</option>
-                                    <option value="">CPI A2-INFORMATIQUE</option>
-                                    <option value="">CPIA2-SYSTEME EMBARQUÉ</option>
-                                    <option value="">CPIA2 - BTP</option>
-                                    <option value="">CPIA2 - GENERALISTE</option>
-                                    <option value="">A3 - INFORMATIQUE</option>
-                                    <option value="">A3 - SYSTEME EMBARQUÉ</option>
-                                    <option value="">A3 - BTP </option>
-                                    <option value="">A3 - GENERALISTE </option>
-                                    <option value="">A4 - INFORMATIQUE </option>
-                                    <option value="">A4 - SYSTEME EMBARQUÉ </option>
-                                    <option value="">A4 - BTP </option>
-                                    <option value="">A4 - GENERALISTE </option>
-                                    <option value="">A5 - INFORMATIQUE </option>
-                                    <option value="">A5 - SYSTEME EMBARQUÉ </option>
-                                    <option value="">A5 - BTP </option>
-                                    <option value="">A5 - GENERALISTE </option>
-                                </select>
-                            </div>
-                            <div class="Student-box">
-                                <li> Center : </li>
-                                <select name="pseudoPilotCenter" required="required">
-                                    <option value="">Choose the Center</option>
-                                    <option value="">Aix-en-Provence</option>
-                                    <option value="">Angoulême</option>
-                                    <option value="">Arras</option>
-                                    <option value="">Bordeaux</option>
-                                    <option value="">Brest</option>
-                                    <option value="">Caen</option>
-                                    <option value="">Dijon</option>
-                                    <option value="">Grenoble</option>
-                                    <option value="">La Rochelle</option>
-                                    <option value="">Le Mans</option>
-                                    <option value="">Lille</option>
-                                    <option value="">Lyon</option>
-                                    <option value="">Montpellier</option>
-                                    <option value="">Nancy</option>
-                                    <option value="">Nantes</option>
-                                    <option value="">Nice</option>
-                                    <option value="">Orléans</option>
-                                    <option value="">Paris Nanterre</option>
-                                    <option value="">Pau</option>
-                                    <option value="">Reims</option>
-                                    <option value="">Rouen</option>
-                                    <option value="">Saint-Nazaire</option>
-                                    <option value="">Strasbourg</option>
-                                    <option value="">Toulouse</option>
-                                </select>
-                            </div>
-                            <div class="Student-box">
-                                <li> Email : </li>
-                                <input class="formulaireInput" id="myInput" name="pseudoPilotEmail" type="text" placeholder="Pilot Email" required="required">
-                            </div>
-                            <div class="button-box">
-                                <input class="favorite-styled" type="submit" value="Validate">
-                                <input class="favorite-styled" type="reset" value="Reset">
-                            </div>
-                        </ul>
-                    </div>
+            <section class="add-content">
 
-                </div>
-            </form>
-        </div>
+                <h2 class="title-main-content">Modify Pilot Account</h2>
+                <form method="post" action="">
+                    <article class="search-box1">
+                        <img src="../images/search.png">
+                        <input class="formulaireInput" id="myInput" name="pseudoPilotLogin" type="text" placeholder="Pilot Login" required="required">
+                    </article>
+                    <article class="write-post-container1">
+                        <article class="student-account">
+                            <ul>
+                                <article class="Student-box">
+                                    <li> First Name : </li>
+                                    <input class="formulaireInput" id="myInput" name="pseudoPilotFirstName" type="text" placeholder="Pilot FirstName" required="required">
+                                </article>
+                                <article class="Student-box">
+                                    <li> Name : </li>
+                                    <input class="formulaireInput" id="myInput" name="pseudoPilotName" type="text" placeholder="Pilot Name" required="required">
+                                </article>
+                                <article class="Student-box">
+                                    <li> Promotion : </li>
+                                    <select name="pseudoPilotPromotion" required="required">
+                                        <option value="">Choose the Promotion</option>
+                                        <option value="">CPI A1</option>
+                                        <option value="">CPI A2-INFORMATIQUE</option>
+                                        <option value="">CPIA2-SYSTEME EMBARQUÉ</option>
+                                        <option value="">CPIA2 - BTP</option>
+                                        <option value="">CPIA2 - GENERALISTE</option>
+                                        <option value="">A3 - INFORMATIQUE</option>
+                                        <option value="">A3 - SYSTEME EMBARQUÉ</option>
+                                        <option value="">A3 - BTP </option>
+                                        <option value="">A3 - GENERALISTE </option>
+                                        <option value="">A4 - INFORMATIQUE </option>
+                                        <option value="">A4 - SYSTEME EMBARQUÉ </option>
+                                        <option value="">A4 - BTP </option>
+                                        <option value="">A4 - GENERALISTE </option>
+                                        <option value="">A5 - INFORMATIQUE </option>
+                                        <option value="">A5 - SYSTEME EMBARQUÉ </option>
+                                        <option value="">A5 - BTP </option>
+                                        <option value="">A5 - GENERALISTE </option>
+                                    </select>
+                                </article>
+                                <article class="Student-box">
+                                    <li> Center : </li>
+                                    <select name="pseudoPilotCenter" required="required">
+                                        <option value="">Choose the Center</option>
+                                        <option value="">Aix-en-Provence</option>
+                                        <option value="">Angoulême</option>
+                                        <option value="">Arras</option>
+                                        <option value="">Bordeaux</option>
+                                        <option value="">Brest</option>
+                                        <option value="">Caen</option>
+                                        <option value="">Dijon</option>
+                                        <option value="">Grenoble</option>
+                                        <option value="">La Rochelle</option>
+                                        <option value="">Le Mans</option>
+                                        <option value="">Lille</option>
+                                        <option value="">Lyon</option>
+                                        <option value="">Montpellier</option>
+                                        <option value="">Nancy</option>
+                                        <option value="">Nantes</option>
+                                        <option value="">Nice</option>
+                                        <option value="">Orléans</option>
+                                        <option value="">Paris Nanterre</option>
+                                        <option value="">Pau</option>
+                                        <option value="">Reims</option>
+                                        <option value="">Rouen</option>
+                                        <option value="">Saint-Nazaire</option>
+                                        <option value="">Strasbourg</option>
+                                        <option value="">Toulouse</option>
+                                    </select>
+                                </article>
+                                <article class="Student-box">
+                                    <li> Email : </li>
+                                    <input class="formulaireInput" id="myInput" name="pseudoPilotEmail" type="text" placeholder="Pilot Email" required="required">
+                                </article>
+                                <article class="button-box">
+                                    <input class="favorite-styled" type="submit" value="Validate">
+                                    <input class="favorite-styled" type="reset" value="Reset">
+                                </article>
+                            </ul>
+                        </article>
 
-    </div>
+                    </article>
+                </form>
+            </section>
+
+        </section>
+    </main>
     <style>
         .Student-box select {
             font-size: 0.9rem;

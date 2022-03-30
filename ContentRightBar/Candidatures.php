@@ -48,73 +48,73 @@
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
-        <div class="Internship-content">
+        <section class="Internship-content">
 
             <h2 class="title-main-content">My Candidature(s)</h2>
-            <div class="write-post-container">
+            <section class="write-post-container">
                 <ul class="Offers-list">
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
                                 Ubisoft
-                                <div class="Place-offer">
+                                <article class="Place-offer">
                                     <ul>
                                         <li> Castelneau-Le-Lez</li>
                                         <li> STEP : 1</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="left-event">
+                                </article>
+                            </article>
+                            <article class="left-event">
                                 <h3>18</h3>
                                 <span>March</span>
-                            </div>
-                        </div>
+                            </article>
+                        </article>
 
                     </li>
 
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
                                 DELL
-                                <div class="Place-offer">
+                                <article class="Place-offer">
                                     <ul>
                                         <li> Odysseum</li>
                                         <li> STEP : 3</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="left-event">
+                                </article>
+                            </article>
+                            <article class="left-event">
                                 <h3>22</h3>
                                 <span>June</span>
-                            </div>
-                        </div>
+                            </article>
+                        </article>
                     </li>
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
                                 INETUM
-                                <div class="Place-offer">
+                                <article class="Place-offer">
                                     <ul>
                                         <li> Millenaire</li>
                                         <li> STEP : 2</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="left-event">
+                                </article>
+                            </article>
+                            <article class="left-event">
                                 <h3>25</h3>
                                 <span>July</span>
-                            </div>
-                        </div>
+                            </article>
+                        </article>
                     </li>
-            </div>
-            </ul>
-        </div>
-
-        <script src="../Javascriptindex.js"></script>
+                </ul>
+            </section>
+        </section>
+    </section>
+    <script src="../Javascriptindex.js"></script>
 </body>
 
 </html>

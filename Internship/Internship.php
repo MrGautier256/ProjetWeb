@@ -24,55 +24,55 @@
     <?php include_once("../Bar/NavBar.html");
     include_once("../Const.php"); ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
-        <div class="Internship-content">
+        <section class="Internship-content">
 
             <h2 class="title-main-content">InternShip Offers</h2>
-            <div class="write-post-container">
+            <article class="write-post-container">
                 <ul class="Offers-list">
                     <li>
 
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
                                 Assistant Chef de Projet Informatique
-                                <div class="Place-offer">
+                                <article class="Place-offer">
                                     Millenaire Montpellier, France
-                                </div>
+                                </article>
 
                                 <p>Dans le cadre du déploiement de la stratégie Supply Chain 2021-2024 du groupe SGDBF, l'équipe
                                     DSI
                                     ENTREPÔT recherche
                                     un(e) Concepteur(trice) technico-fonctionnel(le) pour</p>
-                            </div>
+                            </article>
                             <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo">
-                        </div>
+                        </article>
 
                     </li>
 
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
                                 Assistant Chef de Projet Informatique
-                                <div class="Place-offer">
+                                <article class="Place-offer">
                                     Millenaire Montpellier, France
-                                </div>
+                                </article>
 
                                 <p>Dans le cadre du déploiement de la stratégie Supply Chain 2021-2024 du groupe SGDBF, l'équipe
                                     DSI
                                     ENTREPÔT recherche
                                     un(e) Concepteur(trice) technico-fonctionnel(le) pour</p>
-                            </div>
+                            </article>
                             <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo">
-                        </div>
+                        </article>
 
                     </li>
-            </div>
+            </article>
             </ul>
-        </div>
-    </div>
+        </section>
+    </section>
 
     <script src="../Javascriptindex.js"></script>
 </body>

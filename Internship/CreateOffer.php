@@ -15,35 +15,35 @@
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="add-content">
-            <div class="write-create-container">
-                <div class="student-account">
+        <section class="add-content">
+            <article class="write-create-container">
+                <article class="student-account">
                     <h2 style="color: white;">Create an Offer</h2>
-                    <div class="button-box-menu">
+                    <article class="button-box-menu">
                         <form action="./Newcompany.php">
                             <button class="favorite-styled-menu" type="submit">
                                 New Company
                             </button>
                         </form>
-                    </div>
-                    <div class="button-box-menu">
+                    </article>
+                    <article class="button-box-menu">
                         <form action="./Existingcompany.php">
                             <button class="favorite-styled-menu" type="submit">
                                 Existing company
                             </button>
                         </form>
-                    </div>
-                </div>
+                    </article>
+                </article>
 
-            </div>
-        </div>
+            </article>
+        </section>
 
-    </div>
+    </section>
     <style>
     </style>
 

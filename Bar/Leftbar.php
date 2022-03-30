@@ -15,7 +15,7 @@
            color: white;
        }
    </style>
-   <div class="left-sidebar" id="left-sidebar">
+   <aside class="left-sidebar" id="left-sidebar">
        <div class="imp-links">
            <a href="../Main/index.php"><img src="../images/home.png"> Home</a>
            <a href="../Internship/searchoffer.php"><img src="../images/friends.png"> internship offers</a>
@@ -43,4 +43,4 @@
        <form>
            <input class="Return-button" type="button" value="Return" onclick="history.go(-1)">
        </form>
-   </div>
+   </aside>

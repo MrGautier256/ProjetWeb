@@ -15,16 +15,16 @@
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="Delegate-content">
+        <section class="Delegate-content">
 
             <h2 class="title-main-content">Delegates</h2>
 
-            <div class="write-post-container">
+            <section class="write-post-container">
                 <ul class="Delegate-list">
                     <li>
                         <a href="#">Thomas Altazin <br>
@@ -50,12 +50,10 @@
 
 
                 </ul>
-            </div>
-        </div>
+            </section>
+        </section>
 
-    </div>
-
-
+    </section>
     <script src="../Javascriptindex.js"></script>
 
 

@@ -15,23 +15,23 @@
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="add-content">
+        <section class="add-content">
 
             <h2 class="title-main-content">Search Student</h2>
             <form method="post" action="./Student.php">
 
-                <div class="student-account">
+                <section class="student-account">
                     <ul>
-                        <div class="Student-box">
+                        <article class="Student-box">
                             <li> Search by Login : </li>
                             <input class="formulaireInput" id="studentLogin" name="studentLogin" type="text" placeholder="Student Login">
-                        </div>
-                        <div class="Student-box">
+                        </article>
+                        <article class="Student-box">
                             <li> Promotion : </li>
                             <select name="studentPromotion">
                                 <option value="">Choose Student Class</option>
@@ -53,8 +53,8 @@
                                 <option value="A5-BTP">A5-BTP </option>
                                 <option value="A5-GENERALISTE">A5-GENERALISTE </option>
                             </select>
-                        </div>
-                        <div class="Student-box">
+                        </article>
+                        <article class="Student-box">
                             <li> Center : </li>
                             <select name="studentCenter">
                                 <option value="">Choose the Center</option>
@@ -83,18 +83,18 @@
                                 <option value="Strasbourg">Strasbourg</option>
                                 <option value="Toulouse">Toulouse</option>
                             </select>
-                        </div>
-                        <div class="button-box">
+                        </article>
+                        <article class="button-box">
                             <input class="favorite-styled" type="submit" value="Search">
                             <input class="favorite-styled" type="reset" value="Reset">
-                        </div>
+                        </article>
                     </ul>
-                </div>
+                </section>
 
             </form>
-        </div>
+        </section>
 
-    </div>
+    </section>
     <style>
         .Student-box select {
             font-size: 0.9rem;

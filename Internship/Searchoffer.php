@@ -15,37 +15,37 @@
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="add-content">
+        <section class="add-content">
 
             <h2 class="title-main-content">Search InternShip Offer</h2>
             <form method="post" action="../FunctionPHP/import.php">
 
-                <div class="student-account">
+                <section class="student-account">
                     <ul>
-                        <div class="Student-box">
+                        <article class="Student-box">
                             <li> Search by Name : </li>
                             <input class="formulaireInput" id="delegateLogin" name="delegateLogin" type="text" placeholder="Offer name">
-                        </div>
-                        <div class="Student-box">
+                        </article>
+                        <article class="Student-box">
                             <li> Search by skills : </li>
                             <input class="formulaireInput" id="delegateLogin" name="delegateLogin" type="text" placeholder="Offer Skils">
-                        </div>
-                        <div class="button-box">
+                        </article>
+                        <article class="button-box">
                             <input class="favorite-styled" type="submit" value="Create">
                             <input class="favorite-styled" type="reset" value="Reset">
-                        </div>
+                        </article>
                     </ul>
-                </div>
+                </section>
 
             </form>
-        </div>
+        </section>
 
-    </div>
+    </section>
     <style>
         .Student-box select {
             font-size: 0.9rem;
