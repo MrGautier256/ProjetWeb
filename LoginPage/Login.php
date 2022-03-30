@@ -17,19 +17,19 @@
                 <div class="form login">
                     <span class="title">Login</span>
 
-                    <form action="#">
+                    <form method="post" action="../FunctionPHP/connect.php">
                         <div class="input-field">
-                            <input type="text" placeholder="Enter your email" required>
+                            <input type="text" id="userLogin" name="userLogin" placeholder="Enter your email" required>
                             <i class="uil uil-envelope"></i>
                         </div>
 
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Enter your password" required>
+                            <input type="password" id="userPassword" name="userPassword" class="password" placeholder="Enter your password" required>
                             <i class="uil uil-lock icon"></i>
                             <i class="uil uil-eye-slash showHidePw"></i>
                         </div>
 
-                        <div class="checkbox-text">
+                        <div style="visibility:hidden" class="checkbox-text">
                             <div class="checkbox-content">
                                 <input type="checkbox" id="logCheck">
                                 <label for="logCheck" class="text">Remember me</label>
@@ -38,11 +38,11 @@
                             <a href="#" class="text">Forgot password?</a>
                         </div>
                         <div class="input-field button">
-                            <input type="button" value="Login Now">
+                            <input type="submit" value="Login Now">
                         </div>
                     </form>
 
-                    <div class="login-signup">
+                    <div style="visibility:hidden" class="login-signup">
                         <span class="text">Not a member?
                             <a href="#" class="text signup-link">Sign up now</a>
                         </span>
@@ -52,46 +52,10 @@
 
                 <div class="form signup">
                     <span class="title">Registration</span>
-
-                    <form action="#">
-                        <div class="input-field">
-                            <input type="text" placeholder="Enter your name" required>
-                            <i class="uil uil-user"></i>
-                        </div>
-                        <div class="input-field">
-                            <input type="text" placeholder="Enter your email" required>
-                            <i class="uil uil-envelope"></i>
-                        </div>
-
-                        <div class="input-field">
-                            <input type="password" placeholder="Create a password" required>
-                            <i class="uil uil-lock icon"></i>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" class="password" placeholder="Confirm a password" required>
-                            <i class="uil uil-lock icon"></i>
-                            <i class="uil uil-eye-slash showHidePw"></i>
-                        </div>
-
-                        <div class="checkbox-text">
-                            <div class="checkbox-content">
-                                <input type="checkbox" id="signCheck">
-                                <label for="signCheck" class="text">I accept all terms & conditions</label>
-                            </div>
-                        </div>
-
-                        <div class="input-field button">
-                            <input type="button" value="Register Now">
-                        </div>
-                    </form>
-
-                    <div class="login-signup">
-                        <span class="text">Already have an account?
-                            <a href="#" class="text login-link">Login now</a>
-                        </span>
-                    </div>
+                    </span>
                 </div>
             </div>
+        </div>
         </div>
     </main>
     <script src="JavaScriptSign.js"></script>
