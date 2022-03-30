@@ -19,14 +19,15 @@
        <div class="imp-links">
            <a href="../Main/index.php"><img src="../images/home.png"> Home</a>
            <a href="../Internship/searchoffer.php"><img src="../images/friends.png"> internship offers</a>
-           <a href="../Companies/Searchcompany.php"><img src="../images/work.png"></i>Companies</a>
-           <a href="../Student/Searchstudent.php"><img src="../images/Student.png"></i>Student</a>
+           <a href="../Companies/Searchcompany.php"><img src="../images/work.png">Companies</a>
+           <a href="../Student/Searchstudent.php"><img src="../images/Student.png">Student</a>
            <a href="../Delegates/Searchdelegate.php"><img src="../images/watch.png"> Delegates</a>
            <div id="Crud-pilot">
                <a href="../Pilots/Searchpilot.php"><img src="../images/marketplace.png"> Pilots</a>
            </div>
            <?php
-            if (true) {
+            // 1 = Student 2 = pilot 3 = Admin 4 = Delegate
+            if ($_SESSION['user']['ID_Role'] != 1) {
                 echo '
                <a href="../Accounts/CreateAccounts.php"><img src="../images/add.png"> Create</a>
                <a href="../Accounts/ModifyAccounts.php"><img src="../images/edit.png"> Modify</a>

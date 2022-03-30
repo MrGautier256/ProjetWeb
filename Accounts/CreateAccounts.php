@@ -13,24 +13,32 @@
     <?php
     include_once("../Const.php");
 
-    // 1 = Student 2 = pilot 3 = Delegate
+    // 1 = Student 2 = pilot 3 = Admin 4 = Delegate
 
-    $GLOBALS["session"] = 1;
+
     include_once("../Bar/Navbar.html");
     ?>
     <div class="container">
         <?php
         include_once("../Bar/Leftbar.php");
+        ?>
 
-        if ($GLOBALS["session"] == 1) {
-            echo "
-        <h1>Vous n'avez pas les droits</h1>";
-        } else {
-            echo '<div id="Crud-student">
+        <div id="Crud-student">
             <div class="add-content">
                 <div class="write-create-container">
                     <div class="student-account">
                         <H2 style="color: #fff;">Create Account</H2>
+                        <?php
+                        switch ($_SESSION['user']['ID_Role']) {
+                            case '1':
+                                echo "
+        <h1 style ='color: #fff'>Vous n'avez pas les droits</h1>";
+                                break;
+
+                            case '4':
+                                break;
+                            default:
+                                echo '
                         <div class="button-box-menu">
                             <form action="../Student/Createstudent.php">
                                 <button class="favorite-styled-menu" type="submit">
@@ -45,18 +53,18 @@
                                 </button>
                             </form>
                         </div>';
-        }
-        if ($GLOBALS["session"] != 2 && $GLOBALS["session"] != 1) {
-            echo '<div class="button-box-menu">
+                        }
+                        if ($_SESSION['user']['ID_Role'] != 2 && $_SESSION['user']['ID_Role'] != 1 && $_SESSION['user']['ID_Role'] != 4) {
+                            echo '<div class="button-box-menu">
                             <form action="../Pilots/CreatePilot.php">
                                 <button class="favorite-styled-menu" type="submit">
                                     Create Pilot
                                 </button>
                             </form>';
-        }
-
-        if ($GLOBALS["session"] != 1) {
-            echo '
+                        }
+                        // $GLOBALS["session"]
+                        if ($_SESSION['user']['ID_Role'] != 1) {
+                            echo '
                             <div class="button-box-menu">
                                 <form action="../Internship/CreateOffer.php">
                                     <button class="favorite-styled-menu" type="submit">
@@ -72,21 +80,25 @@
             </div>
             <script src="../Javascriptindex.js"></script>
         </div>';
-        }
-        ?>
-        <style>
-            #Crud-student {
-                width: 100%;
-            }
+                        }
+                        ?>
+                        <style>
+                            #Crud-student {
+                                width: 100%;
+                            }
 
-            .add-content {
-                width: 100%;
-            }
+                            .add-content {
+                                width: 100%;
+                            }
 
-            .container h1 {
-                width: 100%;
-                text-align: center;
-                margin-top: 20px;
-            }
-        </style>
+                            .container h1 {
+                                width: 100%;
+                                text-align: center;
+                                margin-top: 20px;
+                            }
+
+                            .button-box-menu {
+                                width: 100%;
+                            }
+                        </style>
 </body>
