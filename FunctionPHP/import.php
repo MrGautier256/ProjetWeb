@@ -196,7 +196,7 @@ if ($createInternshipNewCompany == 1) {
     " . $bdd->quote($newCompanyName) . ", 
     " . $bdd->quote($newCompanyBusiness) . ",
     " . $bdd->quote($newCompanyCity) . " 
-    , 0, 'Aucune', 'confiant');
+    , 0, 'Aucune', " . $bdd->quote($newCompanyConfidence) . ");
 
     INSERT INTO `offre_de_stage` (`OS_Nom`,`OS_Competences`, `OS_Localites`, `OS_Remuneration`, `OS_Duree`, `OS_Date_Offre`, `ID_Entreprise`) 
     VALUES (
