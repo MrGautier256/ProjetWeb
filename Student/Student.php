@@ -12,8 +12,6 @@ try {
     die;
 }
 
-$solo = true;
-
 
 if (isset($studentCenter) && isset($studentPromotion) && $studentLogin === "") {
 
@@ -24,7 +22,6 @@ if (isset($studentCenter) && isset($studentPromotion) && $studentLogin === "") {
 
     $result = $bdd->query($reqt);
     $StudentResult = $result->fetchAll();
-    $solo = true;
 }
 if (isset($studentPromotion) && $studentCenter === "" && $studentLogin === "") {
 
@@ -34,7 +31,6 @@ if (isset($studentPromotion) && $studentCenter === "" && $studentLogin === "") {
 
     $result = $bdd->query($reqt);
     $StudentResult = $result->fetchAll();
-    $solo = true;
 }
 if (isset($studentCenter) && $studentPromotion === "" && $studentLogin === "") {
     $reqt = "SELECT * from utilisateur 
@@ -43,7 +39,6 @@ if (isset($studentCenter) && $studentPromotion === "" && $studentLogin === "") {
 
     $result = $bdd->query($reqt);
     $StudentResult = $result->fetchAll();
-    $solo = true;
 }
 if (isset($studentLogin) && $studentCenter === "" && $studentPromotion === "") {
 
@@ -52,7 +47,6 @@ if (isset($studentLogin) && $studentCenter === "" && $studentPromotion === "") {
     on etudiant.ID_UTILISATEUR = utilisateur.ID_UTILISATEUR WHERE A_Login = " . $bdd->quote($studentLogin);
     $result = $bdd->query($reqt);
     $StudentResult = $result->fetchAll();
-    $solo = false;
 }
 
 
