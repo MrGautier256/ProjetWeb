@@ -48,27 +48,26 @@ $Entreprises = new DisplayEntreprise();
                             <div class="Student-box">
                                 <li> Internship Name : </li>
                                 <input class="formulaireInput" id="myInput" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
-                                <input id="internshipName" name="internshipName" type="text" placeholder="Internship Name" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Skills : </li>
-                                <input id="internshipSkills" name="internshipSkills" type="text" placeholder="Internship skills" required="required">
+                                <input class="formulaireInput" id="internshipSkills" name="internshipSkills" type="text" placeholder="Internship skills" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Compensation : </li>
-                                <input id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
+                                <input class="formulaireInput" id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Duration : </li>
-                                <input id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
+                                <input class="formulaireInput" id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
                             </div>
                             <div class="Student-box">
                                 <li> Date : </li>
-                                <input id="internshipDate" name="internshipDate" type="date" placeholder="InternShip Date" required="required">
+                                <input class="formulaireInput" id="internshipDate" name="internshipDate" type="date" placeholder="InternShip Date" required="required">
                             </div>
                             <div class="Student-box">
                                 <li></li>
-                                <input id="createInternshipOldCompany" name="createInternshipOldCompany" type="radio" value="1" style="visibility: hidden" checked>
+                                <input class="formulaireInput" id="createInternshipOldCompany" name="createInternshipOldCompany" type="radio" value="1" style="visibility: hidden" checked>
                             </div>
                             <div class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">
