@@ -13,6 +13,8 @@
     <?php
     // 1 = Student 2 = pilot 3 = Admin 4 = Delegate
     include_once("../Bar/Navbar.html");
+    include_once("../Const.php");
+
     ?>
     <div class="container">
         <?php
