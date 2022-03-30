@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once("../Const.php");
 $studentDelete = @$_POST['studentDelete'];
 $pilotDelete = @$_POST['pilotDelete'];
 $delegateDelete = @$_POST['delegateDelete'];

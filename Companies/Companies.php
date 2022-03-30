@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <?php include_once("../bar/Navbar.html"); ?>
+    <?php include_once("../bar/Navbar.html");
+    include_once("../Const.php"); ?>
     <div class="container">
         <?php include_once("../bar/Leftbar.php"); ?>
         <div class="main-content">

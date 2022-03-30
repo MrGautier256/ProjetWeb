@@ -19,7 +19,8 @@
 
 <body>
     <?php include_once('../Bar/Navbar.html') ?>
-    <?php include_once('../Bar/Leftbar.php') ?>
+    <?php include_once('../Bar/Leftbar.php');
+    include_once("../Const.php"); ?>
 
     <div class="containeroffre">
         <div class="formulaire-wrapper">

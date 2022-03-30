@@ -10,62 +10,90 @@
 </head>
 
 <body>
-    <div id="Crud-student">
+    <?php
+    // 1 = Student 2 = pilot 3 = Admin 4 = Delegate
+    include_once("../Bar/Navbar.html");
+    include_once("../Const.php");
+
+    ?>
+    <div class="container">
         <?php
-        include_once("../Bar/Navbar.html");
+        include_once("../Bar/Leftbar.php");
         ?>
-
-        <div class="container">
+        <div class="student-account">
+            <h2 style="color: white;">Modify Account</h2>
             <?php
-            include_once("../Bar/Leftbar.php");
-            ?>
-
-            <div class="add-content">
-
-                <div class="write-create-container">
-                    <div class="student-account">
-                        <h2 style="color: white;">Modify Account</h2>
+            switch ($_SESSION['user']['ID_Role']) {
+                case '1':
+                    echo "
+                                <h1 style ='color: #fff; text-align :center'>Vous n'avez pas les droits</h1>";
+                    break;
+                case '4':
+                    echo '
                         <div class="button-box-menu">
                             <form action="../Student/Modifystudent.php">
-                                <button class="favorite-styled-menu" type="submit">
-                                    Modify Student
+                               <button class="favorite-styled-menu" type="submit">
+                                   Modify Student
                                 </button>
                             </form>
-                        </div>
+                        </div>';
+                    break;
+                default:
+                    echo '
                         <div class="button-box-menu">
+                                                <form action="../Student/Modifystudent.php">
+                                                    <button class="favorite-styled-menu" type="submit">
+                                                        Modify Student
+                                                    </button>
+                                                </form>
+                                            </div>
+                                            <div class="button-box-menu">
                             <form action="../Delegates/Modifydelegate.php">
                                 <button class="favorite-styled-menu" type="submit">
                                     Modify Delegate
                                 </button>
                             </form>
-                        </div>
-                        <div id="Crud-pilot" class="button-box-menu">
+                        </div>';
+            }
+            if ($_SESSION['user']['ID_Role'] != 2 && $_SESSION['user']['ID_Role'] != 1 && $_SESSION['user']['ID_Role'] != 4) {
+                echo '<div id="Crud-pilot" class="button-box-menu">
                             <form action="../Pilots/Modifypilot.php">
                                 <button class="favorite-styled-menu" type="submit">
                                     Modify Pilot
                                 </button>
                             </form>
-                        </div>
-                        <div class="button-box-menu">
+                        </div>';
+            }
+
+            if ($_SESSION['user']['ID_Role'] != 1) {
+                echo '<div class="button-box-menu">
                             <form action="../companies/Modifycompany.php">
                                 <button class="favorite-styled-menu" type="submit">
                                     Modify Company
                                 </button>
                             </form>
-                        </div>
-                        <div class="button-box-menu">
+                        </div>';
+            }
+
+            if ($_SESSION['user']['ID_Role'] != 1) {
+                echo '
+                            <div class="button-box-menu">
                             <form action="../Internship/Modifyoffer.php">
                                 <button class="favorite-styled-menu" type="submit">
                                     Modify Offer
                                 </button>
                             </form>
                         </div>
-                    </div>
-
-                </div>
+                        </div>
             </div>
-
-        </div>
-    </div>
-    <script src="../Javascriptindex.js"></script>
+            <script src="../Javascriptindex.js"></script>
+        </div>';
+            }
+            ?>
+            <!-- ------------------------------------------------------------------ -->
+            <style>
+                .student-account {
+                    width: 100%;
+                }
+            </style>
 </body>

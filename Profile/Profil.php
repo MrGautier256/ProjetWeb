@@ -14,6 +14,7 @@
     <?php
     include_once("../Bar/NavBar.html");
     include_once("./Profilepage.php");
+    include_once("../Const.php");
     ?>
 
     <script src="../Javascriptindex.js"></script>

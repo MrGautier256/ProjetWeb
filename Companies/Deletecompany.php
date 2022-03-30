@@ -18,6 +18,7 @@ $Entreprises = new DisplayEntreprise();
 <body>
     <?php
     include_once("../Bar/Navbar.html");
+    include_once("../Const.php");
     ?>
 
     <div class="container">

@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once("../Const.php");
 
 class LoginRepository
 {

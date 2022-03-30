@@ -12,7 +12,7 @@
 <body>
     <div id="Crud-pilot">
         <?php
-        session_start();
+        include_once("../Const.php");
         include_once("../Bar/Navbar.html");
         ?>
 

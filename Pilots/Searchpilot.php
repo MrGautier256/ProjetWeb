@@ -13,6 +13,7 @@
     <div id="Crud-pilot">
         <?php
         include_once("../Bar/Navbar.html");
+        include_once("../Const.php");
         ?>
 
         <div class="container">

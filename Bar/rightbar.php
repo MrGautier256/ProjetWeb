@@ -1,4 +1,7 @@
-<div class="right-sidebar">
+<?php
+if ($_SESSION['user']['ID_Role'] == 1) {
+
+    echo '<div class="right-sidebar">
     <div class="sidebar-title">
         <h4>My Candidatures</h4>
         <a href="../ContentRightBar/Candidatures.php">See All</a>
@@ -42,10 +45,16 @@
         </div>
     </div>
 
-    <?php
-    include_once("Mywishlist.html");
-    ?>
+';
+    include_once('Mywishlist.html');
+    echo '</div>
 </div>
-
-</div>
-</div>
+</div>';
+} else {
+    echo '
+    <style>
+    .main-content {
+        width: 70%
+    }
+</style>';
+}

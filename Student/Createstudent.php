@@ -17,6 +17,7 @@
         }
     </style>
     <?php
+    include_once("../Const.php");
     include_once("../Bar/Navbar.html");
     ?>
 
