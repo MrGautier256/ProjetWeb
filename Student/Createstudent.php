@@ -17,7 +17,7 @@
         }
     </style>
     <?php
-    session_start();
+    include_once("../Const.php");
     include_once("../Bar/Navbar.html");
     ?>
 

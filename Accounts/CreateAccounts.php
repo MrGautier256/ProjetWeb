@@ -11,6 +11,8 @@
 
 <body>
     <?php
+    include_once("../Const.php");
+
     // 1 = Student 2 = pilot 3 = Delegate
 
     $GLOBALS["session"] = 1;

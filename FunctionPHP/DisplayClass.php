@@ -1,4 +1,5 @@
 <?php
+include_once("../Const.php");
 echo "coucou";
 class DisplayEntreprise
 {
