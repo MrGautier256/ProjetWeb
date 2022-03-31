@@ -83,6 +83,10 @@
                                 <option value="Strasbourg">Strasbourg</option>
                                 <option value="Toulouse">Toulouse</option>
                             </select>
+                            <article class="Student-box">
+                                <li></li>
+                                <input class="formulaireInput" id="studentLimit" name="studentLimit" type="radio" value="1" style="visibility: hidden" checked>
+                            </article>
                         </article>
                         <article class="button-box">
                             <input class="favorite-styled" type="submit" value="Search">

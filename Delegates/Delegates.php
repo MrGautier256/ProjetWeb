@@ -16,7 +16,6 @@ try {
 if (!empty($delegateCenter) && empty($delegateLogin)) {
 
     $reqt = "SELECT * from utilisateur where ID_Role = 4 and U_centre = " . $bdd->quote($delegateCenter);
-    var_dump($reqt);
 }
 if (!empty($delegateLogin)) {
 

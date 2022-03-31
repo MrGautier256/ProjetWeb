@@ -1,3 +1,56 @@
+<?php
+require_once("../Const.php");
+
+$companyName = @$_POST['companyName'];
+$companyCity = @$_POST['companyCity'];
+$pilotConfidence = @$_POST['pilotConfidence'];
+
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_mieux;charset=utf8', 'root', '');
+} catch (PDOException $e) {
+    echo $e->getMessage() . "\n";
+    die;
+}
+
+
+if (!empty($companyCity) && !empty($pilotConfidence) && empty($companyName)) {
+
+    $reqt = "SELECT * from entreprise 
+    WHERE En_Confiance_Pilote = " . $bdd->quote($pilotConfidence) .
+        " AND En_Localite = " . $bdd->quote($companyCity);
+}
+if (!empty($pilotConfidence) && empty($companyCity) && empty($companyName)) {
+
+    $reqt = "SELECT * from entreprise WHERE En_Confiance_Pilote = " . $bdd->quote($pilotConfidence);
+}
+if (!empty($companyCity) && empty($pilotConfidence) && empty($companyName)) {
+
+    $reqt = "SELECT * from entreprise WHERE En_Localite = " . $bdd->quote($companyCity);
+}
+if (!empty($companyName)) {
+
+    $reqt = "SELECT * from entreprise WHERE En_Nom =" . $bdd->quote($companyName);
+}
+
+
+$result = $bdd->query($reqt);
+$CompanyResult = $result->fetchAll();
+
+if ($result == false) {
+    header('Location: ./Searchcompany.php');
+    exit();
+}
+
+if (empty($CompanyResult)) {
+    header('Location: ./Searchcompany.php');
+    exit();
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,11 +72,16 @@
             <h2 class="title-main-content">Companies</h2>
             <section class="write-post-container">
                 <ul id="Entreprises-list">
-                    <li><a href="">PC soft <img src="../images/pc-soft.png" class="entreprises-logo"></a></li>
-                    <li><a href="#">DELL <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dell_logo_2016.svg/800px-Dell_logo_2016.svg.png" class="entreprises-logo"></a></li>
-                    <li><a href="#">Ubisoft <img src="../images/ubisoft.png" class="entreprises-logo"></a></li>
-                    <li><a href="#">Razer <img src="https://logo-marque.com/wp-content/uploads/2020/11/Razer-Logo-650x366.png" class="entreprises-logo"></a></li>
-                    <li><a href="#">Apple <img src="https://images.unidays.world/i/self-serve/customer/lhPpygWQv0OjBW2sX0TzPat6wmOPiLxIsGt2wvqyFeE=/logo/png/891c2b0e-bf5d-421b-96f7-4231a901e5fb" class="entreprises-logo"></a></li>
+                    <?php
+                    foreach ($CompanyResult as $Company) {
+                    ?>
+                        <li><a href="#"><?= $Company['En_Nom'] ?>, Secteur d'activité: <?= $Company['En_Secteur_Activite'] ?> <br>
+                                Ville: <?= $Company['En_Localite'] ?><br>
+                                Avis Tuteur: <?= $Company['En_Confiance_Pilote'] ?>
+                                <img src="../images/pc-soft.png" class="entreprises-logo"></a></li>
+                    <?php
+                    }
+                    ?>
                 </ul>
             </section>
         </div>

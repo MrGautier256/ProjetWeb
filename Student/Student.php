@@ -41,6 +41,7 @@ if (!empty($studentLogin)) {
 
 $result = $bdd->query($reqt);
 
+
 $result = $bdd->query($reqt);
 if ($result == false) {
     header('Location: ./Searchstudent.php');
@@ -68,16 +69,17 @@ if (empty($StudentResult)) {
 </head>
 
 <body>
-    <main>
+    <?php
+    include_once("../Bar/Navbar.html");
+    include_once("../Const.php");
+    ?>
+
+    <div class="container">
         <?php
-        include_once("../Bar/Navbar.html");
-        include_once("../Const.php");
+        include_once("../Bar/Leftbar.php");
         ?>
 
-        <section class="container">
-            <?php
-            include_once("../Bar/Leftbar.php");
-            ?>
+        <div class="Delegate-content">
 
             <h2 class="title-main-content">Student</h2>
             <div class="write-post-container">
@@ -92,24 +94,12 @@ if (empty($StudentResult)) {
                     }
                     ?>
 
-                <h2 class="title-main-content">Student</h2>
-                <article class="write-post-container">
-                    <ul class="Delegate-list">
-                        <?php
-                        foreach ($StudentResult as $Student) {
-                        ?>
-                            <li><a href="#"><?= $Student['U_Prenom'] ?> <?= $Student['U_Nom'] ?> <br>
-                                    <?= $Student['E_Promotion'] ?> </a></li>
-                        <?php
-                        }
-                        ?>
+                </ul>
+            </div>
+        </div>
 
-                    </ul>
-                </article>
-            </section>
+    </div>
 
-        </section>
-    </main>
     <style>
         @media (max-width: 900px) {
 

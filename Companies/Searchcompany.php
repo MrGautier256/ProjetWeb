@@ -1,3 +1,18 @@
+<?php
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_mieux;charset=utf8', 'root', '');
+} catch (PDOException $e) {
+    echo $e->getMessage() . "\n";
+    die;
+}
+$reqt = "SELECT DISTINCT En_Localite FROM `entreprise`";
+$result = $bdd->query($reqt);
+$CompanyLocaliteResult = $result->fetchAll();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,37 +38,46 @@
         <section class="add-content">
 
             <h2 class="title-main-content">Search Company</h2>
-            <form method="post" action="../FunctionPHP/import.php">
+            <form method="post" action="./Companies.php">
 
                 <section class="student-account">
                     <ul>
                         <article class="Student-box">
                             <li> Search by Name : </li>
-                            <input class="formulaireInput" id="delegateLogin" name="delegateLogin" type="text" placeholder="Company Name">
+                            <input class="formulaireInput" id="companyName" name="companyName" type="text" placeholder="Company Name">
                         </article>
                         <article class="Student-box">
-                            <li> Search by city : </li>
-                            <input class="formulaireInput" id="delegateLogin" name="delegateLogin" type="text" placeholder="City of the Company">
-                        </article>
-                        <article class="Student-box">
-                            <li> Search by Pilot Confidence : </li>
-                            <select name="delegateCenter" required="required">
-                                <option value="">Choose the Center</option>
-                                <option value="Aix-en-Provence">Beaucoup</option>
+                            <li> Search by City : </li>
+                            <select name="companyCity" id="companyCity">
+                                <option value="">Select a City </option>
+                                <?php
+                                foreach ($CompanyLocaliteResult as $Entreprise) {
+                                ?>
+                                    <option value="<?= $Entreprise['En_Localite'] ?>"><?= $Entreprise['En_Localite'] ?></option>
+                                <?php
+                                }
+                                ?>
+
                             </select>
 
                         </article>
                         <article class="Student-box">
-                            <li> Search by Line of business : </li>
-                            <input class="formulaireInput" id="delegateLogin" name="delegateLogin" type="text" placeholder="Company Line of Business">
+                            <li> Search by Pilot Confidence : </li>
+                            <select name="pilotConfidence" id="pilotConfidence">
+                                <option value="">Pilot Confidence </option>
+                                <option value="Tres Confiant">Tres Confiant</option>
+                                <option value="Confiant">Confiant</option>
+                                <option value="Peu Confiant">Peu Confiant</option>
+                                <option value="Sans informations">Sans informations</option>
+                            </select>
+
                         </article>
                         <article class="button-box">
-                            <input class="favorite-styled" type="submit" value="Create">
+                            <input class="favorite-styled" type="submit" value="Search">
                             <input class="favorite-styled" type="reset" value="Reset">
                         </article>
                     </ul>
                 </section>
-
             </form>
         </section>
 

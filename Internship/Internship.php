@@ -1,3 +1,56 @@
+<?php
+require_once("../Const.php");
+
+$offerName = @$_POST['offerName'];
+$companyCity = @$_POST['companyCity'];
+$companyName = @$_POST['companyName'];
+
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_mieux;charset=utf8', 'root', '');
+} catch (PDOException $e) {
+    echo $e->getMessage() . "\n";
+    die;
+}
+
+
+if (!empty($companyCity) && !empty($companyName) && empty($offerName)) {
+
+    $reqt = "SELECT * from entreprise 
+    WHERE En_Confiance_Pilote = " . $bdd->quote($companyName) .
+        " AND En_Localites = " . $bdd->quote($companyCity);
+}
+if (!empty($companyName) && empty($companyCity) && empty($offerName)) {
+
+    $reqt = "SELECT * from offre_de_stage 
+    INNER JOIN entreprise on entreprise.ID_Entreprise = offre_de_stage.ID_Entreprise
+    WHERE En_Nom = " . $bdd->quote($companyName);
+}
+if (!empty($companyCity) && empty($companyName) && empty($offerName)) {
+
+    $reqt = "SELECT * from offre_de_stage WHERE OS_Localites = " . $bdd->quote($companyCity);
+}
+if (!empty($offerName)) {
+
+    $reqt = "SELECT * from offre_de_stage WHERE OS_Nom = " . $bdd->quote($offerName);
+}
+
+
+$result = $bdd->query($reqt);
+if ($result == false) {
+    header('Location: ./searchoffer.php');
+    exit();
+}
+
+$OfferResult = $result->fetchAll();
+if (empty($OfferResult)) {
+    header('Location: ./searchoffer.php');
+    exit();
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,42 +86,25 @@
             <h2 class="title-main-content">InternShip Offers</h2>
             <article class="write-post-container">
                 <ul class="Offers-list">
-                    <li>
+                    <?php
+                    foreach ($OfferResult as $Offer) {
+                    ?>
+                        <li>
+                            <article class="Offer-container">
+                                <article class="Offer-Title">
+                                    <?= $Offer['OS_Nom'] ?>
+                                    <article class="Place-offer">
+                                        <?= $Offer['OS_Localites'] ?>
+                                    </article>
 
-                        <article class="Offer-container">
-                            <article class="Offer-Title">
-                                Assistant Chef de Projet Informatique
-                                <article class="Place-offer">
-                                    Millenaire Montpellier, France
+                                    <p><?= $Offer['OS_Competences'] ?></p>
                                 </article>
-
-                                <p>Dans le cadre du déploiement de la stratégie Supply Chain 2021-2024 du groupe SGDBF, l'équipe
-                                    DSI
-                                    ENTREPÔT recherche
-                                    un(e) Concepteur(trice) technico-fonctionnel(le) pour</p>
+                                <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo">
                             </article>
-                            <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo">
-                        </article>
-
-                    </li>
-
-                    <li>
-                        <article class="Offer-container">
-                            <article class="Offer-Title">
-                                Assistant Chef de Projet Informatique
-                                <article class="Place-offer">
-                                    Millenaire Montpellier, France
-                                </article>
-
-                                <p>Dans le cadre du déploiement de la stratégie Supply Chain 2021-2024 du groupe SGDBF, l'équipe
-                                    DSI
-                                    ENTREPÔT recherche
-                                    un(e) Concepteur(trice) technico-fonctionnel(le) pour</p>
-                            </article>
-                            <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo">
-                        </article>
-
-                    </li>
+                        </li>
+                    <?php
+                    }
+                    ?>
             </article>
             </ul>
         </section>
