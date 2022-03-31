@@ -1,5 +1,4 @@
 <?php
-include_once("../Const.php");
 
 if ($_SESSION['user']['ID_Role'] == 1) {
 

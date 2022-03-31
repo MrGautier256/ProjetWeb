@@ -1,6 +1,15 @@
 var settingsmenu = document.querySelector(".settings-menu") //var setting menu
 var darkBtn = document.getElementById("dark-btn")
 
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('C:/xampp/phpMyAdmin/htdocs/CESIXAMP/Projet/ProjetGit/ProjetWeb/service-worker.js')
+        .then((sw) => {
+            console.log("Le Service Worker a été enregistré", sw);
+        })
+        .catch(err => console.error);
+}
+
+
 function settingsMenuToggle() {  //setting menu toggle 
     settingsmenu.classList.toggle("settings-menu-height");
 }
