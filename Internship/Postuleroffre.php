@@ -22,44 +22,47 @@
     <?php include_once('../Bar/Leftbar.php');
     include_once("../Const.php"); ?>
 
-    <div class="containeroffre">
-        <div class="formulaire-wrapper">
-            <div class="formulaire-bloc">
+    <section class="containeroffre">
+        <section class="formulaire-wrapper">
+            <section class="formulaire-bloc">
                 <form name="form1" enctype="multipart/form-data" method="post" action="file.php" id="application-form" class="form">
-                    <div class="postuler-contenu">
-                        <div>
+                    <section class="postuler-contenu">
+                        <article>
                             <h2>Apply to the Offer :</h2>
-                            <div class="form-group">
+                            <article class="form-group">
                                 <label>Name</label>
                                 <input type="text" value="" placeholder="Enter Your Name" name="name" required>
-                            </div>
-                            <div class="form-group">
+                            </article>
+                            <article class="form-group">
                                 <label>Email</label>
                                 <input type="email" value="" placeholder="Enter Your Email Address" name="email" required>
-                            </div>
-                            <div class="form-group">
+                            </article>
+                            <article class="form-group">
                                 <label>Phone</label>
                                 <input type="phone" value="" placeholder="Contact Number" name="phone" required>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="form-group">
+                            </article>
+                        </article>
+                        <article>
+                            <article class="form-group">
                                 <label class="form-label">Message</label>
                                 <textarea name="message" placeholder="Type Message Here"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <p>
-                        <input type="file" id="exampleInputFile" name="CV">
-                    </p>
-                    <div>
-                        <button type="submit">
-                            <span class="sendmessage"></span> Send Message </button>
-                    </div>
+                            </article>
+                        </article>
+                        </article>
+                        <p>
+                            <input type="file" id="exampleInputFile" name="CV">
+                        </p>
+                        <article>
+                            <button type="submit">
+                                <span class="sendmessage"></span> Send Message </button>
+                        </article>
+                    </section>
+
                 </form>
-            </div>
-        </div>
-    </div>
+            </section>
+        </section>
+    </section>
+
     <style>
         @media (max-width: 900px) {
             .containeroffre {

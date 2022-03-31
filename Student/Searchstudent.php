@@ -35,8 +35,8 @@
                             <li> Promotion : </li>
                             <select name="studentPromotion">
                                 <option value="">Choose Student Class</option>
-                                <option value="CPI A1">CPI A1</option>
-                                <option value="CPI A2-INFORMATIQUE">CPIA2-INFORMATIQUE</option>
+                                <option value="CPIA1">CPI A1</option>
+                                <option value="CPIA2-INFORMATIQUE">CPIA2-INFORMATIQUE</option>
                                 <option value="CPIA2-SYSTEME EMBARQUÉ">CPIA2-SYSTEME EMBARQUÉ</option>
                                 <option value="CPIA2-BTP">CPIA2-BTP</option>
                                 <option value="CPIA2-GENERALISTE">CPIA2-GENERALISTE</option>

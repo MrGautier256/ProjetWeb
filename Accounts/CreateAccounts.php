@@ -42,20 +42,20 @@
                 <div class="write-create-container">
                     <div class="student-account">
                         <H2 style="color: #fff;">Create Account</H2>
-                        <div class="button-box-menu">
+                        <article class="button-box-menu">
                             <form action="../Student/Createstudent.php">
                                 <button class="favorite-styled-menu" type="submit">
                                     Create Student
                                 </button>
                             </form>
-                        </div>
-                        <div class="button-box-menu">
+                        </article>
+                        <article class="button-box-menu">
                             <form action="../Delegates/CreateDelegate.php">
                                 <button class="favorite-styled-menu" type="submit">
                                     Create Delegate
                                 </button>
                             </form>
-                        </div>';
+                        </article>';
         } ?>
 
 
@@ -71,13 +71,13 @@
         // $GLOBALS["session"]
         if ($_SESSION['user']['ID_Role'] != 1) {
             echo '
-                            <div class="button-box-menu">
+                            <article class="button-box-menu">
                                 <form action="../Internship/CreateOffer.php">
                                     <button class="favorite-styled-menu" type="submit">
                                         Create InternShip Offer
                                     </button>
                                 </form>
-                            </div>
+                            </article>
                         </div>
 
                     </div>

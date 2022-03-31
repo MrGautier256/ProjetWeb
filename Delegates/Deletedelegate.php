@@ -15,31 +15,31 @@
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="add-content">
+        <section class="add-content">
 
             <h2 class="title-main-content">Delete Delegate Account</h2>
             <form method="post" action="../FunctionPHP/delete.php">
 
-                <div class="search-box1">
+                <article class="search-box1">
                     <img src="../images/search.png">
                     <input id="delegateLogin" name="delegateLogin" type="text" placeholder="Delegate Login" required="required">
-                </div>
-                <div class="Student-box">
+                </article>
+                <article class="Student-box">
                     <li></li>
                     <input id="delegateDelete" name="delegateDelete" type="radio" value="1" style="visibility: hidden" checked>
-                </div>
-                <div class="write-post-container1">
+                </article>
+                <article class="write-post-container1">
                     <input class="favorite-styled-menu" type="submit" value="Delete">
-                </div>
+                </article>
             </form>
-        </div>
+        </section>
 
-    </div>
+    </section>
 
 
     <script src="../Javascriptindex.js"></script>

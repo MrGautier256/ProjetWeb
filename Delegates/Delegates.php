@@ -1,3 +1,46 @@
+<?php
+require_once("../Const.php");
+
+$delegateLogin = @$_POST['delegateLogin'];
+$delegateCenter = @$_POST['delegateCenter'];
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_mieux;charset=utf8', 'root', '');
+} catch (PDOException $e) {
+    echo $e->getMessage() . "\n";
+    die;
+}
+
+
+
+if (!empty($delegateCenter) && empty($delegateLogin)) {
+
+    $reqt = "SELECT * from utilisateur where ID_Role = 4 and U_centre = " . $bdd->quote($delegateCenter);
+    var_dump($reqt);
+}
+if (!empty($delegateLogin)) {
+
+    $reqt = "SELECT * from utilisateur INNER join authentification 
+    on authentification.ID_Authentification = utilisateur.ID_Authentification 
+    INNER JOIN role on role.ID_Role = utilisateur.ID_Role where A_Login = " . $bdd->quote($delegateLogin);
+}
+
+$result = $bdd->query($reqt);
+if ($result == false) {
+    header('Location: ./SearchDelegate.php');
+    exit();
+}
+
+$DelegateResult = $result->fetchAll();
+if (empty($DelegateResult)) {
+    header('Location: ./SearchDelegate.php');
+    exit();
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,47 +58,35 @@
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="Delegate-content">
+        <section class="Delegate-content">
 
             <h2 class="title-main-content">Delegates</h2>
 
-            <div class="write-post-container">
+            <section class="write-post-container">
                 <ul class="Delegate-list">
-                    <li>
-                        <a href="#">Thomas Altazin <br>
-                            Enseignant formateur et Responsable pédagogique
-                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQF_23CTWKRz2A/profile-displayphoto-shrink_400_400/0/1593169661293?e=1652918400&v=beta&t=9JSdOjXxX_TZ9stO2ZjVK7AY2i-iPXdRZHOqyLkMahQ" class="entreprises-logo">
-                        </a>
-                    </li>
-                    <li><a href="#">Alexandra Gelabert <br>
-                            Responsable de formation d'ingénieurs <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFiMhtY5R3irw/profile-displayphoto-shrink_400_400/0/1555600163800?e=1652918400&v=beta&t=TL18Nmu856tVVCa86v6AN4R34vJpLXPat8QaQWGCAiU" class="entreprises-logo"></a></li>
+                    <ul class="Delegate-list">
+                        <?php
+                        foreach ($DelegateResult as $Delegate) {
+                        ?>
+                            <li><a href="#"><?= $Delegate['U_Prenom'] ?> <?= $Delegate['U_Nom'] ?>
+                                    <br><?= $Delegate['U_centre'] ?>
+                                    <br><?= $Delegate['U_Email'] ?>
+                                </a></li>
+                        <?php
+                        }
+                        ?>
 
-                    <li><a href="#">Laori Abdelaziz <br>
-                            Enseignant formateur
-                            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHU-kSm21I1ww/profile-displayphoto-shrink_400_400/0/1565296616279?e=2147483647&v=beta&t=W7d59kKMpfEtLfgDpI3nx6Ob627bO-8aNMgL_aL8N1A" class="entreprises-logo"></a></li>
-                    <li><a href="#">Veronique Guillon <br>
-                            Directrice campus CESI Montpellier
-                            <img src="https://media-exp1.licdn.com/dms/image/C5603AQHCR25ajCTrNQ/profile-displayphoto-shrink_400_400/0/1584992690068?e=1652918400&v=beta&t=8L4O4Z9fnrYF7dbHsMtX2LvLB5uf4fbQ_iUg0_TJteE" class="entreprises-logo"></a></li>
-                    <li><a href="#">Veronique Guillon <br>
-                            Directrice campus CESI Montpellier
-                            <img src="https://media-exp1.licdn.com/dms/image/C5603AQHCR25ajCTrNQ/profile-displayphoto-shrink_400_400/0/1584992690068?e=1652918400&v=beta&t=8L4O4Z9fnrYF7dbHsMtX2LvLB5uf4fbQ_iUg0_TJteE" class="entreprises-logo"></a></li>
-                    <li><a href="#">Veronique Guillon <br>
-                            Directrice campus CESI Montpellier
-                            <img src="https://media-exp1.licdn.com/dms/image/C5603AQHCR25ajCTrNQ/profile-displayphoto-shrink_400_400/0/1584992690068?e=1652918400&v=beta&t=8L4O4Z9fnrYF7dbHsMtX2LvLB5uf4fbQ_iUg0_TJteE" class="entreprises-logo"></a></li>
-
-
+                    </ul>
                 </ul>
-            </div>
-        </div>
+            </section>
+        </section>
 
-    </div>
-
-
+    </section>
     <script src="../Javascriptindex.js"></script>
 
 

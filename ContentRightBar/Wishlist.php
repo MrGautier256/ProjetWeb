@@ -45,109 +45,110 @@
     <?php include_once("../Bar/NavBar.html");
     include_once("../Const.php"); ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
-        <div class="Internship-content">
+        <section class="Internship-content">
 
             <h2 class="title-main-content">My Wish List</h2>
-            <div class="write-post-container">
+            <section class="write-post-container">
                 <ul class="Offers-list">
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
-                                <div contenteditable="true">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
+                                <article contenteditable="true">
                                     DELL
-                                </div>
-                                <div contenteditable="true" class="Place-offer">
+                                </article>
+                                <article contenteditable="true" class="Place-offer">
                                     <ul>
                                         <li> Castelneau-Le-Lez</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="left-event1">
+                                </article>
+                            </article>
+                            <article class="left-event1">
                                 <h3>1</h3>
-                            </div>
-                        </div>
+                            </article>
+                        </article>
 
                     </li>
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
-                                <div contenteditable="true">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
+                                <article contenteditable="true">
                                     UBISOFT
-                                </div>
-                                <div contenteditable="true" class="Place-offer">
+                                </article>
+                                <article contenteditable="true" class="Place-offer">
                                     <ul>
                                         <li> Castelneau-Le-Lez</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="left-event1">
+                                </article>
+                            </article>
+                            <article class="left-event1">
                                 <h3>2</h3>
-                            </div>
-                        </div>
+                            </article>
+                        </article>
 
                     </li>
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
-                                <div contenteditable="true">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
+                                <article contenteditable="true">
                                     INETUM
-                                </div>
-                                <div contenteditable="true" class="Place-offer">
+                                </article>
+                                <article contenteditable="true" class="Place-offer">
                                     <ul>
                                         <li> Odysseum</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="left-event1">
+                                </article>
+                            </article>
+                            <article class="left-event1">
                                 <h3>3</h3>
-                            </div>
-                        </div>
+                            </article>
+                        </article>
 
                     </li>
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
-                                <div contenteditable="true">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
+                                <article contenteditable="true">
                                     HUAWEI
-                                </div>
-                                <div contenteditable="true" class="Place-offer">
+                                </article>
+                                <article contenteditable="true" class="Place-offer">
                                     <ul>
                                         <li> Castelneau-Le-Lez</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="left-event1">
+                                </article>
+                            </article>
+                            <article class="left-event1">
                                 <h3>4</h3>
-                            </div>
-                        </div>
+                            </article>
+                        </article>
                     </li>
                     <li>
-                        <div class="Offer-container">
-                            <div class="Offer-Title">
-                                <div contenteditable="true">
+                        <article class="Offer-container">
+                            <article class="Offer-Title">
+                                <article contenteditable="true">
                                     HP
-                                </div>
-                                <div contenteditable="true" class="Place-offer">
+                                </article>
+                                <article contenteditable="true" class="Place-offer">
                                     <ul>
                                         <li> Castelneau-Le-Lez</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="left-event1">
+                                </article>
+                            </article>
+                            <article class="left-event1">
                                 <h3>5</h3>
-                            </div>
-                        </div>
+                            </article>
+                        </article>
 
                     </li>
-            </div>
-            </ul>
-        </div>
+                </ul>
+            </section>
 
-        <script src="../Javascriptindex.js"></script>
+        </section>>
+    </section>
+    <script src="../Javascriptindex.js"></script>
 </body>
 
 </html>

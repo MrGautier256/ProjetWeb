@@ -13,40 +13,44 @@ try {
 }
 
 
-if (isset($studentCenter) && isset($studentPromotion) && $studentLogin === "") {
 
-    $reqt = "SELECT * from utilisateur INNER join etudiant 
+if (!empty($studentCenter) && !empty($studentPromotion) && empty($studentLogin)) {
+
+    $reqt = "SELECT *, U_centre from utilisateur INNER join etudiant 
     on etudiant.ID_UTILISATEUR = utilisateur.ID_UTILISATEUR 
     WHERE U_centre = " . $bdd->quote($studentCenter) . "
     AND E_promotion = " . $bdd->quote($studentPromotion);
-
-    $result = $bdd->query($reqt);
-    $StudentResult = $result->fetchAll();
 }
-if (isset($studentPromotion) && $studentCenter === "" && $studentLogin === "") {
+if (!empty($studentPromotion) && empty($studentCenter) && empty($studentLogin)) {
 
-    $reqt = "SELECT * from utilisateur INNER join etudiant 
+    $reqt = "SELECT *, U_centre from utilisateur INNER join etudiant 
     on etudiant.ID_UTILISATEUR = utilisateur.ID_UTILISATEUR 
     WHERE E_promotion = " . $bdd->quote($studentPromotion);
-
-    $result = $bdd->query($reqt);
-    $StudentResult = $result->fetchAll();
 }
-if (isset($studentCenter) && $studentPromotion === "" && $studentLogin === "") {
-    $reqt = "SELECT * from utilisateur 
+if (!empty($studentCenter) && empty($studentPromotion) && empty($studentLogin)) {
+    $reqt = "SELECT *, U_centre from utilisateur 
     INNER join etudiant on etudiant.ID_UTILISATEUR = utilisateur.ID_UTILISATEUR 
     WHERE U_centre = " . $bdd->quote($studentCenter);
-
-    $result = $bdd->query($reqt);
-    $StudentResult = $result->fetchAll();
 }
-if (isset($studentLogin) && $studentCenter === "" && $studentPromotion === "") {
+if (!empty($studentLogin)) {
 
-    $reqt = "SELECT * from utilisateur INNER join authentification 
+    $reqt = "SELECT *, U_centre from utilisateur INNER join authentification 
     on authentification.ID_Authentification = utilisateur.ID_Authentification INNER JOIN etudiant 
     on etudiant.ID_UTILISATEUR = utilisateur.ID_UTILISATEUR WHERE A_Login = " . $bdd->quote($studentLogin);
-    $result = $bdd->query($reqt);
-    $StudentResult = $result->fetchAll();
+}
+
+$result = $bdd->query($reqt);
+
+$result = $bdd->query($reqt);
+if ($result == false) {
+    header('Location: ./Searchstudent.php');
+    exit();
+}
+
+$StudentResult = $result->fetchAll();
+if (empty($StudentResult)) {
+    header('Location: ./Searchstudent.php');
+    exit();
 }
 
 
@@ -83,7 +87,8 @@ if (isset($studentLogin) && $studentCenter === "" && $studentPromotion === "") {
                     foreach ($StudentResult as $Student) {
                     ?>
                         <li><a href="#"><?= $Student['U_Prenom'] ?> <?= $Student['U_Nom'] ?> <br>
-                                <?= $Student['E_Promotion'] ?> </a></li>
+                                <?= $Student['E_Promotion'] ?> <?= $Student['U_centre'] ?>
+                                <br><?= $Student['U_Email'] ?></a></li>
                     <?php
                     }
                     ?>

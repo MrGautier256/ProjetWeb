@@ -15,32 +15,32 @@
         include_once("../Const.php");
         ?>
 
-     <div class="container">
+     <section class="container">
          <?php
             include_once("../Bar/Leftbar.php");
             ?>
 
-         <div class="add-content">
+         <section class="add-content">
 
-             <div class="write-post-container1">
-                 <div class="student-account">
+             <section class="write-post-container1">
+                 <article class="student-account">
                      <ul>
                          <h2 style="color: white; margin-bottom:20px;">Company Informations </h2>
                          <form id="CreateNewCompany" method="post" action="../FunctionPHP/import.php">
 
-                             <div class="Student-box">
+                             <article class="Student-box">
                                  <li> Company Name : </li>
                                  <input class="formulaireInput" id="newCompanyName" name="newCompanyName" type="text" placeholder="Company name" required="required">
-                             </div>
-                             <div class="Student-box">
+                             </article>
+                             <article class="Student-box">
                                  <li> line of business : </li>
                                  <input class="formulaireInput" id="newCompanyBusiness" name="newCompanyBusiness" type="text" placeholder="Company line of business" required="required">
-                             </div>
-                             <div class="Student-box">
+                             </article>
+                             <article class="Student-box">
                                  <li> City : </li>
                                  <input class="formulaireInput" id="newCompanyCity" name="newCompanyCity" type="text" placeholder="Company City" required="required">
-                             </div>
-                             <div class="Student-box">
+                             </article>
+                             <article class="Student-box">
                                  <li> Pilot confidence : </li>
                                  <select name="newCompanyConfidence" required="required">
                                      <option value="">Pilot Confidence </option>
@@ -49,43 +49,43 @@
                                      <option value="Peu Confiant">Peu Confiant</option>
                                      <option value="Sans informations">Sans informations</option>
                                  </select>
-                             </div>
+                             </article>
                              <hr style="margin: 30px 20px;">
                              <h2 style="color: white; margin-bottom:20px;">Internship Informations </h2>
-                             <div class="Student-box">
+                             <article class="Student-box">
                                  <li> Internship Name : </li>
                                  <input class="formulaireInput" id="internshipName" name="internshipName" type="text" placeholder="Internship Name" required="required">
-                             </div>
-                             <div class="Student-box">
+                             </article>
+                             <article class="Student-box">
                                  <li> Skills : </li>
                                  <input class="formulaireInput" id="internshipSkills" name="internshipSkills" type="text" placeholder="Student Skills" required="required">
-                             </div>
-                             <div class="Student-box">
+                             </article>
+                             <article class="Student-box">
                                  <li> Compensation : </li>
                                  <input class="formulaireInput" id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
-                             </div>
-                             <div class="Student-box">
+                             </article>
+                             <article class="Student-box">
                                  <li> Duration : </li>
                                  <input class="formulaireInput" id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
-                             </div>
-                             <div class="Student-box">
+                             </article>
+                             <article class="Student-box">
                                  <li> Date : </li>
                                  <input class="formulaireInput" id="intershipDate" name="internshipDate" type="date" placeholder="InternShip Duration" required="required">
-                             </div>
-                             <div class="Student-box">
+                             </article>
+                             <article class="Student-box">
                                  <li></li>
                                  <input id="createInternshipNewCompany" name="createInternshipNewCompany" type="radio" value="1" style="visibility: hidden" checked>
-                             </div>
-                             <div class="button-box">
+                             </article>
+                             <article class="button-box">
                                  <input class="favorite-styled" type="submit" value="Validate">
                                  <input class="favorite-styled" type="reset" value="Reset">
-                             </div>
+                             </article>
                          </form>
                      </ul>
-                 </div>
-             </div>
-         </div>
-     </div>
+                 </article>
+             </section>
+         </section>
+     </section>
      <style>
          .Student-box select {
              font-size: 0.9rem;

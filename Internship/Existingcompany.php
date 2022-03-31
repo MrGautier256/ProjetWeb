@@ -21,18 +21,18 @@ $Entreprises = new DisplayEntreprise();
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="add-content">
+        <section class="add-content">
 
-            <div class="student-account">
+            <section class="student-account">
                 <ul>
                     <h2 style="color: white; margin-bottom:20px;">Internship Informations </h2>
                     <form method="post" id="CreateOfferOldCompany" action="../FunctionPHP/import.php">
-                        <div class="Student-box">
+                        <article class="Student-box">
                             <li> Company : </li>
                             <select name="oldCompanyName" required="required">
                                 <option value="">Choose the Company</option>
@@ -44,40 +44,40 @@ $Entreprises = new DisplayEntreprise();
                                 }
                                 ?>
                             </select>
-                            <div class="Student-box">
+                            <article class="Student-box">
                                 <li> Internship Name : </li>
                                 <input class="formulaireInput" id="oldInternshipName" name="oldInternshipName" type="text" placeholder="Internship Name" required="required">
-                            </div>
-                            <div class="Student-box">
+                            </article>
+                            <article class="Student-box">
                                 <li> Skills : </li>
                                 <input class="formulaireInput" id="internshipSkills" name="internshipSkills" type="text" placeholder="Internship skills" required="required">
-                            </div>
-                            <div class="Student-box">
+                            </article>
+                            <article class="Student-box">
                                 <li> Compensation : </li>
                                 <input class="formulaireInput" id="internshipCompensation" name="internshipCompensation" type="number" placeholder="Company Compensation" required="required">
-                            </div>
-                            <div class="Student-box">
+                            </article>
+                            <article class="Student-box">
                                 <li> Duration : </li>
                                 <input class="formulaireInput" id="internshipDuration" name="internshipDuration" type="text" placeholder="InternShip Duration" required="required">
-                            </div>
-                            <div class="Student-box">
+                            </article>
+                            <article class="Student-box">
                                 <li> Date : </li>
                                 <input class="formulaireInput" id="internshipDate" name="internshipDate" type="date" placeholder="InternShip Date" required="required">
-                            </div>
-                            <div class="Student-box">
+                            </article>
+                            <article class="Student-box">
                                 <li></li>
                                 <input class="formulaireInput" id="createInternshipOldCompany" name="createInternshipOldCompany" type="radio" value="1" style="visibility: hidden" checked>
-                            </div>
-                            <div class="button-box">
+                            </article>
+                            <article class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">
                                 <input class="favorite-styled" type="reset" value="Reset">
-                            </div>
+                            </article>
                     </form>
                 </ul>
-            </div>
-        </div>
+            </section>
+        </section>
 
-    </div>
+    </section>
     <style>
         .Student-box select {
             font-size: 0.9rem;

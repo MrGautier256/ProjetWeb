@@ -15,63 +15,63 @@
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="add-content">
+        <section class="add-content">
 
             <h2 class="title-main-content">Search Delegate</h2>
-            <form method="post" action="../FunctionPHP/import.php">
+            <form method="post" action="./Delegates.php">
 
-                <div class="student-account">
+                <section class="student-account">
                     <ul>
-                        <div class="Student-box">
+                        <article class="Student-box">
                             <li> Search by Login : </li>
                             <input class="formulaireInput" id="delegateLogin" name="delegateLogin" type="text" placeholder="Delegate Login">
-                        </div>
-                        <div class="Student-box">
+                        </article>
+                        <article class="Student-box">
                             <li> Center : </li>
-                            <select name="pseudoPilotCenter">
+                            <select name="delegateCenter">
                                 <option value="">Choose the Center</option>
-                                <option value="">Aix-en-Provence</option>
-                                <option value="">Angoulême</option>
-                                <option value="">Arras</option>
-                                <option value="">Bordeaux</option>
-                                <option value="">Brest</option>
-                                <option value="">Caen</option>
-                                <option value="">Dijon</option>
-                                <option value="">Grenoble</option>
-                                <option value="">La Rochelle</option>
-                                <option value="">Le Mans</option>
-                                <option value="">Lille</option>
-                                <option value="">Lyon</option>
-                                <option value="">Montpellier</option>
-                                <option value="">Nancy</option>
-                                <option value="">Nantes</option>
-                                <option value="">Nice</option>
-                                <option value="">Orléans</option>
-                                <option value="">Paris Nanterre</option>
-                                <option value="">Pau</option>
-                                <option value="">Reims</option>
-                                <option value="">Rouen</option>
-                                <option value="">Saint-Nazaire</option>
-                                <option value="">Strasbourg</option>
-                                <option value="">Toulouse</option>
+                                <option value="Aix-en-Provence">Aix-en-Provence</option>
+                                <option value="Angoulême">Angoulême</option>
+                                <option value="Arras">Arras</option>
+                                <option value="Bordeaux">Bordeaux</option>
+                                <option value="Brest">Brest</option>
+                                <option value="Caen">Caen</option>
+                                <option value="Dijon">Dijon</option>
+                                <option value="Grenoble">Grenoble</option>
+                                <option value="Rochelle">La Rochelle</option>
+                                <option value="Le Mans">Le Mans</option>
+                                <option value="Lille">Lille</option>
+                                <option value="Lyon">Lyon</option>
+                                <option value="Montpellier">Montpellier</option>
+                                <option value="Nancy">Nancy</option>
+                                <option value="Nantes">Nantes</option>
+                                <option value="Nice">Nice</option>
+                                <option value="Orléans">Orléans</option>
+                                <option value="Paris Nanterre">Paris Nanterre</option>
+                                <option value="Pau">Pau</option>
+                                <option value="Reims">Reims</option>
+                                <option value="Rouen">Rouen</option>
+                                <option value="Saint-Nazaire">Saint-Nazaire</option>
+                                <option value="Strasbourg">Strasbourg</option>
+                                <option value="Toulouse">Toulouse</option>
                             </select>
-                        </div>
-                        <div class="button-box">
-                            <input class="favorite-styled" type="submit" value="Create">
+                        </article>
+                        <article class="button-box">
+                            <input class="favorite-styled" type="submit" value="Search">
                             <input class="favorite-styled" type="reset" value="Reset">
-                        </div>
+                        </article>
                     </ul>
-                </div>
+                </section>
 
             </form>
-        </div>
+        </section>
 
-    </div>
+    </section>
     <style>
         .Student-box select {
             font-size: 0.9rem;

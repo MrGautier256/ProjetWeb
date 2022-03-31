@@ -10,34 +10,36 @@
 </head>
 
 <body>
-    <?php
-    include_once("../Bar/Navbar.html");
-    include_once("../Const.php");
-    ?>
-
-    <div class="container">
+    <main>
         <?php
-        include_once("../Bar/Leftbar.php");
+        include_once("../Bar/Navbar.html");
+        include_once("../Const.php");
         ?>
 
-        <div class="add-content">
+        <section class="container">
+            <?php
+            include_once("../Bar/Leftbar.php");
+            ?>
 
-            <h2 class="title-main-content">Delete Student Account</h2>
-            <form method="post" action="../FunctionPHP/delete.php">
-                <div class="search-box1">
-                    <img src="../images/search.png">
-                    <input id="studentLogin" name="studentLogin" type="text" placeholder="Student Login" required="required">
-                </div>
-                <div class="Student-box">
-                    <li></li>
-                    <input id="studentDelete" name="studentDelete" type="radio" value="1" style="visibility: hidden" checked>
-                </div>
-                <div class="write-post-container1">
-                    <input class="favorite-styled-menu" type="submit" value="Delete">
-                </div>
-            </form>
-        </div>
-    </div>
+            <section class="add-content">
+
+                <h2 class="title-main-content">Delete Student Account</h2>
+                <form method="post" action="../FunctionPHP/delete.php">
+                    <article class="search-box1">
+                        <img src="../images/search.png">
+                        <input id="studentLogin" name="studentLogin" type="text" placeholder="Student Login" required="required">
+                    </article>
+                    <article class="Student-box">
+                        <li></li>
+                        <input id="studentDelete" name="studentDelete" type="radio" value="1" style="visibility: hidden" checked>
+                    </article>
+                    <article class="write-post-container1">
+                        <input class="favorite-styled-menu" type="submit" value="Delete">
+                    </article>
+                </form>
+            </section>
+        </section>
+    </main>
     <script src="../Javascriptindex.js"></script>
 
 

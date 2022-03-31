@@ -1,3 +1,65 @@
+<?php
+require_once("../Const.php");
+
+$pilotLogin = @$_POST['pilotLogin'];
+$pilotPromotion = @$_POST['pilotPromotion'];
+$pilotCenter = @$_POST['pilotCenter'];
+
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet_mieux;charset=utf8', 'root', '');
+} catch (PDOException $e) {
+    echo $e->getMessage() . "\n";
+    die;
+}
+
+/*
+" . $bdd->quote($pilotLogin);"
+" . $bdd->quote($pilotPromotion);"
+" . $bdd->quote($pilotCenter) . "
+*/
+
+if (!empty($pilotCenter) && !empty($pilotPromotion) && empty($pilotLogin)) {
+
+    $pilotPromotion = "%" . $pilotPromotion . "%";
+    $reqt = "SELECT *,U_centre FROM utilisateur INNER join pilote on pilote.ID_UTILISATEUR = utilisateur.ID_UTILISATEUR 
+    WHERE ID_Role = 2 and P_promotions_assignees LIKE " . $bdd->quote($pilotPromotion) . " 
+    and U_centre = " . $bdd->quote($pilotCenter);
+}
+if (!empty($pilotPromotion) && empty($pilotCenter) && empty($pilotLogin)) {
+
+    $pilotPromotion = "%" . $pilotPromotion . "%";
+    $reqt = "SELECT * , U_centre FROM utilisateur INNER join pilote on pilote.ID_UTILISATEUR = 
+    utilisateur.ID_UTILISATEUR WHERE ID_Role = 2 
+    and P_promotions_assignees LIKE " . $bdd->quote($pilotPromotion);
+}
+if (!empty($pilotCenter) && empty($pilotPromotion) && empty($pilotLogin)) {
+
+    $reqt = "SELECT *,U_centre FROM utilisateur INNER join pilote on pilote.ID_UTILISATEUR = utilisateur.ID_UTILISATEUR 
+    WHERE ID_Role = 2 and U_centre = " . $bdd->quote($pilotCenter);
+}
+if (!empty($pilotLogin)) {
+
+    $reqt = "SELECT * from utilisateur INNER join authentification 
+    on authentification.ID_Authentification = utilisateur.ID_Authentification 
+    INNER join pilote on pilote.ID_UTILISATEUR = utilisateur.ID_UTILISATEUR 
+    where A_Login = " . $bdd->quote($pilotLogin) . " and ID_Role = 2";
+}
+
+$result = $bdd->query($reqt);
+if ($result == false) {
+    header('Location: ./Searchpilot.php');
+    exit();
+}
+
+$PilotResult = $result->fetchAll();
+if (empty($PilotResult)) {
+    header('Location: ./Searchpilot.php');
+    exit();
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,23 +83,15 @@
 
                 <div class="write-post-container">
                     <ul id="Pilot-list">
-                        <li>
-                            <a href="#">Thomas Altazin <br>
-                                Enseignant formateur et Responsable pédagogique
-                                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQF_23CTWKRz2A/profile-displayphoto-shrink_400_400/0/1593169661293?e=1652918400&v=beta&t=9JSdOjXxX_TZ9stO2ZjVK7AY2i-iPXdRZHOqyLkMahQ" class="entreprises-logo">
-                            </a>
-
-
-                        </li>
-                        <li><a href="#">Alexandra Gelabert <br>
-                                Responsable de formation d'ingénieurs <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFiMhtY5R3irw/profile-displayphoto-shrink_400_400/0/1555600163800?e=1652918400&v=beta&t=TL18Nmu856tVVCa86v6AN4R34vJpLXPat8QaQWGCAiU" class="entreprises-logo"></a></li>
-
-                        <li><a href="#">Laori Abdelaziz <br>
-                                Enseignant formateur
-                                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHU-kSm21I1ww/profile-displayphoto-shrink_400_400/0/1565296616279?e=2147483647&v=beta&t=W7d59kKMpfEtLfgDpI3nx6Ob627bO-8aNMgL_aL8N1A" class="entreprises-logo"></a></li>
-                        <li><a href="#">Veronique Guillon <br>
-                                Directrice campus CESI Montpellier
-                                <img src="https://media-exp1.licdn.com/dms/image/C5603AQHCR25ajCTrNQ/profile-displayphoto-shrink_400_400/0/1584992690068?e=1652918400&v=beta&t=8L4O4Z9fnrYF7dbHsMtX2LvLB5uf4fbQ_iUg0_TJteE" class="entreprises-logo"></a></li>
+                        <?php
+                        foreach ($PilotResult as $Pilot) {
+                        ?>
+                            <li><a href="#"><?= $Pilot['U_Prenom'] ?> <?= $Pilot['U_Nom'] ?> <br>
+                                    <?= $Pilot['U_centre'] ?> <?= $Pilot['U_Email'] ?><br>
+                                    <?= $Pilot['P_promotions_assignees'] ?> </a></li>
+                        <?php
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

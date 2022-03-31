@@ -10,13 +10,13 @@
 </head>
 
 <body>
-
-    <?php
-    include_once("../Bar/NavBar.html");
-    include_once("./Profilepage.php");
-    include_once("../Const.php");
-    ?>
-
+    <main>
+        <?php
+        include_once("../Bar/NavBar.html");
+        include_once("./Profilepage.php");
+        include_once("../Const.php");
+        ?>
+    </main>
     <script src="../Javascriptindex.js"></script>
 </body>
 

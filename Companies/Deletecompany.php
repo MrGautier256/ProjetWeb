@@ -21,16 +21,16 @@ $Entreprises = new DisplayEntreprise();
     include_once("../Const.php");
     ?>
 
-    <div class="container">
+    <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
 
-        <div class="add-content">
+        <section class="add-content">
 
             <h2 class="title-main-content">Delete Company</h2>
             <form method="post" action="../FunctionPHP/delete.php">
-                <div class="Student-box">
+                <article class="Student-box">
                     <select name="CompanyName" required="required">
                         <option value="">Choose the Company</option>
                         <?php
@@ -41,18 +41,18 @@ $Entreprises = new DisplayEntreprise();
                         }
                         ?>
                     </select>
-                </div>
-                <div class="Student-box">
+                </article>
+                <article class="Student-box">
                     <li></li>
                     <input id="companyDelete" name="companyDelete" type="radio" value="1" style="visibility: hidden" checked>
-                </div>
-                <div class="write-post-container1">
+                </article>
+                <article class="write-post-container1">
                     <input class="favorite-styled-menu" type="submit" value="Delete">
-                </div>
+                </article>
             </form>
-        </div>
+        </section>
 
-    </div>
+    </section>
     <style>
         .Student-box select {
             font-size: 0.9rem;
