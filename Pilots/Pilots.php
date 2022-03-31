@@ -72,14 +72,15 @@ if (empty($PilotResult)) {
 </head>
 
 <body>
-    <div id="Crud-pilot">
-        <?php include_once("../Bar/Navbar.html"); ?>
-        <div class="container">
-            <?php include_once("../Bar/Leftbar.php");
-            include_once("../Const.php"); ?>
-            <div class="main-content">
+    <main>
+        <section id="Crud-pilot">
+            <?php include_once("../Bar/Navbar.html"); ?>
+            <section class="container">
+                <?php include_once("../Bar/Leftbar.php");
+                include_once("../Const.php"); ?>
+                <section class="main-content">
 
-                <h2 class="title-main-content">Pilots</h2>
+                    <h2 class="title-main-content">Pilots</h2>
 
                 <div class="write-post-container">
                     <ul id="Pilot-list">
@@ -97,10 +98,6 @@ if (empty($PilotResult)) {
             </div>
             <?php include_once("../Bar/Rightbar.php"); ?>
         </div>
-
-
-        <script src="../Javascriptindex.js"></script>
-    </div>
 
 </body>
 

@@ -68,17 +68,16 @@ if (empty($StudentResult)) {
 </head>
 
 <body>
-    <?php
-    include_once("../Bar/Navbar.html");
-    include_once("../Const.php");
-    ?>
-
-    <div class="container">
+    <main>
         <?php
-        include_once("../Bar/Leftbar.php");
+        include_once("../Bar/Navbar.html");
+        include_once("../Const.php");
         ?>
 
-        <div class="Delegate-content">
+        <section class="container">
+            <?php
+            include_once("../Bar/Leftbar.php");
+            ?>
 
             <h2 class="title-main-content">Student</h2>
             <div class="write-post-container">
@@ -93,12 +92,24 @@ if (empty($StudentResult)) {
                     }
                     ?>
 
-                </ul>
-            </div>
-        </div>
+                <h2 class="title-main-content">Student</h2>
+                <article class="write-post-container">
+                    <ul class="Delegate-list">
+                        <?php
+                        foreach ($StudentResult as $Student) {
+                        ?>
+                            <li><a href="#"><?= $Student['U_Prenom'] ?> <?= $Student['U_Nom'] ?> <br>
+                                    <?= $Student['E_Promotion'] ?> </a></li>
+                        <?php
+                        }
+                        ?>
 
-    </div>
+                    </ul>
+                </article>
+            </section>
 
+        </section>
+    </main>
     <style>
         @media (max-width: 900px) {
 
