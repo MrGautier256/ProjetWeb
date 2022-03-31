@@ -73,6 +73,7 @@ if (empty($PilotResult)) {
 </head>
 
 <body>
+<<<<<<< Updated upstream
     <main>
 
         <?php
@@ -102,6 +103,11 @@ if (empty($PilotResult)) {
                 </div>
                 <?php include_once("../Bar/Rightbar.php"); ?>
                 </div>
+
+
+        <script src="../Javascriptindex.js"></script>
+    </div>
+>>>>>>> Stashed changes
 
 </body>
 

@@ -32,13 +32,13 @@
             <h2 class="title-main-content">Search Student</h2>
             <form method="post" action="./Student.php">
 
-                <section class="student-account">
+                <div class="student-account">
                     <ul>
-                        <article class="Student-box">
+                        <div class="Student-box">
                             <li> Search by Login : </li>
                             <input class="formulaireInput" id="studentLogin" name="studentLogin" type="text" placeholder="Student Login">
-                        </article>
-                        <article class="Student-box">
+                        </div>
+                        <div class="Student-box">
                             <li> Promotion : </li>
                             <select name="studentPromotion">
                                 <option value="">Choose Student Class</option>
@@ -60,8 +60,8 @@
                                 <option value="A5-BTP">A5-BTP </option>
                                 <option value="A5-GENERALISTE">A5-GENERALISTE </option>
                             </select>
-                        </article>
-                        <article class="Student-box">
+                        </div>
+                        <div class="Student-box">
                             <li> Center : </li>
                             <select name="studentCenter">
                                 <option value="">Choose the Center</option>
@@ -98,12 +98,12 @@
                         <article class="button-box">
                             <input class="favorite-styled" type="submit" value="Search">
                             <input class="favorite-styled" type="reset" value="Reset">
-                        </article>
+                        </div>
                     </ul>
-                </section>
+                </div>
 
             </form>
-        </section>
+        </div>
 
     </section>';
         }
