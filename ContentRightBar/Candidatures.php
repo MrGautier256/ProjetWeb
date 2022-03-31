@@ -6,45 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
+    <link rel="manifest" href="../manifest.json">
     <title>Candidatures</title>
 </head>
 
 <body>
-    <style>
-        .Internship-content {
-            margin-left: 40px;
-            width: 100%;
-        }
 
-        .Place-offer li {
-            margin-right: 10px;
-            list-style: none;
-        }
-
-        .Offer-container .left-event {
-            background: white;
-            width: 10%;
-            align-items: center;
-        }
-
-        @media (max-width: 900px) {
-
-            .Internship-content {
-                margin-left: 0;
-            }
-
-            .Offer-container .left-event {
-                background: white;
-                width: 29%;
-                align-items: center;
-            }
-
-            .Internship-content {
-                margin-left: 0;
-            }
-        }
-    </style>
-    <?php include_once("../Bar/NavBar.html");
+    <?php include_once("../Bar/NavBar.php");
     include_once("../Const.php");
     ?>
 
@@ -114,6 +82,40 @@
             </section>
         </section>
     </section>
+    <style>
+        .Internship-content {
+            margin-left: 40px;
+            width: 100%;
+        }
+
+        .Place-offer li {
+            margin-right: 10px;
+            list-style: none;
+        }
+
+        .Offer-container .left-event {
+            background: white;
+            width: 10%;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+
+            .Internship-content {
+                margin-left: 0;
+            }
+
+            .Offer-container .left-event {
+                background: white;
+                width: 29%;
+                align-items: center;
+            }
+
+            .Internship-content {
+                margin-left: 0;
+            }
+        }
+    </style>
     <script src="../Javascriptindex.js"></script>
 </body>
 

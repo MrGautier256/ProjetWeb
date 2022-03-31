@@ -68,19 +68,23 @@ if (empty($PilotResult)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
+    <link rel="manifest" href="../manifest.json">
     <title>Pilots page</title>
 </head>
 
 <body>
     <main>
-        <section id="Crud-pilot">
-            <?php include_once("../Bar/Navbar.html"); ?>
-            <section class="container">
-                <?php include_once("../Bar/Leftbar.php");
-                include_once("../Const.php"); ?>
-                <section class="main-content">
 
-                    <h2 class="title-main-content">Pilots</h2>
+        <?php
+        include_once("../Const.php");
+        include_once("../Bar/Navbar.php");
+        ?>
+        <section class="container">
+            <?php include_once("../Bar/Leftbar.php");
+            ?>
+            <section class="main-content">
+
+                <h2 class="title-main-content">Pilots</h2>
 
                 <div class="write-post-container">
                     <ul id="Pilot-list">
@@ -95,9 +99,9 @@ if (empty($PilotResult)) {
                         ?>
                     </ul>
                 </div>
-            </div>
-            <?php include_once("../Bar/Rightbar.php"); ?>
-        </div>
+                </div>
+                <?php include_once("../Bar/Rightbar.php"); ?>
+                </div>
 
 </body>
 

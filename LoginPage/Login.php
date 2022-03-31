@@ -13,10 +13,14 @@ session_destroy();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="StyleLoginpage.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="manifest" href="../manifest.json">
     <title>Log in</title>
 </head>
 
 <body>
+    <?php
+    include_once("../Const.php");
+    ?>
     <main>
         <section class="container">
             <section class="forms">
@@ -67,6 +71,11 @@ session_destroy();
     <script src="JavaScriptSign.js"></script>
 
 </html>
+<style>
+    .container .form {
+        margin-top: 25%;
+    }
+</style>
 </body>
 
 </html>

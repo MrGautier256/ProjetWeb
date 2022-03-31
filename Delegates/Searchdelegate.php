@@ -6,21 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
+    <link rel="manifest" href="../manifest.json">
     <title>Search Student</title>
 </head>
 
 <body>
     <?php
-    include_once("../Bar/Navbar.html");
     include_once("../Const.php");
+    include_once("../Bar/Navbar.php");
     ?>
-
     <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
-        ?>
-
-        <section class="add-content">
+        if ($_SESSION['user']['ID_Role'] == 3 || $_SESSION['user']['ID_Role'] == 2) {
+            echo '<section class="add-content">
 
             <h2 class="title-main-content">Search Delegate</h2>
             <form method="post" action="./Delegates.php">
@@ -71,18 +70,24 @@
             </form>
         </section>
 
-    </section>
-    <style>
-        .Student-box select {
-            font-size: 0.9rem;
-            padding: 2px 5px;
-            border-radius: 20px;
-            width: 100%;
-            padding: 10px;
+    </section>';
+        } else {
+            header('Location: ../Main/Index.php');
         }
-    </style>
+        ?>
 
-    <script src="../Javascriptindex.js"></script>
+
+        <style>
+            .Student-box select {
+                font-size: 0.9rem;
+                padding: 2px 5px;
+                border-radius: 20px;
+                width: 100%;
+                padding: 10px;
+            }
+        </style>
+
+        <script src="../Javascriptindex.js"></script>
 
 
 

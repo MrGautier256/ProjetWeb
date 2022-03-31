@@ -6,19 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
+    <link rel="manifest" href="../manifest.json">
     <title>Search Student</title>
 </head>
 
 <body>
-    <?php
-    include_once("../Bar/Navbar.html");
-    include_once("../Const.php");
-    ?>
 
+    <?php
+    include_once("../Const.php");
+    include_once("../Bar/Navbar.php");
+    ?>
     <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
+        <?php
+        if ($_SESSION['user']['ID_Role'] == 1) {
+            header('Location: ../Main/Index.php');
+        } else {
+            echo '
+
 
         <section class="add-content">
 
@@ -98,18 +105,21 @@
             </form>
         </section>
 
-    </section>
-    <style>
-        .Student-box select {
-            font-size: 0.9rem;
-            padding: 2px 5px;
-            border-radius: 20px;
-            width: 100%;
-            padding: 10px;
+    </section>';
         }
-    </style>
+        ?>
 
-    <script src="../Javascriptindex.js"></script>
+        <style>
+            .Student-box select {
+                font-size: 0.9rem;
+                padding: 2px 5px;
+                border-radius: 20px;
+                width: 100%;
+                padding: 10px;
+            }
+        </style>
+
+        <script src="../Javascriptindex.js"></script>
 
 
 

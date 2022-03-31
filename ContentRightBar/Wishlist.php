@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
+    <link rel="manifest" href="../manifest.json">
     <title>WishList</title>
 </head>
 
@@ -42,8 +43,10 @@
             }
         }
     </style>
-    <?php include_once("../Bar/NavBar.html");
-    include_once("../Const.php"); ?>
+    <?php
+    include_once("../Const.php");
+    include_once("../Bar/NavBar.php");
+    ?>
 
     <section class="container">
         <?php

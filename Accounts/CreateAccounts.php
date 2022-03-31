@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
+    <link rel="manifest" href="../manifest.json">
     <title>Create Account</title>
 </head>
 
@@ -16,7 +17,7 @@
     // 1 = Student 2 = pilot 3 = Admin 4 = Delegate
 
 
-    include_once("../Bar/Navbar.html");
+    include_once("../Bar/Navbar.php");
     ?>
     <div class="container">
 

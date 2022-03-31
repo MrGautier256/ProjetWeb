@@ -14,51 +14,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
+    <link rel="manifest" href="../manifest.json">
     <title>Document</title>
 </head>
 
 <body>
-    <?php include_once('../Bar/Navbar.html') ?>
-    <?php include_once('../Bar/Leftbar.php');
-    include_once("../Const.php"); ?>
+    <?php
+    include_once("../Const.php");
+    include_once('../Bar/Navbar.php');
+    ?>
 
-    <section class="containeroffre">
-        <section class="formulaire-wrapper">
-            <section class="formulaire-bloc">
-                <form name="form1" enctype="multipart/form-data" method="post" action="file.php" id="application-form" class="form">
-                    <section class="postuler-contenu">
-                        <article>
-                            <h2>Apply to the Offer :</h2>
-                            <article class="form-group">
-                                <label>Name</label>
-                                <input type="text" value="" placeholder="Enter Your Name" name="name" required>
-                            </article>
-                            <article class="form-group">
-                                <label>Email</label>
-                                <input type="email" value="" placeholder="Enter Your Email Address" name="email" required>
-                            </article>
-                            <article class="form-group">
-                                <label>Phone</label>
-                                <input type="phone" value="" placeholder="Contact Number" name="phone" required>
-                            </article>
-                        </article>
-                        <article>
-                            <article class="form-group">
-                                <label class="form-label">Message</label>
-                                <textarea name="message" placeholder="Type Message Here"></textarea>
-                            </article>
-                        </article>
-                        </article>
-                        <p>
-                            <input type="file" id="exampleInputFile" name="CV">
-                        </p>
-                        <article>
-                            <button type="submit">
-                                <span class="sendmessage"></span> Send Message </button>
-                        </article>
-                    </section>
+    <section class="container">
+        <?php include_once('../Bar/Leftbar.php') ?>
 
-                </form>
+        <section class="containeroffre">
+            <section class="formulaire-wrapper">
+                <section class="formulaire-bloc">
+                    <form name="form1" enctype="multipart/form-data" method="post" action="file.php" id="application-form" class="form">
+                        <section class="postuler-contenu">
+                            <article>
+                                <h2>Apply to the Offer :</h2>
+                                <article class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" value="" placeholder="Enter Your Name" name="name" required>
+                                </article>
+                                <article class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" value="" placeholder="Enter Your Email Address" name="email" required>
+                                </article>
+                                <article class="form-group">
+                                    <label>Phone</label>
+                                    <input type="phone" value="" placeholder="Contact Number" name="phone" required>
+                                </article>
+                            </article>
+                            <article>
+                                <article class="form-group">
+                                    <label class="form-label">Message</label>
+                                    <textarea name="message" placeholder="Type Message Here"></textarea>
+                                </article>
+                            </article>
+                            </article>
+                            <p>
+                                <input type="file" id="exampleInputFile" name="CV">
+                            </p>
+                            <article>
+                                <button type="submit">
+                                    <span class="sendmessage"></span> Send Message </button>
+                            </article>
+                        </section>
+
+                    </form>
+                </section>
             </section>
         </section>
     </section>

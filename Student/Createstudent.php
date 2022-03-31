@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
+    <link rel="manifest" href="../manifest.json">
     <title>Create student</title>
 </head>
 
@@ -13,7 +14,7 @@
     <main>
         <?php
         include_once("../Const.php");
-        include_once("../Bar/Navbar.html");
+        include_once("../Bar/Navbar.php");
         ?>
 
         <section class="container">
