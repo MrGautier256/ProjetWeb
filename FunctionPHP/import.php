@@ -150,7 +150,7 @@ if ($delegateCreate == 1) {
         (" . $bdd->quote($delegateLogin) . " 
         ," . $bdd->quote($delegatePassword) . ");
         
-        INSERT INTO `utilisateur` (`U_Prenom`, `U_Nom`, `U_Email`, `U_centre`, `ID_Role`, `ID_Authentification`) VALUES
+        INSERT INTO `utilisateur` (`U_Prenom`, `U_Nom`, ``, `U_centre`, `ID_Role`, `ID_Authentification`) VALUES
         (" . $bdd->quote($delegateFirstName) . ", 
         " . $bdd->quote($delegateLastName) . ", 
         " . $bdd->quote($delegateEmail) . ", 

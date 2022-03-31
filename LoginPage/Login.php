@@ -1,4 +1,9 @@
-<?php include_once("../Const.php"); ?>
+<?php
+include_once("../Const.php");
+$_SESSION = array();
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
