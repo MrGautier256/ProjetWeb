@@ -27,26 +27,34 @@
             <form method="post" action="">
                 <article class="search-box1">
                     <img src="../images/search.png">
-                    <input class="formulaireInput" id="myInput" name="pseudoCompanyLogin" type="text" placeholder="Company Login" required="required">
+                    <input class="formulaireInput" id="myInput" name="companyLogin" type="text" placeholder="Company Login" required="required">
                 </article>
                 <section class="write-post-container1">
                     <section class="student-account">
                         <ul>
                             <article class="Student-box">
-                                <li> Company Name : </li>
-                                <input class="formulaireInput" id="myInput" name="pseudoCompany" type="text" placeholder="Company Name" required="required">
+                                <select name="companyName" required="required">
+                                    <option value="">Choose the Company</option>
+                                    <?php
+                                    foreach ($Entreprises->getCompanies() as $Entreprise) {
+                                    ?>
+                                        <option value="<?= $Entreprise['En_Nom'] ?>"><?= $Entreprise['En_Nom'] ?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
                             </article>
                             <article class="Student-box">
                                 <li> line of business : </li>
-                                <input class="formulaireInput" id="myInput" name="pseudoCompanyBusiness" type="text" placeholder="Company Line of business" required="required">
-                            </article>
-                            <article class="Student-box">
-                                <li> City : </li>
-                                <input class="formulaireInput" id="myInput" name="pseudoCompanyCity" type="text" placeholder="Company city" required="required">
+                                <input class="formulaireInput" id="myInput" name="companyBusiness" type="text" placeholder="Company Line of business" required="required">
                             </article>
                             <article class="Student-box">
                                 <li> Pilot confidence : </li>
-                                <input class="formulaireInput" id="myInput" name="pseudoCompanyConfidence" type="text" placeholder="Company Pilot Confidence" required="required">
+                                <input class="formulaireInput" id="myInput" name="companyConfidence" type="text" placeholder="Company Pilot Confidence" required="required">
+                            </article>
+                            <article class="Student-box">
+                                <li></li>
+                                <input class="formulaireInput" id="companyModify" name="internshipModify" type="radio" value="1" style="visibility: hidden" checked>
                             </article>
                             <article class="button-box">
                                 <input class="favorite-styled" type="submit" value="Validate">

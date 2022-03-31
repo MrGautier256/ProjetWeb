@@ -102,22 +102,6 @@ if (document.getElementById('CreatePilot')) {
     })
 }
 
-if (document.getElementById('CreateNewCompany')) {
-    document.getElementById('CreateNewCompany').addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        var Name = document.getElementById("newCompanyName").value;
-        var Business = document.getElementById("newCompanyBusiness").value;
-        var City = document.getElementById("newCompanyCity").value;
-
-        var chainescorrecte = verifchaine(Name, Business, City)
-
-        if (chainescorrecte == true) {
-            document.getElementById('CreateNewCompany').submit()
-        }
-    })
-}
-
 
 
 
@@ -134,7 +118,7 @@ function ConfirmPassword(Pass1, Pass2) {
 
 function verifchaine(Login, Prenom, Nom) {
 
-    if (Login.match(/^([0-9a-zA-Z]){2,17}$/) && Prenom.match(/^([0-9a-zA-Z]){2,17}$/) && Nom.match(/^([0-9a-zA-Z]){2,17}$/)) {
+    if (Login.match(/^([0-9a-zA-Z_ -]){2,17}$/) && Prenom.match(/^([0-9a-zA-Z_ -]){2,17}$/) && Nom.match(/^([0-9a-zA-Z_ -]){2,17}$/)) {
         return true;
     }
     else {

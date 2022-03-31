@@ -1,15 +1,9 @@
-<script
-  src="https://kit.fontawesome.com/de868f3bd8.js"
-  crossorigin="anonymous"
-></script>
+<script src="https://kit.fontawesome.com/de868f3bd8.js" crossorigin="anonymous"></script>
 <nav>
   <div class="nav-left" id="nav-left">
     <i id="toggle" class="fas fa-bars"></i>
     <a href="../Main/Index.php">
-      <img
-        src="https://res.cloudinary.com/recruitee/image/upload/production/images/TUU/GiVF8kve5_Gx.png"
-        class="logo"
-      />
+      <img src="https://res.cloudinary.com/recruitee/image/upload/production/images/TUU/GiVF8kve5_Gx.png" class="logo" />
     </a>
   </div>
 
@@ -31,42 +25,33 @@
       <div class="user-profile">
         <img src="../images/profile-pic.png" />
         <div>
-          <p>Aymane HILMI</p>
+          <p> <?php echo ($_SESSION['user']['U_Prenom'] . " " . ($_SESSION['user']['U_Nom'])) ?></p>
           <a href="../Profile/Profil.php">See Your Profile</a>
         </div>
       </div>
       <hr />
       <div class="user-profile">
-        <img src="../images/feedback.png" />
         <div>
-          <p>Give FeedBack</p>
-          <a href="#">Help us To improve the New design</a>
+          <p> <?php echo ($_SESSION['user']['U_Email']) ?></p>
+          <p> <?php echo ($_SESSION['user']['U_centre']) ?></p>
         </div>
       </div>
       <hr />
       <div class="setting-links">
         <img src="../images/setting.png" class="settings-icon" />
-        <a href="#"
-          >Settings & Privacy <img src="../images/arrow.png" width="10px"
-        /></a>
+        <a href="#">Settings & Privacy <img src="../images/arrow.png" width="10px" /></a>
       </div>
       <div class="setting-links">
         <img src="../images/help.png" class="settings-icon" />
-        <a href="#"
-          >Help & Support <img src="../images/arrow.png" width="10px"
-        /></a>
+        <a href="#">Help & Support <img src="../images/arrow.png" width="10px" /></a>
       </div>
       <div class="setting-links">
         <img src="../images/display.png" class="settings-icon" />
-        <a href="#"
-          >Display & Accessibility <img src="../images/arrow.png" width="10px"
-        /></a>
+        <a href="#">Display & Accessibility <img src="../images/arrow.png" width="10px" /></a>
       </div>
       <div class="setting-links">
         <img src="../images/logout.png" class="settings-icon" />
-        <a href="../LoginPage/Login.php"
-          >Logout <img src="../images/arrow.png" width="10px"
-        /></a>
+        <a href="../LoginPage/Login.php">Logout <img src="../images/arrow.png" width="10px" /></a>
       </div>
     </div>
   </div>

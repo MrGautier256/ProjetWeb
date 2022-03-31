@@ -37,6 +37,11 @@ if (count($verif) > 0) {
 
     $_SESSION['auth'] = true;
     $_SESSION['user']['ID_Role'] = $verif[0]['ID_Role'];
+    $_SESSION['user']['U_Prenom'] = $verif[0]['U_Prenom'];
+    $_SESSION['user']['U_Nom'] = $verif[0]['U_Nom'];
+    $_SESSION['user']['U_Email'] = $verif[0]['U_Email'];
+    $_SESSION['user']['U_centre'] = $verif[0]['U_centre'];
+
     header("Location:../Main/Index.php");
     exit;
 } else {

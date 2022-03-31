@@ -4,6 +4,7 @@ require_once("../Const.php");
 $studentModify = @$_POST['studentModify'];
 $delegateModify = @$_POST['delegateModify'];
 $pilotModify = @$_POST['pilotModify'];
+$internshipModify = @$_POST['internshipModify'];
 
 
 
@@ -183,8 +184,6 @@ if ($pilotModify == 1) {
         header('Location: ../Pilots/Modifypilot.php');
     }
 
-    $reqtpromo = "";
-
     if (empty($pilotFirstName)) {
         $U_Prenom = "";
         $pilotFirstName = "";
@@ -247,5 +246,117 @@ if ($pilotModify == 1) {
 
     $bdd = null;
     header('Location: ../Pilots/Modifypilot.php');
+    exit();
+}
+
+
+
+if ($internshipModify == 1) {
+
+
+    $internshipLogin = $bdd->quote($_POST['internshipLogin']);
+
+    $internshipSkills = $_POST['internshipSkills'];
+    $internshipCompensation = $_POST['internshipCompensation'];
+    $internshipDuration = $_POST['internshipDuration'];
+    $companyName = $bdd->quote($_POST['companyName']);
+
+    if (empty($internshipSkills) && empty($internshipCompensation) && empty($internshipDuration)) {
+        header('Location: ../Internship/Modifyoffer.php');
+    }
+
+    if (empty($internshipSkills)) {
+        $OS_Competences = "";
+        $internshipSkills = "";
+    } else {
+        $OS_Competences = 'OS_Competences =';
+        $internshipSkills = $bdd->quote($internshipSkills) . ',';
+    }
+
+    if (empty($internshipCompensation)) {
+        $OS_Remuneration = "";
+        $internshipCompensation = "";
+    } else {
+        $OS_Remuneration = 'OS_Remuneration =';
+        $internshipCompensation = $bdd->quote($internshipCompensation) . ',';
+    }
+
+    if (empty($internshipDuration)) {
+        $OS_Duree = "";
+        $internshipDuration = "";
+    } else {
+        $OS_Duree = 'OS_Duree =';
+        $internshipDuration = $bdd->quote($internshipDuration) . ',';
+    }
+
+
+
+    $reqt = " SET @idEntre = (SELECT ID_Entreprise FROM entreprise WHERE EN_Nom = " . $companyName . ")
+    SET @IdOffr = (SELECT ID_Offre_de_Stage FROM offre_de_stage WHERE OS_Nom = " . $internshipLogin . " and );
+
+    UPDATE offre_de_stage SET " . $OS_Competences . " " . $internshipSkills . " " . $OS_Remuneration . "
+    " . $internshipCompensation . " " . $OS_Duree . " " . $internshipDuration . " ID_Offre_de_Stage = @IdOffr
+    WHERE ID_Offre_de_Stage = @IdOffr;";
+
+
+    $Offerresults = $bdd->query($reqt);
+
+    $bdd = null;
+    header('Location: ../Internship/Modifyoffer.php');
+    exit();
+}
+
+
+
+if ($companyModify == 1) {
+
+
+    $internshipLogin = $bdd->quote($_POST['internshipLogin']);
+
+    $internshipSkills = $_POST['internshipSkills'];
+    $internshipCompensation = $_POST['internshipCompensation'];
+    $internshipDuration = $_POST['internshipDuration'];
+
+    if (empty($internshipSkills) && empty($internshipCompensation) && empty($internshipDuration)) {
+        header('Location: ../Internship/Modifyoffer.php');
+    }
+
+    if (empty($internshipSkills)) {
+        $OS_Competences = "";
+        $internshipSkills = "";
+    } else {
+        $OS_Competences = 'OS_Competences =';
+        $internshipSkills = $bdd->quote($internshipSkills) . ',';
+    }
+
+    if (empty($internshipCompensation)) {
+        $OS_Remuneration = "";
+        $internshipCompensation = "";
+    } else {
+        $OS_Remuneration = 'OS_Remuneration =';
+        $internshipCompensation = $bdd->quote($internshipCompensation) . ',';
+    }
+
+    if (empty($internshipDuration)) {
+        $OS_Duree = "";
+        $internshipDuration = "";
+    } else {
+        $OS_Duree = 'OS_Duree =';
+        $internshipDuration = $bdd->quote($internshipDuration) . ',';
+    }
+
+
+
+    $reqt = "SET @IdOffr = (SELECT ID_Offre_de_Stage FROM offre_de_stage WHERE OS_Nom = " . $internshipLogin . ");
+
+    UPDATE offre_de_stage SET " . $OS_Competences . " " . $internshipSkills . " " . $OS_Remuneration . "
+    " . $internshipCompensation . " " . $OS_Duree . " " . $internshipDuration . " ID_Offre_de_Stage = @IdOffr
+    WHERE ID_Offre_de_Stage = @IdOffr;";
+
+
+    $Offerresults = $bdd->query($reqt);
+
+    $bdd = null;
+    header('Location: ../Internship/Modifyoffer.php');
     exit();
 }

@@ -1,5 +1,5 @@
 <?php
-include_once("../Const.php");
+session_start();
 $_SESSION = array();
 session_destroy();
 ?>
@@ -18,9 +18,6 @@ session_destroy();
 </head>
 
 <body>
-    <?php
-    include_once("../Const.php");
-    ?>
     <main>
         <section class="container">
             <section class="forms">
@@ -29,7 +26,7 @@ session_destroy();
 
                     <form method="post" action="../FunctionPHP/connect.php">
                         <article class="input-field">
-                            <input type="text" id="userLogin" name="userLogin" placeholder="Enter your email" required>
+                            <input type="text" id="userLogin" name="userLogin" placeholder="Enter your Login" required>
                             <i class="uil uil-envelope"></i>
                         </article>
 

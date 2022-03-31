@@ -54,7 +54,7 @@ include_once("../Const.php");
             <a href="../Accounts/ModifyAccounts.php"><img src="../images/edit.png"> Modify</a>
             <a href="../Accounts/DeleteAccounts.php"><img src="../images/delete.png"> Delete</a>';
                 break;
-            case '0':
+            case null:
                 header('Location: ../LoginPage/Login.php');
                 break;
         }
