@@ -37,15 +37,15 @@
                                 <h2>Apply to the Offer :</h2>
                                 <article class="form-group">
                                     <label>Name</label>
-                                    <input type="text" value="" placeholder="Enter Your Name" name="name" required>
+                                    <input type="text" placeholder="Enter Your Name" name="name" required>
                                 </article>
                                 <article class="form-group">
                                     <label>Email</label>
-                                    <input type="email" value="" placeholder="Enter Your Email Address" name="email" required>
+                                    <input type="email" placeholder="Enter Your Email Address" name="email" required>
                                 </article>
                                 <article class="form-group">
                                     <label>Phone</label>
-                                    <input type="phone" value="" placeholder="Contact Number" name="phone" required>
+                                    <input type="phone" placeholder="Contact Number" name="phone" required>
                                 </article>
                             </article>
                             <article>

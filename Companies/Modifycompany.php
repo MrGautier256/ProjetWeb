@@ -12,12 +12,12 @@
 
 <body>
     <?php
+    include_once("../Const.php");
     include_once("../Bar/Navbar.php");
     ?>
 
     <section class="container">
         <?php
-        include_once("../Const.php");
         include_once("../Bar/Leftbar.php");
         ?>
 

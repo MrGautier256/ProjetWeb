@@ -85,6 +85,12 @@ $CompanyNameResult = $result->fetchAll();
                     </ul>
                 </section>
             </form>
+            <article class="button-box-postuler">
+                <form method="post" action="../Postuleroffre/Postuleroffre.php">
+                    <button class="favorite-styled-menu" type="submit">Send an Application</button>
+                </form>
+            </article>
+
         </section>
 
     </section>
@@ -95,6 +101,10 @@ $CompanyNameResult = $result->fetchAll();
             border-radius: 20px;
             width: 100%;
             padding: 10px;
+        }
+
+        .button-box-postuler {
+            width: 100%;
         }
     </style>
 

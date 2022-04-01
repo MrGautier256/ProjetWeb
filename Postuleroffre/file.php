@@ -2,11 +2,10 @@
 if ($_POST && isset($_FILES['CV'])) {
 
     $from_email = $_POST['email']; //sender email
-    $recipient_email = 'aymanehilmi1@gmail.com'; //recipient email
+    $recipient_email =  $_POST['email']; //recipient email
     $subject = 'Enquiry'; //subject of email
     $message = 'Name:' . $_POST['name']; //message body
     $message .= ',phone :' . $_POST['phone'] . ',';
-    $message .= ',email :' . $_POST['email'] . ',';
     $message .= 'message:' . $_POST['message'] . '';
 
     //get file details we need

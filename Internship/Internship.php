@@ -69,6 +69,10 @@ if (empty($OfferResult)) {
             margin-left: 40px;
         }
 
+        .internship-box {
+            width: 70%
+        }
+
         @media (max-width: 900px) {
             .Internship-content {
                 margin-left: 0;
