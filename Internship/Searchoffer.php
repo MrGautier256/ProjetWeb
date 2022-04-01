@@ -86,7 +86,7 @@ $CompanyNameResult = $result->fetchAll();
                 </section>
                 <article class="button-box">
                     <form action="../Postuleroffre/Postuleroffre.php">
-                        <button class="favorite-styled" type="button">Apply</button>
+                        <button class="favorite-styled-menu" type="button">Apply</button>
                     </form>
                 </article>
             </form>
