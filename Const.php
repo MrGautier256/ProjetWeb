@@ -4,3 +4,5 @@ session_start();
 if ($_SESSION == null) {
     header("Location:../LoginPage/Login.php");
 }
+
+$_SESSION['user']['ID_Role'] = 1;
