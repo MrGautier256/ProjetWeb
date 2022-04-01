@@ -74,6 +74,10 @@ if (empty($OfferResult)) {
                 margin-left: 0;
             }
         }
+
+        .internship-box {
+            width: 70%
+        }
     </style>
     <?php
     include_once("../Const.php");
@@ -84,33 +88,35 @@ if (empty($OfferResult)) {
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
-        <section class="Internship-content">
+        <div class="internship-box">
+            <section class="Internship-content">
 
-            <h2 class="title-main-content">InternShip Offers</h2>
-            <article class="write-post-container">
-                <ul class="Offers-list">
-                    <?php
-                    foreach ($OfferResult as $Offer) {
-                    ?>
-                        <li>
-                            <article class="Offer-container">
-                                <article class="Offer-Title">
-                                    <?= $Offer['OS_Nom'] ?>
-                                    <article class="Place-offer">
-                                        <?= $Offer['OS_Localites'] ?>
+                <h2 class="title-main-content">InternShip Offers</h2>
+                <article class="write-post-container">
+                    <ul class="Offers-list">
+                        <?php
+                        foreach ($OfferResult as $Offer) {
+                        ?>
+                            <li>
+                                <article class="Offer-container">
+                                    <article class="Offer-Title">
+                                        <?= $Offer['OS_Nom'] ?>
+                                        <article class="Place-offer">
+                                            <?= $Offer['OS_Localites'] ?>
+                                        </article>
+
+                                        <p><?= $Offer['OS_Competences'] ?></p>
                                     </article>
-
-                                    <p><?= $Offer['OS_Competences'] ?></p>
+                                    <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo">
                                 </article>
-                                <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo">
-                            </article>
-                        </li>
-                    <?php
-                    }
-                    ?>
-            </article>
-            </ul>
-        </section>
+                            </li>
+                        <?php
+                        }
+                        ?>
+                </article>
+                </ul>
+            </section>
+        </div>
     </section>
 
     <script src="../Javascriptindex.js"></script>
