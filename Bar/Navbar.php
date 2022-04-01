@@ -23,7 +23,25 @@
     </div>
     <div class="settings-menu-inner">
       <div class="user-profile">
-        <img src="../images/profile-pic.png" />
+        <?php
+        include_once("../Const.php");
+        switch ($_SESSION['user']['ID_Role']) {
+          case "1":
+            echo '<img src="../images/profile-pic.png" />';
+            break;
+          case "2":
+            echo '<img src="../images/altazin.jpg" />';
+            break;
+          case "3":
+            echo '<img src="../images/admin.jpg" />';
+            break;
+          case "4":
+            echo '<img src="../images/audrey.jpg" />';
+            break;
+        }
+
+        ?>
+
         <div>
           <p> <?php echo ($_SESSION['user']['U_Prenom'] . " " . ($_SESSION['user']['U_Nom'])) ?></p>
           <a href="../Profile/Profil.php">See Your Profile</a>
