@@ -25,8 +25,9 @@
     ?>
 
     <section class="container">
-        <?php include_once('../Bar/Leftbar.php') ?>
-
+        <?php
+        include_once('../Bar/Leftbar.php');
+        ?>
         <section class="containeroffre">
             <section class="formulaire-wrapper">
                 <section class="formulaire-bloc">
@@ -73,6 +74,7 @@
         @media (max-width: 900px) {
             .containeroffre {
                 padding: 40px 12px 0 12px;
+                width: 100%;
             }
 
             .formulaire-wrapper {
@@ -97,6 +99,7 @@
 
             .containeroffre {
                 padding: 0px 40px 40px 40px;
+                width: 100%;
             }
 
             .formulaire-bloc {
