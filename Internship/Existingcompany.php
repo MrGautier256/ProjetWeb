@@ -79,6 +79,7 @@ $Entreprises = new DisplayEntreprise();
         </section>
 
     </section>
+
     <style>
         .Student-box select {
             font-size: 0.9rem;

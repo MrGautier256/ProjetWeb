@@ -119,7 +119,4 @@ if (empty($StudentResult)) {
     </style>
     <script src="../Javascriptindex.js"></script>
 
-
-
-
 </body>

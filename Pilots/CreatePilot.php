@@ -28,12 +28,6 @@
                     <article class="student-account">
 
                         <article>
-                            <?php
-                            if (!empty($_SESSION['Error_creation'])) {
-                                echo '<article>' . $_SESSION['Error_creation'] . '</article>';
-                                $_SESSION['Error_creation'] = '';
-                            }
-                            ?>
                             <form method="post" action="../FunctionPHP/import.php">
                                 <article class="write-post-container1">
                                     <article class="student-account">

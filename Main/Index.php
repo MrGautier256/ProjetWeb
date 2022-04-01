@@ -50,7 +50,6 @@ $LastestNews = $News->fetchAll();
                         </article>
                     </article>
                     <p class="publication-text"> </i> Compétences requises: <?= $LNews['OS_Competences'] ?></p>
-                    <img src="https://static.alphorm.com/bgplayer/FR_191/FR_191_bg_player_large.png" class="publication-image">
                 </article>
             <?php
             }

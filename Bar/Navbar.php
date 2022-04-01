@@ -13,7 +13,23 @@
       <input type="text" placeholder="Search" />
     </div>
     <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-      <img src="../images/profile-pic.png" />
+      <?php
+      switch ($_SESSION['user']['ID_Role']) {
+        case "1":
+          echo '<img src="../images/profile-pic.png" />';
+          break;
+        case "2":
+          echo '<img src="../images/altazin.jpg" />';
+          break;
+        case "3":
+          echo '<img src="../images/admin.jpg" />';
+          break;
+        case "4":
+          echo '<img src="../images/audrey.jpg" />';
+          break;
+      }
+
+      ?>
     </div>
   </div>
   <!------------------Settings-Menu--------------------->
@@ -24,7 +40,6 @@
     <div class="settings-menu-inner">
       <div class="user-profile">
         <?php
-        include_once("../Const.php");
         switch ($_SESSION['user']['ID_Role']) {
           case "1":
             echo '<img src="../images/profile-pic.png" />';

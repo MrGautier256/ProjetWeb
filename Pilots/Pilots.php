@@ -73,7 +73,7 @@ if (empty($PilotResult)) {
 </head>
 
 <body>
-<<<<<<< Updated upstream
+
     <main>
 
         <?php
@@ -105,9 +105,8 @@ if (empty($PilotResult)) {
                 </div>
 
 
-        <script src="../Javascriptindex.js"></script>
-    </div>
->>>>>>> Stashed changes
+                <script src="../Javascriptindex.js"></script>
+                </div>
 
 </body>
 

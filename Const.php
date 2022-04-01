@@ -5,4 +5,4 @@ if ($_SESSION == null) {
     header("Location:../LoginPage/Login.php");
 }
 
-$_SESSION['user']['ID_Role'] = 1;
+//$_SESSION['user']['ID_Role'];

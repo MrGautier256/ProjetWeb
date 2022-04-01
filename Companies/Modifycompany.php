@@ -11,6 +11,21 @@
 </head>
 
 <body>
+    <style>
+        .Student-box select {
+            font-size: 0.9rem;
+            padding: 2px 5px;
+            border-radius: 20px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .company-select {
+            width: 100%;
+            border-radius: 50px;
+        }
+    </style>
     <?php
     include_once("../Const.php");
     include_once("../Bar/Navbar.php");
@@ -33,7 +48,7 @@
                     <section class="student-account">
                         <ul>
                             <article class="Student-box">
-                                <select name="companyName" required="required">
+                                <select class="company-select" name="companyName" required="required">
                                     <option value="">Choose the Company</option>
                                     <?php
                                     foreach ($Entreprises->getCompanies() as $Entreprise) {
@@ -67,7 +82,6 @@
         </section>
 
     </section>
-
 
     <script src="../Javascriptindex.js"></script>
 

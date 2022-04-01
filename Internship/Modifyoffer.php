@@ -89,7 +89,6 @@ $Entreprises = new DisplayEntreprise();
             margin-bottom: 20px;
         }
     </style>
-
     <script src="../Javascriptindex.js"></script>
 
 

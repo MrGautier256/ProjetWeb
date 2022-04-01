@@ -100,6 +100,7 @@ if ($studentModify == 1) {
     $Studentresults = $bdd->query($reqt);
 
     $bdd = null;
+    $_SESSION['ResultInteract'] = "Modification effectuée";
     header('Location: ../Student/Modifystudent.php');
     exit();
 }
@@ -163,6 +164,7 @@ if ($delegateModify == 1) {
     $Studentresults = $bdd->query($reqt);
 
     $bdd = null;
+    $_SESSION['ResultInteract'] = "Modification effectuée";
     header('Location: ../Delegates/Modifydelegate.php');
     exit();
 }
@@ -245,6 +247,7 @@ if ($pilotModify == 1) {
     $Studentresults = $bdd->query($reqt);
 
     $bdd = null;
+    $_SESSION['ResultInteract'] = "Modification effectuée";
     header('Location: ../Pilots/Modifypilot.php');
     exit();
 }
@@ -302,6 +305,7 @@ if ($internshipModify == 1) {
     $Offerresults = $bdd->query($reqt);
 
     $bdd = null;
+    $_SESSION['ResultInteract'] = "Modification effectuée";
     header('Location: ../Internship/Modifyoffer.php');
     exit();
 }
@@ -354,8 +358,8 @@ if ($companyModify == 1) {
     WHERE ID_Offre_de_Stage = @IdOffr;";
 
 
-    $Offerresults = $bdd->query($reqt);
-
+    //$Offerresults = $bdd->query($reqt);
+    $_SESSION['ResultInteract'] = "Modification effectuée";
     $bdd = null;
     header('Location: ../Internship/Modifyoffer.php');
     exit();

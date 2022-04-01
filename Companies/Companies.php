@@ -93,7 +93,13 @@ if (empty($CompanyResult)) {
 
 
     <script src="../Javascriptindex.js"></script>
-
+    <style>
+        @media (max-width: 900px) {
+            .entreprises-logo {
+                display: none;
+            }
+        }
+    </style>
 </body>
 
 </html>

@@ -69,18 +69,19 @@ if (empty($OfferResult)) {
             margin-left: 40px;
         }
 
-        .internship-box {
-            width: 70%
-        }
-
         @media (max-width: 900px) {
             .Internship-content {
                 margin-left: 0;
+                width: 100%;
+            }
+
+            .internship-box {
+                width: 100%
             }
         }
 
         .internship-box {
-            width: 70%
+            width: 100%
         }
     </style>
     <?php
@@ -92,7 +93,8 @@ if (empty($OfferResult)) {
         <?php
         include_once("../Bar/Leftbar.php");
         ?>
-        <div class="internship-box">
+
+        <section class="internship-box">
             <section class="Internship-content">
 
                 <h2 class="title-main-content">InternShip Offers</h2>
@@ -111,7 +113,7 @@ if (empty($OfferResult)) {
 
                                         <p><?= $Offer['OS_Competences'] ?></p>
                                     </article>
-                                    <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo">
+                                    <!-- <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo"> -->
                                 </article>
                             </li>
                         <?php
@@ -120,7 +122,7 @@ if (empty($OfferResult)) {
                 </article>
                 </ul>
             </section>
-        </div>
+        </section>
     </section>
 
     <script src="../Javascriptindex.js"></script>

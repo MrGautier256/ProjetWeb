@@ -24,12 +24,7 @@
 
             <section class="add-content">
                 <h2 class="title-main-content">Create New Student Account</h2>
-                <?php
-                if (!empty($_SESSION['Error_creation'])) {
-                    echo '<article>' . $_SESSION['Error_creation'] . '</article>';
-                    $_SESSION['Error_creation'] = '';
-                }
-                ?>
+                <?php echo ('<article>' . $_SESSION['Error_creation'] . '</article>'); ?>
                 <form method="post" id="CreateStudent" action="../FunctionPHP/import.php">
                     <article class="write-post-container1">
                         <article class="student-account">
@@ -142,6 +137,7 @@
     </style>
     <script src="../Javascriptindex.js"></script>
 
+    <?php $_SESSION['Error_creation'] = "" ?>
 
 
 

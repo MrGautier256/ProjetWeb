@@ -19,6 +19,103 @@
 </head>
 
 <body>
+    <style>
+        @media (max-width: 900px) {
+            .containeroffre {
+                padding: 40px 12px 0 12px;
+                width: 100%;
+            }
+
+            .formulaire-wrapper {
+                display: flex;
+                height: 100vh;
+                justify-content: space-around;
+                align-items: center;
+                padding-bottom: 80%;
+                /* padding: 0px 20px 20px 20px; */
+            }
+
+            .container {
+                width: 100%;
+            }
+
+        }
+
+        @media (min-width: 901px) {
+            .formulaire-wrapper {
+                display: flex;
+                height: 100vh;
+                justify-content: space-around;
+                align-items: center;
+                padding-bottom: 2%;
+            }
+
+            .containeroffre {
+                padding: 0px 40px 40px 40px;
+                width: 100%;
+            }
+
+            .formulaire-bloc {
+                margin-top: 10px;
+
+            }
+
+            .left-sidebar {
+                display: none;
+            }
+
+            .formulaire-wrapper {
+                padding-bottom: 20%;
+                /* padding: 0px 20px 20px 20px; */
+            }
+        }
+
+        .formulaire-bloc {
+            padding: 30px;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 5px;
+            background: #009688;
+            color: white;
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+
+
+
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group input {
+            width: 100%;
+            border: none;
+            border-radius: 50px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .form p {
+            margin: 20px;
+        }
+
+        #exampleInputFile {
+            padding: 20px;
+        }
+
+        textarea {
+            resize: none;
+            height: 70px;
+        }
+    </style>
     <?php
     include_once("../Const.php");
     include_once('../Bar/Navbar.php');
@@ -70,94 +167,7 @@
         </section>
     </section>
 
-    <style>
-        @media (max-width: 900px) {
-            .containeroffre {
-                padding: 40px 12px 0 12px;
-                width: 100%;
-            }
 
-            .formulaire-wrapper {
-                display: flex;
-                height: 100vh;
-                justify-content: space-around;
-                align-items: center;
-                padding-bottom: 2%;
-                /* padding: 0px 20px 20px 20px; */
-            }
-
-        }
-
-        @media (min-width: 901px) {
-            .formulaire-wrapper {
-                display: flex;
-                height: 100vh;
-                justify-content: space-around;
-                align-items: center;
-                padding-bottom: 2%;
-            }
-
-            .containeroffre {
-                padding: 0px 40px 40px 40px;
-                width: 100%;
-            }
-
-            .formulaire-bloc {
-                margin-top: 20px;
-
-            }
-
-            .left-sidebar {
-                display: none;
-            }
-        }
-
-        .formulaire-bloc {
-            padding: 30px;
-            align-items: center;
-            justify-content: space-around;
-            border-radius: 5px;
-            background: #009688;
-            color: white;
-            width: 100%;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-
-
-
-
-        .form-group {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group input {
-            width: 100%;
-            border: none;
-            border-radius: 50px;
-            padding: 10px;
-            margin-top: 10px;
-        }
-
-        .form p {
-            margin: 20px;
-        }
-
-        #exampleInputFile {
-            padding: 20px;
-        }
-
-        textarea {
-            resize: none;
-            height: 70px;
-        }
-    </style>
     <script src="../Javascriptindex.js"></script>
 </body>
 

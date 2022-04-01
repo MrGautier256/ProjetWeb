@@ -45,8 +45,7 @@
         </section>
 
     </section>
-    <style>
-    </style>
+
 
     <script src="../Javascriptindex.js"></script>
 

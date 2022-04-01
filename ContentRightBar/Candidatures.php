@@ -12,8 +12,9 @@
 
 <body>
 
-    <?php include_once("../Bar/NavBar.php");
+    <?php
     include_once("../Const.php");
+    include_once("../Bar/NavBar.php");
     ?>
 
     <section class="container">

@@ -53,6 +53,21 @@ if (empty($DelegateResult)) {
 </head>
 
 <body>
+    <style>
+        @media (max-width: 900px) {
+            .container {
+                display: block;
+                margin-top: 70px;
+            }
+        }
+
+        @media (min-width: 900px) {
+
+            .Delegate-content {
+                width: 70%;
+            }
+        }
+    </style>
     <?php
     include_once("../Const.php");
     include_once("../Bar/Navbar.php");
@@ -69,24 +84,24 @@ if (empty($DelegateResult)) {
 
             <section class="write-post-container">
                 <ul class="Delegate-list">
-                    <ul class="Delegate-list">
-                        <?php
-                        foreach ($DelegateResult as $Delegate) {
-                        ?>
-                            <li><a href="#"><?= $Delegate['U_Prenom'] ?> <?= $Delegate['U_Nom'] ?>
-                                    <br><?= $Delegate['U_centre'] ?>
-                                    <br><?= $Delegate['U_Email'] ?>
-                                </a></li>
-                        <?php
-                        }
-                        ?>
+                    <?php
+                    foreach ($DelegateResult as $Delegate) {
+                    ?>
+                        <li><a href="#"><?= $Delegate['U_Prenom'] ?> <?= $Delegate['U_Nom'] ?>
+                                <br><?= $Delegate['U_centre'] ?>
+                                <br><?= $Delegate['U_Email'] ?>
+                            </a>
+                        </li>
+                    <?php
+                    }
+                    ?>
 
-                    </ul>
                 </ul>
             </section>
         </section>
 
     </section>
+
     <script src="../Javascriptindex.js"></script>
 
 

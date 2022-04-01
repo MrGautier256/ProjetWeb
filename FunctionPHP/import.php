@@ -62,10 +62,11 @@ if ($studentCreate == 1) {
 
         $Studentresults = $bdd->query($Studentreq_str);
         $bdd = null;
+        $_SESSION['ResultInteract'] = "Creation reussie";
         header('Location: ../Student/Createstudent.php');
         exit();
     } else {
-        $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
+        $_SESSION['ResultInteract'] = "Impossible de creer le compte: Email ou Login deja existant";
         header('Location: ../Student/Createstudent.php');
         exit();
     }
@@ -114,10 +115,11 @@ if ($pilotCreate == 1) {
 
         $Pilotresults = $bdd->query($Pilotreq_str);
         $bdd = null;
+        $_SESSION['ResultInteract'] = "Creation reussie";
         header('Location: ../Pilots/CreatePilot.php');
         exit();
     } else {
-        $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
+        $_SESSION['ResultInteract'] = "Impossible de creer le compte: Email ou Login deja existant";
         header('Location: ../Student/CreatePilot.php');
         exit();
     }
@@ -162,10 +164,11 @@ if ($delegateCreate == 1) {
 
         $Delegateresults = $bdd->query($Delegatereq_str);
         $bdd = null;
+        $_SESSION['ResultInteract'] = "Creation reussie";
         header('Location: ../Delegates/CreateDelegate.php');
         exit();
     } else {
-        $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
+        $_SESSION['ResultInteract'] = "Impossible de creer le compte: Email ou Login deja existant";
         header('Location: ../Student/CreateDelegate.php');
         exit();
     }
@@ -212,10 +215,11 @@ if ($createInternshipNewCompany == 1) {
 
         $InternshipNewCompanyresults = $bdd->query($InternshipNewCompanyreq_str);
         $bdd = null;
+        $_SESSION['ResultInteract'] = "Creation reussie";
         header('Location: ../Internship/Newcompany.php');
         exit();
     } else {
-        $_SESSION['Error_creation'] = "entreprise deja existante";
+        $_SESSION['ResultInteract'] = "entreprise deja existante";
         header('Location: ../Internship/Newcompany.php');
         exit();
     }
@@ -253,11 +257,12 @@ if ($createInternshipOldCompany == 1) {
         var_dump($InternshipOldCompanyresults);
         $InternshipOldCompanyresults = $bdd->query($InternshipOldCompanyreq_str);
         $bdd = null;
+        $_SESSION['ResultInteract'] = "Entreprise crée avec succès";
         header('Location: ../Internship/Existingcompany.php');
         exit();
     } else {
         echo "prout";
-        $_SESSION['Error_creation'] = "Nom d'offre deja existant";
+        $_SESSION['ResultInteract'] = "Creation échouée";
         header('Location: ../Internship/Existingcompany.php');
         exit();
     }
