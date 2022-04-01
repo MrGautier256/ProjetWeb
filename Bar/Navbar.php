@@ -18,6 +18,7 @@
         case "1":
           echo '<img src="../images/profile-pic.png" />';
           break;
+
         case "2":
           echo '<img src="../images/altazin.jpg" />';
           break;

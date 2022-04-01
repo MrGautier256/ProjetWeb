@@ -25,6 +25,18 @@ $Entreprises = new DisplayEntreprise();
     <section class="container">
         <?php
         include_once("../Bar/Leftbar.php");
+        switch ($_SESSION['user']['ID_Role']) {
+            case 1:
+                // header("Location:../LoginPage/Login.php");
+                header("Location:../Main/Index.php");
+                break;
+            case '4':
+                header("Location:../Main/Index.php");
+                break;
+            case 'null':
+                header("Location:../LoginPage/Login.php");
+                break;
+        }
         ?>
 
         <section class="add-content">

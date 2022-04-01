@@ -15,6 +15,18 @@
         <?php
         include_once("../Const.php");
         include_once("../Bar/Navbar.php");
+        switch ($_SESSION['user']['ID_Role']) {
+            case 1:
+                // header("Location:../LoginPage/Login.php");
+                header("Location:../Main/Index.php");
+                break;
+            case '4':
+                header("Location:../Main/Index.php");
+                break;
+            case 'null':
+                header("Location:../LoginPage/Login.php");
+                break;
+        }
         ?>
 
         <section class="container">
