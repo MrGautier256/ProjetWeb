@@ -69,7 +69,7 @@
             if ($_SESSION['user']['ID_Role'] != 1) {
                 echo '<div class="button-box-menu">
                             <form action="../companies/Modifycompany.php">
-                                <button class="favorite-styled-menu" type="submit">
+                                <button class="favorite-styled-menu" style="background:grey" type="submit" disabled="disabled">
                                     Modify Company
                                 </button>
                             </form>

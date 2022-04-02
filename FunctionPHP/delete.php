@@ -77,7 +77,7 @@ if ($pilotDelete == 1) {
         exit();
     } else {
         $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
-        header('Location: ../Student/Deletepilot.php');
+        header('Location: ../Pilots/Deletepilot.php');
         exit();
     }
 }
@@ -110,7 +110,7 @@ if ($delegateDelete == 1) {
         exit();
     } else {
         $_SESSION['Error_creation'] = "Impossible de creer le compte: Email ou Login deja existant";
-        header('Location: ../Student/Deletedelegate.php');
+        header('Location: ../Delegates/Deletedelegate.php');
         exit();
     }
 }
