@@ -40,6 +40,7 @@ if ($studentCreate == 1) {
         $studentPromo = $_POST['studentPromotion'];
         $studentCenter = $_POST['studentCenter'];
         $studentPassword = hash('md5', $_POST['studentPassword']);
+
         $studentConfirmPassword = $_POST['studentConfirmPassword'];
 
         $Studentreq_str = "INSERT INTO `authentification` (`A_Login`, `A_mdp`) VALUES
@@ -61,6 +62,7 @@ if ($studentCreate == 1) {
         ),(SELECT ID_Wishlist FROM wishlist WHERE Wish_Etudiant = @NomPrenom));";
 
         $Studentresults = $bdd->query($Studentreq_str);
+
         $bdd = null;
         $_SESSION['ResultInteract'] = "Creation reussie";
         header('Location: ../Student/Createstudent.php');
