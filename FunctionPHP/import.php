@@ -98,6 +98,7 @@ if ($pilotCreate == 1) {
 
         $pilotPromo = implode(", ", $pilotPromoTab);
 
+
         $Pilotreq_str = "INSERT INTO `authentification` (`A_Login`, `A_mdp`) VALUES
         (" . $bdd->quote($pilotLogin) . " 
         , " . $bdd->quote($pilotPassword) . ");

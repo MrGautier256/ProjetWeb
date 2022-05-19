@@ -1,5 +1,14 @@
 <?php
 session_start();
+
+if (@$_SESSION['fail'] == true) {
+?>
+    <script>
+        alert("L'identifiant ou le mot de passe est incorrect");
+    </script>
+<?php
+}
+
 $_SESSION = array();
 session_destroy();
 ?>

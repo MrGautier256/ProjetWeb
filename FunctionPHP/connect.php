@@ -45,5 +45,6 @@ if (count($verif) > 0) {
     header("Location:../Main/Index.php");
     exit;
 } else {
+    $_SESSION['fail'] = true;
     echo "L'identifiant ou le mot de passe est incorrect";
 }
