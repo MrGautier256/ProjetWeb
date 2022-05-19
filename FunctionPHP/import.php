@@ -27,13 +27,13 @@ if ($studentCreate == 1) {
 
     $VerifStudentLogin = "SELECT A_Login FROM `authentification` WHERE A_Login = " . $bdd->quote($studentLogin);
     $VerifStudentLoginResult = $bdd->query($VerifStudentLogin);
-    $VeriStudentfLoginResultFetch = $VerifStudentLoginResult->fetch(PDO::FETCH_ASSOC);
+    $VerifStudentLoginResultFetch = $VerifStudentLoginResult->fetch(PDO::FETCH_ASSOC);
 
     $VerifStudentMail = "SELECT U_Email FROM `utilisateur` WHERE U_Email = " . $bdd->quote($studentEmail);
     $VerifStudentMailResult = $bdd->query($VerifStudentMail);
     $VerifStudentMailResultFetch = $VerifStudentMailResult->fetch(PDO::FETCH_ASSOC);
 
-    if ($VeriStudentfLoginResultFetch == false && $VerifStudentMailResultFetch == false) {
+    if ($VerifStudentLoginResultFetch == false && $VerifStudentMailResultFetch == false) {
 
         $studentFirstName = $_POST['studentFirstName'];
         $studentLastName = $_POST['studentLastName'];
