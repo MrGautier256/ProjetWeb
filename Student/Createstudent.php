@@ -40,21 +40,21 @@
                     <article class="write-post-container1">
                         <article class="student-account">
                             <table>
-                                <tr class="Student-box">
-                                    <td> Login : </td>
-                                    <td><input class="formulaireInput" id="studentLogin" class="myInput" name="studentLogin" type="text" placeholder="Student Login" required="required"></td>
-                                </tr>
-                                <tr class="Student-box">
-                                    <td> First Name : </td>
-                                    <td><input class="formulaireInput" id="studentFirstName" name="studentFirstName" type="text" placeholder="Student FirstName" required="required"></td>
-                                </tr>
-                                <tr class="Student-box">
-                                    <td> Name : </td>
-                                    <td><input class="formulaireInput" id="studentLastName" name="studentLastName" type="text" placeholder="Student Name" required="required"></td>
-                                </tr>
-                                <tr class="Student-box">
-                                    <td> Promotion : </td>
-                                    <td><select name="studentPromotion" required="required"></td>
+                                <article class="Student-box">
+                                    <li> Login : </li>
+                                    <li><input class="formulaireInput" id="studentLogin" class="myInput" name="studentLogin" type="text" placeholder="Student Login" required="required"></li>
+                                </article>
+                                <article class="Student-box">
+                                    <li> First Name : </li>
+                                    <li><input class="formulaireInput" id="studentFirstName" name="studentFirstName" type="text" placeholder="Student FirstName" required="required"></li>
+                                </article>
+                                <article class="Student-box">
+                                    <li> Name : </li>
+                                    <li><input class="formulaireInput" id="studentLastName" name="studentLastName" type="text" placeholder="Student Name" required="required"></li>
+                                </article>
+                                <article class="Student-box">
+                                    <li> Promotion : </li>
+                                    <li><select name="studentPromotion" required="required"></li>
                                     <option value="">Choose Student Class</option>
                                     <option value="CPIA1">CPI A1</option>
                                     <option value="CPIA2-INFORMATIQUE">CPIA2-INFORMATIQUE</option>
@@ -74,10 +74,10 @@
                                     <option value="A5-BTP">A5-BTP </option>
                                     <option value="A5-GENERALISTE">A5-GENERALISTE </option>
                                     </select>
-                                </tr>
-                                <tr class="Student-box">
-                                    <td> Center : </td>
-                                    <td><select name="studentCenter" required="required"></td>
+                                </article>
+                                <article class="Student-box">
+                                    <li> Center : </li>
+                                    <li><select name="studentCenter" required="required"></li>
                                     <option value="">Choose the Center</option>
                                     <option value="Aix-en-Provence">Aix-en-Provence</option>
                                     <option value="Angoulême">Angoulême</option>
@@ -101,30 +101,30 @@
                                     <option value="Reims">Reims</option>
                                     <option value="Rouen">Rouen</option>
                                     <option value="Saint-Nazaire">Saint-Nazaire</option>
-                                    <option value="Strasbourg">Strasbourg</option>
+                                    <option value="Sarticleasbourg">Strasbourg</option>
                                     <option value="Toulouse">Toulouse</option>
                                     </select>
-                                </tr>
-                                <tr class="Student-box">
-                                    <td> Email : </td>
-                                    <td><input class="formulaireInput" id="studentEmail" name="studentEmail" type="email" placeholder="Student Email" required="required"></td>
-                                </tr>
-                                <tr class="Student-box">
-                                    <td> Password : </td>
-                                    <td><input class="formulaireInput" id="studentPassword" name="studentPassword" type="password" placeholder="Student Password" required="required"></td>
-                                </tr>
-                                <tr class="Student-box">
-                                    <td> Confirm Password : </td>
-                                    <td><input class="formulaireInput" id="studentConfirmPassword" name="studentConfirmPassword" type="password" placeholder="Confirm Password" required="required"></td>
-                                </tr>
-                                <tr class="Student-box">
-                                    <td></td>
-                                    <td><input class="formulaireInput" id="studentCreate" name="studentCreate" type="radio" value="1" style="visibility: hidden" checked></td>
-                                </tr>
-                                <tr class="button-box">
-                                    <td><input class="favorite-styled" type="submit" value="Validate"></td>
-                                    <td><input class="favorite-styled" type="reset" value="Reset"></td>
-                                </tr>
+                                </article>
+                                <article class="Student-box">
+                                    <li> Email : </li>
+                                    <li><input class="formulaireInput" id="studentEmail" name="studentEmail" type="email" placeholder="Student Email" required="required"></li>
+                                </article>
+                                <article class="Student-box">
+                                    <li> Password : </li>
+                                    <li><input class="formulaireInput" id="studentPassword" name="studentPassword" type="password" placeholder="Student Password" required="required"></li>
+                                </article>
+                                <article class="Student-box">
+                                    <li> Confirm Password : </li>
+                                    <li><input class="formulaireInput" id="studentConfirmPassword" name="studentConfirmPassword" type="password" placeholder="Confirm Password" required="required"></li>
+                                </article>
+                                <article class="Student-box">
+                                    <li></li>
+                                    <li><input class="formulaireInput" id="studentCreate" name="studentCreate" type="radio" value="1" style="visibility: hidden" checked></li>
+                                </article>
+                                <div class="button-box">
+                                    <input class="favorite-styled" type="submit" value="Validate">
+                                    <input class="favorite-styled" type="reset" value="Reset">
+                                </div>
                             </table>
                         </article>
                     </article>
