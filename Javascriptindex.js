@@ -10,17 +10,16 @@ if (navigator.serviceWorker) {
 }
 
 
-function settingsMenuToggle() {  //setting menu toggle 
+function settingsMenuToggle() { //setting menu toggle 
     settingsmenu.classList.toggle("settings-menu-height");
 }
 
-darkBtn.onclick = function () { // permet de switch de theme
+darkBtn.onclick = function() { // permet de switch de theme
     darkBtn.classList.toggle("dark-btn-on");
     document.body.classList.toggle("dark-theme");
     if (localStorage.getItem("theme") == "light") {
         localStorage.setItem("theme", "dark");
-    }
-    else {
+    } else {
         localStorage.setItem("theme", "light");
     }
 }
@@ -28,12 +27,10 @@ darkBtn.onclick = function () { // permet de switch de theme
 if (localStorage.getItem("theme") == "light") { //permet de se souvenir du theme apres un refresh
     darkBtn.classList.remove("dark-btn-on");
     document.body.classList.remove("dark-theme");
-}
-else if (localStorage.getItem("theme") == "dark") {
+} else if (localStorage.getItem("theme") == "dark") {
     darkBtn.classList.add("dark-btn-on");
     document.body.classList.add("dark-theme");
-}
-else {
+} else {
     localStorage.setItem("theme", "light");
 }
 
@@ -57,13 +54,13 @@ function myFunction() {
 
 var getSidebar = document.getElementById('left-sidebar');
 var getToggle = document.getElementById('toggle');
-getToggle.addEventListener('click', function () {
+getToggle.addEventListener('click', function() {
     // console.warn("hello world");
     getSidebar.classList.toggle('left-sidebar');
 });
 
 if (document.getElementById('CreateStudent')) {
-    document.getElementById('CreateStudent').addEventListener("submit", function (e) {
+    document.getElementById('CreateStudent').addEventListener("submit", function(e) {
         e.preventDefault();
         var Password1 = document.getElementById("studentPassword").value;
         var Password2 = document.getElementById("studentConfirmPassword").value;
@@ -83,7 +80,7 @@ if (document.getElementById('CreateStudent')) {
 }
 
 if (document.getElementById('CreatePilot')) {
-    document.getElementById('CreatePilot').addEventListener("submit", function (e) {
+    document.getElementById('CreatePilot').addEventListener("submit", function(e) {
         e.preventDefault();
         var Password1 = document.getElementById("pilotPassword").value;
         var Password2 = document.getElementById("pilotConfirmPassword").value;
@@ -109,8 +106,7 @@ function ConfirmPassword(Pass1, Pass2) {
 
     if (Pass1 == Pass2) {
         return true;
-    }
-    else {
+    } else {
         alert("Les mots de passe de correspondent pas")
         return false;
     }
@@ -120,12 +116,56 @@ function verifchaine(Login, Prenom, Nom) {
 
     if (Login.match(/^([0-9a-zA-Z_ -]){2,17}$/) && Prenom.match(/^([0-9a-zA-Z_ -]){2,17}$/) && Nom.match(/^([0-9a-zA-Z_ -]){2,17}$/)) {
         return true;
-    }
-    else {
+    } else {
         alert(Login);
         alert(Prenom);
         alert(Nom);
         return false;
+    }
+
+}
+
+function ToWishList(id) {
+    //var name = document.getElementById("id").value;
+    if (id) {
+        console.log(id);
+        $.ajax({
+            type: 'post',
+            url: '../FunctionPHP/InteractWishList.php',
+            data: {
+                id_Offre: id,
+                ToWishList: true,
+
+            },
+            success: function(response) {
+                $('#ajax').html(response);
+            }
+        });
+        //location.reload(true);
+    } else {
+        $('#ajax').html("");
+    }
+}
+
+function DelFromWishList(id) {
+    //var name = document.getElementById("id").value;
+    if (id) {
+        console.log(id);
+        $.ajax({
+            type: 'post',
+            url: '../FunctionPHP/InteractWishList.php',
+            data: {
+                id_Offre: id,
+                DelFromWishList: true,
+
+            },
+            success: function(response) {
+                $('#ajax').html(response);
+            }
+        });
+        //location.reload(true);
+    } else {
+        $('#ajax').html("");
     }
 
 }

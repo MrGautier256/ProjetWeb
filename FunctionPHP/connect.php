@@ -1,6 +1,9 @@
 <?php
 include_once("../Const.php");
 
+// session_start();
+// var_dump($_SESSION)
+
 class LoginRepository
 {
     private $_connexion; //PDO
@@ -41,6 +44,7 @@ if (count($verif) > 0) {
     $_SESSION['user']['U_Nom'] = $verif[0]['U_Nom'];
     $_SESSION['user']['U_Email'] = $verif[0]['U_Email'];
     $_SESSION['user']['U_centre'] = $verif[0]['U_centre'];
+    $_SESSION['user']['ID_UTILISATEUR'] = $verif[0]['ID_UTILISATEUR'];
 
     header("Location:../Main/Index.php");
     exit;

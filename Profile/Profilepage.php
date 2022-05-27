@@ -1,7 +1,9 @@
+<?php
+include_once("../Const.php");
+include_once("../Bar/Leftbar.php");
+?>
+
 <section class="container">
-    <?php
-    include_once("../Bar/Leftbar.php");
-    ?>
     <section class="profile-container">
         <img src="../images/cover.png" class="cover-img">
         <article class="profile-details">
@@ -9,8 +11,10 @@
                 <article class="pd-row">
                     <img src="../images/profile-pic.png" class="pd-image">
                     <article>
-                        <h3>Aymane HILMI</h3>
+                        <h3><?= $_SESSION['user']['U_Prenom']?> <?=($_SESSION['user']['U_Nom'])?></h3>
                         <p>20 Years Old - Student in engineering school of computer science</p>
+                        <p><?= $_SESSION['user']['U_Email']?><?= $_SESSION['user']['U_centre']?></p>
+
                     </article>
                 </article>
             </article>
@@ -94,7 +98,7 @@
                     <article class="user-profile">
                         <img src="../images/profile-pic.png">
                         <article>
-                            <a href="#">Aymane HILMI</a>
+                            <a href="#"><?= $_SESSION['user']['U_Prenom']?> <?=($_SESSION['user']['U_Nom'])?></a>
                             <p> <i class="fa-solid fa-clock"></i> 2 Days Ago</p>
                         </article>
                     </article>
@@ -105,7 +109,7 @@
                     <article class="user-profile">
                         <img src="../images/profile-pic.png">
                         <article>
-                            <a href="#">Aymane HILMI</a>
+                            <a href="#"><?= $_SESSION['user']['U_Prenom']?> <?=($_SESSION['user']['U_Nom'])?></a>
                             <p> <i class="fa-solid fa-clock"></i> 10 days Ago</p>
                         </article>
                     </article>

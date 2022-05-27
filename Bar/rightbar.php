@@ -1,8 +1,9 @@
 <?php
 
-if ($_SESSION['user']['ID_Role'] == 1) {
-
-    echo '<div class="right-sidebar">
+if ($_SESSION['user']['ID_Role'] == 1) 
+{
+    ?>
+    <div class="right-sidebar">
     <div class="sidebar-title">
         <h4>My Candidatures</h4>
         <a href="../ContentRightBar/Candidatures.php">See All</a>
@@ -45,17 +46,14 @@ if ($_SESSION['user']['ID_Role'] == 1) {
             <a href="#"> More Info</a>
         </div>
     </div>
-
-';
-    include_once('Mywishlist.html');
-    echo '</div>
+    <?php include_once('Mywishlist.php');?>
+    </div>
 </div>
-</div>';
-} else {
-    echo '
+</div>
+<?php } else { ?>
     <style>
     .main-content {
         width: 70%
     }
-</style>';
+</style><?php
 }

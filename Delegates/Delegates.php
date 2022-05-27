@@ -107,7 +107,6 @@ if (empty($DelegateResult)) {
                     <?php
                     }
                     ?>
-
                 </ul>
             </section>
         </section>

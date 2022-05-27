@@ -27,13 +27,13 @@ if ($studentCreate == 1) {
 
     $VerifStudentLogin = "SELECT A_Login FROM `authentification` WHERE A_Login = " . $bdd->quote($studentLogin);
     $VerifStudentLoginResult = $bdd->query($VerifStudentLogin);
-    $VerifStudentLoginResultFetch = $VerifStudentLoginResult->fetch(PDO::FETCH_ASSOC);
+    $VeriStudentfLoginResultFetch = $VerifStudentLoginResult->fetch(PDO::FETCH_ASSOC);
 
     $VerifStudentMail = "SELECT U_Email FROM `utilisateur` WHERE U_Email = " . $bdd->quote($studentEmail);
     $VerifStudentMailResult = $bdd->query($VerifStudentMail);
     $VerifStudentMailResultFetch = $VerifStudentMailResult->fetch(PDO::FETCH_ASSOC);
 
-    if ($VerifStudentLoginResultFetch == false && $VerifStudentMailResultFetch == false) {
+    if ($VeriStudentfLoginResultFetch == false && $VerifStudentMailResultFetch == false) {
 
         $studentFirstName = $_POST['studentFirstName'];
         $studentLastName = $_POST['studentLastName'];
@@ -97,7 +97,6 @@ if ($pilotCreate == 1) {
         $pilotConfirmPassword = $_POST['pilotConfirmPassword'];
 
         $pilotPromo = implode(", ", $pilotPromoTab);
-
 
         $Pilotreq_str = "INSERT INTO `authentification` (`A_Login`, `A_mdp`) VALUES
         (" . $bdd->quote($pilotLogin) . " 

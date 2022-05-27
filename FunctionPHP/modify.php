@@ -350,6 +350,7 @@ if ($companyModify == 1) {
     }
 
 
+
     $reqt = "SET @IdOffr = (SELECT ID_Offre_de_Stage FROM offre_de_stage WHERE OS_Nom = " . $internshipLogin . ");
 
     UPDATE offre_de_stage SET " . $OS_Competences . " " . $internshipSkills . " " . $OS_Remuneration . "
