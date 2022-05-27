@@ -79,7 +79,7 @@ $CompanyNameResult = $result->fetchAll();
                             </select>
                         </article>
                         <article class="button-box">
-                            <input class="favorite-styled" type="submit" value="Create">
+                            <input class="favorite-styled" type="submit" value="Search">
                             <input class="favorite-styled" type="reset" value="Reset">
                         </article>
                     </ul>

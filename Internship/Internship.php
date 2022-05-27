@@ -13,12 +13,15 @@ try {
     die;
 }
 
+if (empty($companyCity) && empty($companyName) && empty($offerName)) {
 
+    $reqt = "SELECT * from offre_de_stage INNER JOIN entreprise";
+}
 if (!empty($companyCity) && !empty($companyName) && empty($offerName)) {
 
-    $reqt = "SELECT * from entreprise 
-    WHERE En_Confiance_Pilote = " . $bdd->quote($companyName) .
-        " AND En_Localites = " . $bdd->quote($companyCity);
+    $reqt = "SELECT * FROM `offre_de_stage` INNER JOIN entreprise WHERE 
+    En_Nom = " . $bdd->quote($companyName) . " AND 
+    OS_Localites = " . $bdd->quote($companyCity);
 }
 if (!empty($companyName) && empty($companyCity) && empty($offerName)) {
 
@@ -35,7 +38,6 @@ if (!empty($offerName)) {
     $reqt = "SELECT * from offre_de_stage WHERE OS_Nom = " . $bdd->quote($offerName);
 }
 
-
 $result = $bdd->query($reqt);
 if ($result == false) {
     header('Location: ./searchoffer.php');
@@ -43,11 +45,11 @@ if ($result == false) {
 }
 
 $OfferResult = $result->fetchAll();
+
 if (empty($OfferResult)) {
     header('Location: ./searchoffer.php');
     exit();
 }
-
 
 ?>
 
@@ -60,6 +62,8 @@ if (empty($OfferResult)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styleindex.css">
     <link rel="manifest" href="../manifest.json">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../Javascriptindex.js"></script>
     <title>Internships</title>
 </head>
 
@@ -102,17 +106,19 @@ if (empty($OfferResult)) {
                     <ul class="Offers-list">
                         <?php
                         foreach ($OfferResult as $Offer) {
+
                         ?>
                             <li>
                                 <article class="Offer-container">
                                     <article class="Offer-Title">
-                                        <?= $Offer['OS_Nom'] ?>
+                                        <?= $Offer['OS_Nom'] ?> Chez <?= $Offer['En_Nom'] ?>
                                         <article class="Place-offer">
                                             <?= $Offer['OS_Localites'] ?>
                                         </article>
 
                                         <p><?= $Offer['OS_Competences'] ?></p>
                                     </article>
+                                    <div><button class="btn-gradblue" style="width : 102px" id="<?= $LNews['ID_Offre_de_Stage'] ?>" name="<?= $LNews['ID_Offre_de_Stage'] ?>" onclick="ToWishList(<?= $LNews['ID_Offre_de_Stage'] ?>)">Ajouter</button></div>
                                     <!-- <img src="https://guide-images.cdn.ifixit.com/igi/cDZiwSJVRhEXkKCC.large" class="Offer-logo"> -->
                                 </article>
                             </li>
@@ -124,8 +130,6 @@ if (empty($OfferResult)) {
             </section>
         </section>
     </section>
-
-    <script src="../Javascriptindex.js"></script>
 </body>
 
 </html>
