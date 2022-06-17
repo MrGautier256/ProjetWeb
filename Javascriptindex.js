@@ -126,7 +126,6 @@ function verifchaine(Login, Prenom, Nom) {
 }
 
 function ToWishList(id) {
-    //var name = document.getElementById("id").value;
     if (id) {
         console.log(id);
         $.ajax({
@@ -141,14 +140,12 @@ function ToWishList(id) {
                 $('#ajax').html(response);
             }
         });
-        //location.reload(true);
     } else {
         $('#ajax').html("");
     }
 }
 
 function DelFromWishList(id) {
-    //var name = document.getElementById("id").value;
     if (id) {
         console.log(id);
         $.ajax({
