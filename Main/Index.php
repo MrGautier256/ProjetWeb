@@ -64,8 +64,11 @@ $LastestNews = $News->fetchAll();
                                     </p>
                                 </div>
                                 <div>
-                                    <div><button class="btn-gradblue" style="width : 102px" id="<?= $LNews['ID_Offre_de_Stage'] ?>" name="<?= $LNews['ID_Offre_de_Stage'] ?>" onclick="ToWishList(<?= $LNews['ID_Offre_de_Stage'] ?>)" >Ajouter</button></div>
-                                    <div><button class="btn-gradred" id="<?= $LNews['ID_Offre_de_Stage'] ?>" name="<?= $LNews['ID_Offre_de_Stage'] ?>" onclick="DelFromWishList(<?= $LNews['ID_Offre_de_Stage'] ?>)">Supprimer</button></div>
+                                    <div><button class="btn-gradblue" style="width : 102px" id="<?= $LNews['ID_Offre_de_Stage'] ?>" 
+                                    name="<?= $LNews['ID_Offre_de_Stage'] ?>" onclick="ToWishList(<?= $LNews['ID_Offre_de_Stage'] ?>);">Ajouter</button></div>
+                                    
+                                    <div><button class="btn-gradred" id="<?= $LNews['ID_Offre_de_Stage'] ?>" name="<?= $LNews['ID_Offre_de_Stage'] ?>" 
+                                    onclick="DelFromWishList(<?= $LNews['ID_Offre_de_Stage'] ?>);" onclick="location.reload();">Supprimer</button></div>
                                 </div>
                             </div>
                         </article>
@@ -80,7 +83,41 @@ $LastestNews = $News->fetchAll();
 
             </section>
             <?php include_once("../Footer/Footer.html"); ?>
+            <script> 
+        
+            function ToWishList(idoffre) {
+                if (idoffre) {
+                    $.post('../FunctionPHP/InteractWishList.php', {
+                        id_Offre: idoffre,
+                        ToWishList: true,
+                    }, function(data) {
+                        AfficherWishlist();
+                        $('#ajax').html(data);
+                    });
+                }
+            }
 
+            function DelFromWishList(idoffre) {
+                if (idoffre) {
+                    $.post('../FunctionPHP/InteractWishList.php', {
+                        id_Offre: idoffre,
+                        DelFromWishList: true,
+                    }, function(data) {
+                        AfficherWishlist();
+                        $('#ajax').html(data);
+                    });
+                }
+            }
+
+            function AfficherWishlist() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("WishlistAjax").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "../Bar/Mywishlist.php");
+                xhttp.send();
+            }
+            </script>
             <script src="../Javascriptindex.js"></script>
     </body>
 

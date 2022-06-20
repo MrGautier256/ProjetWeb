@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 try {
     $bdd = new PDO('mysql:host=localhost;dbname=projet_mieux;charset=utf8', 'root', '');
@@ -34,9 +33,6 @@ if (@$_POST['ToWishList'] == true && isset($_POST['id_Offre'])) {
         if ($result == false) {
             echo ('<script>alert("Ajout échoué")</script>');
         } 
-        else{
-            echo ('<script>location.reload(true);</script>');
-        }
     } else {
         echo ('<script>alert("Offre déja dans votre wishlist")</script>');
     }
@@ -64,9 +60,6 @@ if (@$_POST['DelFromWishList'] == true && isset($_POST['id_Offre'])) {
         if ($result == false) {
             echo ('<script>alert("Suppression échouée")</script>');
         } 
-        else{
-            echo ('<script>location.reload(true);</script>');
-        }
     } else {
         echo ('<script>alert("Cette offre n\'est pas dans votre Wishlist")</script>');
     }

@@ -131,6 +131,7 @@ function ToWishList(idoffre) {
             id_Offre: idoffre,
             ToWishList: true,
         }, function(data) {
+            AfficherWishlist();
             $('#ajax').html(data);
         });
     }
@@ -142,7 +143,17 @@ function DelFromWishList(idoffre) {
             id_Offre: idoffre,
             DelFromWishList: true,
         }, function(data) {
+            AfficherWishlist();
             $('#ajax').html(data);
         });
     }
+}
+
+function AfficherWishlist() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("WishlistAjax").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "../Bar/Mywishlist.php");
+    xhttp.send();
 }

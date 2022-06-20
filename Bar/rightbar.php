@@ -46,7 +46,7 @@ if ($_SESSION['user']['ID_Role'] == 1)
             <a href="#"> More Info</a>
         </div>
     </div>
-    <?php include_once('Mywishlist.php');?>
+    <div id="WishlistAjax"></div>
     </div>
 </div>
 </div>
