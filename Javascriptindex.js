@@ -125,44 +125,24 @@ function verifchaine(Login, Prenom, Nom) {
 
 }
 
-function ToWishList(id) {
-    if (id) {
-        console.log(id);
-        $.ajax({
-            type: 'post',
-            url: '../FunctionPHP/InteractWishList.php',
-            data: {
-                id_Offre: id,
-                ToWishList: true,
-
-            },
-            success: function(response) {
-                $('#ajax').html(response);
-            }
+function ToWishList(idoffre) {
+    if (idoffre) {
+        $.post('../FunctionPHP/InteractWishList.php', {
+            id_Offre: idoffre,
+            ToWishList: true,
+        }, function(data) {
+            $('#ajax').html(data);
         });
-    } else {
-        $('#ajax').html("");
     }
 }
 
-function DelFromWishList(id) {
-    if (id) {
-        console.log(id);
-        $.ajax({
-            type: 'post',
-            url: '../FunctionPHP/InteractWishList.php',
-            data: {
-                id_Offre: id,
-                DelFromWishList: true,
-
-            },
-            success: function(response) {
-                $('#ajax').html(response);
-            }
+function DelFromWishList(idoffre) {
+    if (idoffre) {
+        $.post('../FunctionPHP/InteractWishList.php', {
+            id_Offre: idoffre,
+            DelFromWishList: true,
+        }, function(data) {
+            $('#ajax').html(data);
         });
-        //location.reload(true);
-    } else {
-        $('#ajax').html("");
     }
-
 }
